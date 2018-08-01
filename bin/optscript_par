@@ -1,0 +1,271 @@
+#!/bin/ksh
+
+CODEDIR=`awk 'NR==1,NR==1 {print $1}' CODENAME`
+EXEDIR=`awk 'NR==1,NR==1 {print $1}' EXENAME`
+
+# unix script for parallel optimise
+
+# tidy up
+
+rm -f Newco*
+rm -f hessian*
+rm -f gradient*
+rm -f energy*
+rm -f combine*
+rm -f CONVERGEDCOORDS
+rm -f UNCONVERGEDCOORDS
+rm -f OUTLIST*
+rm -f FCHKLIST
+
+package=`awk 'NR==1,NR==1 {print $0}' IN_PACKAGE`
+maxsteps=`awk 'NR==2,NR==2 {print $1}' OPTSTEPS`
+
+cp IN_JOBTYPE IN_JOBTYPE_original
+echo "jobtype" > IN_JOBTYPE
+echo "2" >> IN_JOBTYPE
+
+# deriv=2
+
+echo "0" > STEPNUMBER
+
+if [ $package -eq 1 ]
+then
+cat LOADQCP > scr_gam
+cat $CODEDIR/scr_gam1 >> scr_gam
+cat LOADDP >> scr_gam
+cat $CODEDIR/scr_gam2 >>scr_gam
+chmod +x scr_gam
+./scr_gam
+#$CODEDIR/scr_gam
+fi
+
+if [ $package -eq 2 ]
+then
+cp IN_G09 IN_G09_original
+cp IN_G09_step0 IN_G09
+#cp IN_G09 tmpfile
+#sed 's/OPT/FREQ/' tmpfile > IN_G09
+$CODEDIR/scr_gau
+cp IN_G09_original IN_G09
+fi
+
+if [ $package -eq 3 ]
+then
+cp NWCcommands NWCcommands_original
+cp NWCcommands tmpfile
+sed 's/OPTIMIZE/GRADIENT/' tmpfile > NWCcommands
+echo "TASK SCF HESSIAN" >> NWCcommands
+cat LOADQCP > scr_nwc
+cat $CODEDIR/scr_nwc1 >> scr_nwc
+cat LOADDP >> scr_nwc
+cat $CODEDIR/scr_nwc2 >> scr_nwc
+chmod +x scr_nwc
+./scr_nwc
+#$CODEDIR/scr_nwc
+  cp NWCcommands_original NWCcommands
+fi
+
+if [ $package -eq 4 ]
+then
+cp IN_QCH IN_QCH_original
+cp IN_QCH_step0 IN_QCH
+#cp IN_QCH tmpfile
+#sed 's/JOBTYPE OPT/JOBTYPE FREQ/' tmpfile > IN_QCH
+$CODEDIR/scr_qch
+cp IN_QCH_original IN_QCH
+fi
+
+
+$CODEDIR/message.pl
+grep 'YOU CANNOT USE RESTART' OUT_SMFA
+fail=$?
+if [ $fail ==  0 ]
+then
+echo "Whole process terminated due to failure of a charge calculation" >> OUT_SMFA
+exit 1
+fi
+
+rm -f OUTLIST*
+rm -f FCHKLIST
+
+cp combinedderivs combinedderivs.0
+
+$CODEDIR/getcombdata.pl 0
+
+natom=`awk 'NR==1,NR==1 {print \$1}' name.xyz`
+(( n3 = 3 * natom ))
+(( rad = n3 / 200. ))
+echo "$rad" > TRUSTRADIUS
+
+rm -f optout
+$EXEDIR/ROGEROPT >> optout
+mv deltax deltax.0
+cp fort.67 fort.67_0
+
+
+cp xyzFILENAME xyzFILENAME_original
+numberofatoms=`awk 'NR==2,NR==2 {print $1}' xyzFILENAME`
+echo "Newcoords.xyz" > xyzFILENAME
+echo "$numberofatoms" >> xyzFILENAME
+
+echo "jobtype file for opt" > IN_JOBTYPE
+echo "1" >> IN_JOBTYPE
+
+rm -f WARNINGS
+$EXEDIR/Preparegeom < Newcoords.xyz > rub
+cat WARNINGS >> optout
+
+$EXEDIR/SOLCH
+
+echo "1" > READY2GO
+$CODEDIR/fragonly.pl
+
+if [ $package -eq 2 ]
+then
+ cp IN_G09_original tmpfile
+ sed 's/OPT/FORCE/' tmpfile > IN_G09
+# sed 's/FREQ/FORCE/' tmpfile > IN_G09
+fi
+
+if [ $package -eq 3 ]
+then
+ cp NWCcommands_original NWCcommands
+ cp NWCcommands tmpfile
+ sed 's/OPTIMIZE/GRADIENT/' tmpfile > NWCcommands
+fi
+
+if [ $package -eq 4 ]
+then
+ cp IN_QCH_original tmpfile
+ sed 's/JOBTYPE OPT/JOBTYPE FORCE/' tmpfile > IN_QCH
+# sed 's/JOBTYPE FREQ/JOBTYPE FORCE/' tmpfile > IN_QCH
+fi
+
+istep=1
+while [ $istep -lt $maxsteps ]
+do
+echo "$istep" > STEPNUMBER
+echo "Output from optimization step $istep" >> OUT_SMFA
+
+$CODEDIR/modfilenames.pl
+$CODEDIR/createrunscripts.pl
+rm -f OUTLIST*
+rm -f FCHKLIST
+
+if [ $package -eq 1 ]
+then
+# $CODEDIR/scr_gam
+./scr_gam
+fi
+if [ $package -eq 2 ]
+then
+ $CODEDIR/scr_gau
+fi
+if [ $package -eq 3 ]
+then
+# $CODEDIR/scr_nwc
+./scr_nwc
+fi
+if [ $package -eq 4 ]
+then
+ $CODEDIR/scr_qch
+fi
+
+$EXEDIR/updatehessian
+
+$CODEDIR/getcombdata.pl $istep
+
+cp combinedderivs combinedderivs.$istep
+
+$EXEDIR/ROGEROPT >> optout
+mv deltax deltax.$istep
+cp Newcoords.xyz Newcoords.xyz.$istep
+cp fort.67 fort.67_$istep
+
+# check convergence
+converge=`grep converged optout | wc -l`
+if [ $converge -gt 0 ]
+then
+ cp Newcoords.xyz CONVERGEDCOORDS
+ echo ' ' >> OUT_SMFA
+ echo "The geometry optimsation has converged in '$istep' steps." >> OUT_SMFA
+ echo "The converged geometry is contained in the file CONVERGEDCOORDS." >> OUT_SMFA
+ echo "Intermediate output from the optimisation process can be viewed" >> OUT_SMFA
+ echo "in the file optout" >> OUT_SMFA
+ echo " " >> OUT_SMFA
+ echo "The initial geometry had a total energy of" >> OUT_SMFA
+ energy0=`awk 'NR==1,NR==1 {print $1}' "energy.0"`
+ echo "$energy0" >> OUT_SMFA
+ echo " " >> OUT_SMFA
+ echo "The final geometry has a total energy of" >> OUT_SMFA
+ (( istep1 = istep - 1 ))
+ energylast=`awk 'NR==1,NR==1 {print $1}' "energy.$istep"`
+ echo "$energylast" >> OUT_SMFA
+
+ cp IN_JOBTYPE_original IN_JOBTYPE
+ cp xyzFILENAME_original xyzFILENAME
+
+ if [ $package -eq 2 ]
+ then
+  cp IN_G09_original IN_G09
+ fi
+ if [ $package -eq 3 ]
+ then
+  cp NWCcommands_original NWCcommands
+ fi
+ if [ $package -eq 4 ]
+ then
+  cp IN_QCH_original IN_QCH
+ fi
+ (( istep = maxsteps ))
+
+fi
+
+if [ $istep -lt $maxsteps ]
+then
+# update the fragments
+ $EXEDIR/Preparegeom < Newcoords.xyz > rub
+ cat WARNINGS >> optout
+$EXEDIR/SOLCH
+ echo "1" > READY2GO
+
+ $CODEDIR/fragonly.pl
+
+ echo " " >> OUT_SMFA
+ echo "Intermediate geometry $istep during the optimisation" >> OUT_SMFA
+
+ (( maxsteps1 = maxsteps - 1 ))
+fi
+
+if [ $istep -eq $maxsteps1 ]
+then
+ cp Newcoords.xyz UNCONVERGEDCOORDS
+ echo "The optimisation did not converge" >> OUT_SMFA
+ echo "The final geometry is contained in the file UNCONVERGEDCOORDS" >> OUT_SMFA
+ echo "The final geometry has a total energy of - unconverged" >> OUT_SMFA
+ energylast=`awk 'NR==1,NR==1 {print $1}' energy.$istep`
+ echo "$energylast" >> OUT_SMFA
+ if [ $package -eq 2 ]
+ then
+  cp IN_G09_original IN_G09
+ fi
+ if [ $package -eq 3 ]
+ then
+  cp NWCcommands_original NWCcommands
+ fi
+ if [ $package -eq 4 ]
+ then
+  cp IN_QCH_original IN_QCH
+ fi
+ exit
+fi
+
+(( istep = istep + 1 ))
+done
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+#!/bin/csh
+
+set diff = $cwd/diff.pl
+set program = $cwd/../bin/gdma
+set tests = ( CO/G03 H2O C2H4/G94 C2H4/G98 C2H4/G03 formamide )
+if ( $#argv > 0 ) then
+  switch($1)
+  case -p:
+    set program = $2
+    shift; shift
+    breaksw
+  default:
+    set tests = ($*)
+    unset $argv
+  endsw
+endif
+if ( ! -e $program ) then
+  echo "$program not found"
+  echo "Usage: run.tests [ -p program-file ] [ test directories ]"
+  exit 1
+endif
+
+set here = $cwd
+foreach n ( $tests )
+  cd $n
+    if ( -e data ) then
+      echo "----------"
+      echo "${n}:"
+      rm -f out punch
+      $program < data > out
+      $diff out.check out
+    endif
+  cd $here
+end
+

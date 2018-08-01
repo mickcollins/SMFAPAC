@@ -1,0 +1,29 @@
+CODEDIR=`awk 'NR==1,NR==1 {print $1}' CODENAME`
+EXEDIR=`awk 'NR==1,NR==1 {print $1}' EXENAME`
+
+CODEDIR/restartlist.pl INLIST
+
+#cp INLIST_original INLIST
+#rm -f RUNNING
+
+./runpar
+$CODEDIR/mvname.pl INLIST
+
+ls INLISTDAL_original > junk
+if [ $? = 0 ]
+then
+ CODEDIR/restartlist.pl INLISTDAL
+# cp INLISTDAL_original INLISTDAL
+# rm -f RUNNING
+ ./rundal
+fi
+
+anal_MAC.pl
+message.pl
+grep 'YOU CANNOT USE RESTART' OUT_SMFA
+fail=$?
+if [ $fail ==  0 ]
+then
+echo "Whole process terminated due to failure of a charge calculation" >> OUT_SMFA
+exit 1
+fi

@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# gets forces and second derivatives from Gaussian archive file
+#script=`basename $0`
+
+#if [ $# != 2 ]
+#  then
+#    echo "Usage: $script molecule " 1>&2
+#    echo
+#    echo "      molecule: molecule studied" 1>&2
+#    exit 1
+#fi
+
+#trap 'exit 1' 1
+molecule=$1
+nhes=$2
+
+awk 'BEGIN{FS="";ORS=""};{i=2;while(i<72){print $i;i++}}' $molecule | sed 's+\\+\n+g' | sed 's/,/\n/g' > rub$nhes
+n=`cat rub$nhes | wc -l`
+n=n-3
+head -$n rub$nhes > rub2_$nhes
+

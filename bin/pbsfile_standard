@@ -1,0 +1,20 @@
+#!/bin/bash
+#PBS -P xxx
+#PBS -N mac
+#PBS -l mem=2gb
+#PBS -l ncpus=2
+#PBS -l jobfs=2gb
+#PBS -l walltime=1:00:00
+#PBS -l wd
+#PBS -q normal
+
+
+# enter instructions that make the quantum chemistry package available    (do not change this line)
+# and finish with a blank line                                            (do not change this line)
+module load qchem/4.3
+
+# enter instructions that make the DALTON  package available              (do not change this line)
+# and finish with a blank line                                            (do not change this line)
+module load dalton
+
+

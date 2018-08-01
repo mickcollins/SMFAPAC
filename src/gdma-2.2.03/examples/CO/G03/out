@@ -1,0 +1,117 @@
+                                     G D M A
+
+                                 by Anthony Stone
+
+                           version 2.2.03, 21 June 2007
+
+               Distributed Multipoles from Gaussian wavefunctions
+
+
+Starting at 11:7:32 on 23 Jul 2008  
+
+Carbon monoxide  6-31G(d)  Gaussian 03
+
+
+
+Using SCF density matrix from file CO-g03.fchk
+
+
+                         Distributed Multipole Analysis
+
+Standard DMA for products of primitives with exponent greater than 4.00000
+Using 80-point Euler-MacLaurin radial quadrature
+Using 590-point Lebedev quadrature
+Becke smoothing parameter = 3
+
+Positions and radii in bohr
+Multipole moments in atomic units, ea_0^k for rank k
+
+C          x =  0.000000  y =  0.000000  z = -1.202703
+           Maximum rank =  6   Radius =  1.228
+                   Q00  =   0.206564
+|Q1| =   0.665665  Q10  =   0.665665
+|Q2| =   0.234416  Q20  =  -0.234416
+|Q3| =   0.727731  Q30  =   0.727731
+|Q4| =   0.624597  Q40  =   0.624597
+|Q5| =   0.753722  Q50  =  -0.753722
+|Q6| =   3.488069  Q60  =  -3.488069
+
+O          x =  0.000000  y =  0.000000  z =  0.902027
+           Maximum rank =  6   Radius =  1.228
+                   Q00  =  -0.206564
+|Q1| =   0.334705  Q10  =  -0.334705
+|Q2| =   0.680218  Q20  =   0.680218
+|Q3| =   0.741244  Q30  =  -0.741244
+|Q4| =   0.031550  Q40  =  -0.031550
+|Q5| =   1.768080  Q50  =   1.768080
+|Q6| =   3.925508  Q60  =  -3.925508
+
+Total multipoles
+referred to origin at x =   0.000000,  y =    0.000000,  z =    0.000000
+                   Q00  =   0.000000
+|Q1| =   0.103802  Q10  =  -0.103802
+|Q2| =   1.628497  Q20  =  -1.628497
+|Q3| =   4.233684  Q30  =   4.233684
+|Q4| =   9.615530  Q40  =  -9.615530
+|Q5| =  15.894885  Q50  =  15.894885
+|Q6| =  26.777958  Q60  = -26.777958
+
+CPU time used:      0m 1.064s          Total:      0m 1.064s
+
+
+Using SCF density matrix from file CO-g03.fchk
+
+
+                         Distributed Multipole Analysis
+
+Standard DMA for products of primitives with exponent greater than 4.00000
+Using 80-point Euler-MacLaurin radial quadrature
+Using 590-point Lebedev quadrature
+Becke smoothing parameter = 3
+
+Positions and radii in bohr
+Multipole moments in atomic units, ea_0^k for rank k
+
+C          x =  0.000000  y =  0.000000  z = -1.202703
+           Maximum rank =  6   Radius =  1.228
+                   Q00  =   1.238141
+|Q1| =   1.581919  Q10  =   1.581919
+|Q2| =   0.103808  Q20  =  -0.103808
+|Q3| =   0.349503  Q30  =  -0.349503
+|Q4| =   0.616715  Q40  =  -0.616715
+|Q5| =   0.723700  Q50  =   0.723700
+|Q6| =   2.080913  Q60  =   2.080913
+
+O          x =  0.000000  y =  0.000000  z =  0.902027
+           Maximum rank =  6   Radius =  1.228
+                   Q00  =   1.063890
+|Q1| =   1.339977  Q10  =  -1.339977
+|Q2| =   0.707313  Q20  =   0.707313
+|Q3| =   0.513214  Q30  =   0.513214
+|Q4| =   1.268936  Q40  =  -1.268936
+|Q5| =   0.377342  Q50  =  -0.377342
+|Q6| =   3.902435  Q60  =   3.902435
+
+bond       x =  0.000000  y =  0.000000  z = -0.150338
+           Maximum rank =  6   Radius =  1.228
+                   Q00  =  -2.302030
+|Q1| =   0.162369  Q10  =  -0.162369
+|Q2| =   1.337153  Q20  =   1.337153
+|Q3| =   0.166929  Q30  =   0.166929
+|Q4| =   2.249930  Q40  =  -2.249930
+|Q5| =   0.128619  Q50  =   0.128619
+|Q6| =   5.157318  Q60  =   5.157318
+
+Total multipoles
+referred to origin at x =   0.000000,  y =    0.000000,  z =    0.000000
+                   Q00  =   0.000000
+|Q1| =   0.103802  Q10  =  -0.103802
+|Q2| =   1.628497  Q20  =  -1.628497
+|Q3| =   4.233684  Q30  =   4.233684
+|Q4| =   9.615530  Q40  =  -9.615530
+|Q5| =  15.894885  Q50  =  15.894885
+|Q6| =  26.777958  Q60  = -26.777958
+
+CPU time used:      0m 1.656s          Total:      0m 2.720s
+
+Finished at 11:7:35 on 23 Jul 2008  

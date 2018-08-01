@@ -1,0 +1,151 @@
+              INPUT to SMFA
+
+The purpose of the calculation is to evaluate the energy
+
+The Level of fragmentation is
+1
+The cutoff value for nonbonded interactions is
+0.
+
+The quantum chemistry program package is
+GAUSSIAN09
+The electronic structure method is
+HF
+The basis set is
+6-31G
+The job type is energy (0), force (1), hessian (2), opt (3), opt=TS (4), scan (5)
+0
+Additional options are
+
+Is long range dispersion accounted for?
+N
+
+The molecular coordinates are in file
+MOGQOO.xyz
+The number of atoms in the molecule is
+35
+
+Classes of moieties that are treated as united groups
+T   amides
+T   CX2 and CX3 (X=F,Cl,..)
+
+The number of specified multiple bonds is
+0
+
+The number of specified single bonds is
+0
+
+The number of extra single bonds is
+0
+
+
+             EXAMINATION of the MOLECULAR COORDINATES shows:
+
+  The total molecular charge =            0
+
+
+ The following metal-containing groups were found
+ Check that the metal charge is correct 
+ 
+
+ The following other charged groups were found
+ 
+
+
+             FRAGMENTATION RESULTS
+
+A description of the fragments can be found in file frags.out
+The coordinates of the fragments in xyz format are contained
+in seefrags (in suitable format for graphics).
+
+ Total numbers of atoms and electrons:           35         148
+  The number of fragments is
+          22
+ 
+  The largest number of electrons in a fragment
+  is           42  for fragment number            2
+ 
+An ab initio input file for this fragment is contained in
+LARGE.com or LARGE.inp or LARGE.nw
+ 
+ 
+            PARALLEL IMPLEMENTATION
+ 
+  The bulk of the cputime is employed in performing
+  electronic structure calculations for the many
+  molecular fragments, and for fragment properties that
+  are needed to evaluate the non-bonded interactions.
+  For these calculations, the recommended number of
+  cpus for maximum efficiency and and minimum walltime
+  is
+ 
+          12
+ 
+  This assumes that each fragment uses only 1 cpu.
+ 
+  The user sets the number of cpus in main menu item 4
+ 
+  The user can specify less than           12  cpus,
+  for example, if only a smaller number is available.
+ 
+
+                      Near isoenergetic reactions
+
+For the molecule contained in file MOGQOO.xyz, an almost isoenergetic reaction
+has been found, corresponding to a Level = 1 fragmentation.
+
+
+The molecule in MOGQOO.xyz (InChI=1S/C11H16F3NO4/c1-10(2,3)19-9(18)15-5-6(11(12,13)14)4-7(15)8(16)17/h6-7H,4-5H2,1-3H3,(H,16,17)/t6-,7-/m0/s1)
+
+  +
+
+ 9   X   Fragment 12    (InChI=1S/CH4/h1H4) 
+  +
+
+ 2   X   Fragment 20    (InChI=1S/CH3NO2/c2-1(3)4/h2H2,(H,3,4)) 
+
+  <==>
+
+ 6   X   Fragment 1    (InChI=1S/C2H6/c1-2/h1-2H3) 
+  +
+
+ 1   X   Fragment 2    (InChI=1S/C2H3F3/c1-2(3,4)5/h1H3) 
+  +
+
+ 1   X   Fragment 4    (InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)) 
+  +
+
+ 1   X   Fragment 7    (InChI=1S/C2H5NO2/c1-5-2(3)4/h1H3,(H2,3,4)) 
+  +
+
+ 2   X   Fragment 10    (InChI=1S/C2H5NO2/c1-3-2(4)5/h3H,1H3,(H,4,5)) 
+
+ The Cartesian coordinates for each Fragment are listed
+ in the file seefrags.
+
+ In addition, files describing the lhs and rhs of the reaction have been created
+ under the file names
+
+ MOGQOO.xyz.lhs.inichi
+ MOGQOO.xyz.lhs.coeff
+ MOGQOO.xyz.lhs.coords
+ MOGQOO.xyz.lhs.svg
+ MOGQOO.xyz.rhs.inichi
+ MOGQOO.xyz.rhs.coeff
+ MOGQOO.xyz.rhs.coords
+ MOGQOO.xyz.rhs.svg
+
+ Files with '.inichi' list the Inchi for each compound
+ Files with '.coeff' list the coefficient of the compound in the reaction formula
+ Files with '.coords' list the Cartesian coordinates of the compounds, visualised with VMD etc
+ Files with '.svg can be opended with a web browser like FireFox to give a table of
+ of 2D drawings of the compounds
+
+The MOGQOO.xyz.lhs... and MOGQOO.xyz.rhs...  files can be used with another utility in SMFA
+to construct more 'near isoenergetic' reactions - see the User's manual
+The files for the reaction formed from
+reaction MOGQOO.xyz minus reaction TAXYIA.xyz
+have been written to files named MOGQOO.xyz-TAXYIA.xyz
+These MOGQOO.xyz-TAXYIA.xyz.inchi (etc) files have exactly the same structure as the original
+MOGQOO.xyz.inchi (etc) files, and so are available for further manipulations
+

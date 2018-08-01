@@ -1,0 +1,53 @@
+#module load gamess/2016-08-R1
+
+CODEDIR=`awk 'NR==1,NR==1 {print $1}' CODENAME`
+EXEDIR=`awk 'NR==1,NR==1 {print $1}' EXENAME`
+
+rm -f RUNDATA
+rm -f list*
+
+chmod +x gaminput
+./gaminput
+#SMFAgaminputs_MAC.pl
+
+rm -f RUNNING
+./runpar
+ ok=`grep 'calculation failed' OUT_SMFA | wc -l`
+ if [ "$ok" -gt "0" ] 
+ then
+ exit 1
+ fi
+wc -l INLIST >> RUNDATA
+wc -l RUNNING >> RUNDATA
+wc -l OUTLIST >> RUNDATA
+
+rm -f RUNNING
+
+ls INLISTDAL_original > junk
+if [ $? = 0 ]
+then
+
+#module unload gamess/2016-08-R1
+#module load dalton
+
+ $CODEDIR/dodaltonpolar.pl
+ $CODEDIR/dodaltondisp.pl
+ rm -f RUNNING
+ ./rundal
+ ok=`grep 'calculation failed' OUT_SMFA | wc -l`
+ if [ "$ok" -gt "0" ]
+ then
+ exit 1
+ fi
+
+ wc -l INLISTDAL >> RUNDATA
+ wc -l RUNNING >> RUNDATA
+ wc -l OUTLISTDAL >> RUNDATA
+
+ rm -f RUNNING
+#module unload dalton
+fi
+
+$CODEDIR/anal_MAC.pl
+
+$CODEDIR/message.pl

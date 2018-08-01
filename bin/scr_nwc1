@@ -1,0 +1,62 @@
+
+#module load nwchem/6.6
+
+CODEDIR=`awk 'NR==1,NR==1 {print $1}' CODENAME`
+EXEDIR=`awk 'NR==1,NR==1 {print $1}' EXENAME`
+
+ls INLISTCHG_original > junk
+if [ $? = 0 ]
+then
+chmod +x nwcchinput
+rm -f RUNNING
+k=1
+iter=3
+while [ "$k" -le "$iter" ]
+do
+./nwcchinput
+# SMFAmkchinputs_nwc.pl
+ ./runchg
+
+# $CODEDIR/mvname.pl INLISTCHG
+
+ ok=`grep 'calculation failed' OUT_SMFA | wc -l`
+ if [ "$ok" -gt "0" ]
+ then
+ exit 1
+ fi
+ $CODEDIR/extractch_nwc.pl
+ ((k = k + 1))
+ rm -f OUTLISTCHG
+
+ ncpusch=`awk ' NR==1,NR==1 {print $1}' NCPUSCH`
+ wc -l INLISTCHG_original > junk
+ leng=`awk 'NR==1,NR==1 {print $1}' junk`
+ (( ta = leng - ncpusch ))
+ tail -$ta INLISTCHG_original > INLISTCHG
+
+ rm -f RUNNING
+ done
+fi
+
+#rm -f RUNDATA
+#rm -f list*
+
+chmod +x nwcinput
+./nwcinput
+#SMFAnwcinputs_MAC.pl
+
+rm -f RUNNING
+./runpar
+# $CODEDIR/mvname.pl INLIST
+
+ ok=`grep 'calculation failed' OUT_SMFA | wc -l`
+ if [ "$ok" -gt "0" ]
+ then
+ exit 1
+ fi
+#wc -l INLIST >> RUNDATA
+#wc -l RUNNING >> RUNDATA
+#wc -l OUTLIST >> RUNDATA
+
+rm -f RUNNING
+

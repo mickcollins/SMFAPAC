@@ -1,0 +1,43 @@
+#!/usr/bin/perl
+
+#use warnings;
+use Config;
+#use lib "~/SMFA_RIKA/CPAN";
+use Shell qw(date pwd);
+use File::Copy 'cp';
+use Cwd;
+
+$CODEDIR=`awk 'NR==1,NR==1 {print \$1}' CODENAME`;
+chomp($CODEDIR);
+$CODEDIR=~ s/^\s+|\s+$//g;
+
+$EXEDIR=`awk 'NR==1,NR==1 {print \$1}' EXENAME`;
+chomp($EXEDIR);
+$EXEDIR=~ s/^\s+|\s+$//g;
+
+
+open(TMP,"<IN_JOBTYPE");
+while (<TMP>) {
+if ($. == 2) {$deriv="$_"};
+}
+chomp $deriv;
+&Lev0_chg_MAC_iter_nwc;
+&SMFAnwcinputs_MAC;
+
+# get the completed jobs
+$out="OUTLIST";
+$storelogs="storelogs";
+if ( -s $out ) {
+$nf=`wc -l $out`;
+($nfin)=split(/\s+/,$nf);
+open(OUT,"<OUTLIST");
+while (<OUT>) {
+$file="$_";
+chomp($file);
+system("mv $storelogs\/$file $file");
+}
+system("rmdir $storelogs");
+close OUT;
+}
+
+&SMFArunallnwc;

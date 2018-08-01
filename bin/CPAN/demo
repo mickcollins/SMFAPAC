@@ -1,0 +1,417 @@
+#!/usr/local/bin/perl5
+#**************************************************************************
+# demo --  Simple PerlMenu demo
+#
+# Notes:   Perl4 - Requires curseperl
+#          Perl5 - Requires William Setzer's "Curses" extension
+#
+#          Demonstrates "latched" (remembered) menu position technique
+#          in "long" menu routine.
+#
+# Author:  Steven L. Kunz
+#          Networked Applications
+#          Iowa State University Computation Center
+#          Ames, IA  50011
+#          Email: skunz@iastate.edu
+#
+# Date:    February 1997
+#**************************************************************************
+
+# Perl5+Curses ONLY!
+# Comment these lines for use with Perl4/curseperl
+BEGIN { $Curses::OldCurses = 1; }
+use Curses;			# PerlMenu needs "Curses"
+use perlmenu;			# Main menu package (Perl5 only)
+require "./menuutil.pl";	# For "pause" and "print_nl" routines.
+
+# Perl4/curseperl ONLY!
+# Uncomment these lines for use with Perl4/curseperl
+# (Did you remember to run "create_menu.pl"?)
+#require "./menu.pl";		# Main menu package (Perl4 only)
+#require "./menuutil.pl";	# For "pause" and "print_nl" routines.
+
+$| = 1;				# Flush after every write to stdout
+
+$window = &initscr();
+&menu_curses_application($window);
+&menu_quit_routine("endwin");
+
+# Uncomment this line to enable shell-escapes.
+# If your shell does not have a "SHELL" environment variable, replace the
+# call parameter with something like "/bin/sh".
+# &menu_shell_command($ENV{"SHELL"});
+
+# Default prefs active at start
+  $numbered_flag = 1;		# Numbered menus
+  $num_pref = "numbered";
+  $gopher_pref = "default";	# Non-gopherlike arrows/scrolling
+  $gopher_flag = 0;
+  $mult_pref = "single";	# Single column menus
+  $mult_flag = 0;
+  $arrow_pref = "arrow";	# Arrow selection indicator menus
+  $arrow_flag = 0;
+
+  $menu_default_top = 0;	# Storage for mainline top item number.
+  $menu_default_row = 0;	# Storage for mainline arrow location.
+  $menu_default_col = 0;	# Storage for mainline arrow location.
+  $row = $col = 0;		# Storage for row/col for menuutil.pl
+  $title_cnt = 0;		# To trigger different subtitles/bottom titles
+
+  while (1) {
+    &menu_init($numbered_flag,"PerlMenu Version 4.0",0,"",
+	"-Copyright 1992-97, Iowa State University, Ames, Iowa (USA)",
+        "main_menu_help");
+    &menu_paint_file("./paint_text",0);
+    &menu_item("Exit this demo","exit");
+    &menu_item("See a single-page menu demo","test_short_menu");
+    &menu_item("See a multiple-page menu demo","test_long_menu");
+    &menu_item("See a radio-button menu demo","test_radio_menu");
+    &menu_item("See a multiple-selection menu demo","test_mult_menu");
+    &menu_item("See a menu demo with sub-titles","test_subtitle_menu");
+    &menu_item("Change arrow-wrap/scrolling menu preferences","gopher_prefs");
+    &menu_item("Change multiple-column menu preferences","mult_col_prefs");
+    &menu_item("Change arrow/highlight selection line menu preferences","arrow_prefs");
+    &menu_item("Change numbering on all menus","numbered_prefs");
+
+    $sel = &menu_display("",$menu_default_row,$menu_default_top,$menu_default_col);
+
+    if ($sel eq "exit") { last; }
+    if ($sel eq "%EMPTY%") {
+      die "Not enough screen lines to display demo menu\n";
+    }
+    if ($sel ne "%UP%") { 
+      &$sel(); # Note that this assumes the "action_text" is a subroutine name	
+    }
+  }
+  &endwin;
+  exit;
+
+#
+# Help routine for items on main menu panel
+#
+sub main_menu_help {
+  local($item_text,$item_tag) = @_;
+
+  &top_title("PerlMenu -- Demo Help Screen for Specific Menu Items");
+  &print_nl("Selection \"$item_text\"",2);
+  if ($item_tag eq "exit") {
+    &print_nl("Selecting this item will immediately exit this demo.",1);
+  }
+  elsif ($item_tag eq "test_short_menu") {
+    &print_nl("A single-page menu has a few items which fit on one screen.",1);
+    &print_nl("No wrapping or scrolling of the menu occurs.",1);
+    &print_nl("",1);
+  }
+  elsif ($item_tag eq "test_long_menu") {
+    &print_nl("A long menu has items that span several pages.",1);
+    &print_nl("Wrapping and scrolling of the menu occurs.",1);
+  }
+  elsif ($item_tag eq "test_radio_menu") {
+    &print_nl("Radio-button menus have selection boxes in front of each item.",1);
+    &print_nl("Only one item can be checked at a time.",1);
+  }
+  elsif ($item_tag eq "test_mult_menu") {
+    &print_nl("A multiple-selection menu provides a list of several items.",1);
+    &print_nl("One or more items and be selected.",1);
+    &print_nl("In addition, some items can be pre-selected or locked out.",1);
+    &print_nl("Selection can be based on string-matching.",1);
+  }
+  elsif ($item_tag eq "test_subtitle_menu") {
+    &print_nl("Several sub-title and bottom title options are available.",1);
+    &print_nl("This selection demonstates them.",1);
+  }
+  elsif ($item_tag eq "prefs") {
+    &print_nl("The PerlMenu designer can provide actions based on overall preferences.",1);
+    &print_nl("This demo shows some of the arrow-key wrapping modes available.",1);
+  }
+
+  &pause("(Press any key to exit help)");
+}
+
+#
+#  Build a short (one page) demo menu.
+#
+sub test_short_menu {
+  local($sel);
+
+  while (1) {
+
+# Init a numbered menu with a title
+    &menu_init($numbered_flag,"Short Menu (fits on one page)");
+
+# Add item to return to main menu.
+    &menu_item("(Exit)","exit");
+
+# Add several items
+    &menu_item("Dog","animal");
+    &menu_item("Cat","animal");
+    &menu_item("Granite","mineral");
+    &menu_item("Mouse","animal");
+    &menu_item("Shale","mineral");
+    &menu_item("Onion","vegetable");
+    &menu_item("Carrot","vegetable");
+
+# Display menu and process selection.
+# Note that the previous position is not remembered because parms 2 and 3 
+# are not supplied to store values used on subsequent call.
+    $sel= &menu_display("");
+
+    if (($sel eq "%UP%") || ($sel eq "exit")) { return; }
+    &clear_screen();
+    &pause("You picked a $sel.");
+  }
+}
+
+#
+# Build demo long menu (several pages)
+#
+sub test_long_menu {
+  local($sel_num);
+
+  local($menu_default_top) = 0; # Storage for local top menu item number.
+  local($menu_default_row,$menu_default_col) = 0;     # Storage for local arrow location.
+
+  while (1) {
+
+# Init a numbered menu with title
+    &menu_init($numbered_flag,"Long Menu (fits on several pages)");
+
+# Add item to return to main menu.
+    &menu_item("(Exit)","exit");
+
+# Build lots of entries in the menu
+    if ($mult_flag) { $max = 200; }
+    else { $max = 50; }
+    for ($i = 1; $i < $max; $i++) {
+      $sel_num = $i + 1;
+      &menu_item("Item $sel_num","action-$sel_num");
+    }
+
+# Get user selection.
+# Note that local parms 2 and 3 are provided to provide storage of the
+# default arrow location and top menu item on the screen for subsequent call.
+    $sel = &menu_display("",$menu_default_row,$menu_default_top,$menu_default_col);
+
+    if (($sel eq "%UP%") || ($sel eq "exit")) { return; }
+    &clear_screen();
+    &pause("You picked the item with selection-action $sel.");
+  }
+}
+
+#
+#  Build a radio-button demo menu.
+#
+sub test_radio_menu {
+  local($sel);
+
+# Init a numbered menu with a title
+  &menu_init($numbered_flag,"Radio-button Menu");
+
+# Add a few items
+  &menu_item("Setting A","a");
+  &menu_item("Setting B","b");
+  &menu_item("Setting C","c");
+
+# Display menu and process selection.
+# Note that the second operand is the "current selection".
+  $sel= &menu_display_radio("","a");
+
+  if ($sel eq "%UP%") { return; }
+  &clear_screen();
+  &pause("You set it to $sel.");
+}
+
+#
+#  Build a multiple-selection demo menu.
+#
+sub test_mult_menu {
+  local($sel,$i,$sel_num);
+
+# Init a numbered menu with a title and subtitle
+  &menu_init($numbered_flag,"Multiple Selection Menu",0,"-Pets");
+
+# Add a few items
+  &menu_item("Dog","dog");
+  &menu_item("Cat","cat");
+  &menu_item("Gerbil (pre-selected)","gerbil",1);
+  &menu_item("Hamster (locked out)","hamster",-1);
+  &menu_item("Goldfish","goldfish");
+
+# Display menu and process selection.
+  $sel = &menu_display_mult("");
+
+  if ($sel eq "%UP%") { return; }
+
+# Process user selection.
+# Note how "split" is used to split the multiple-selection string into
+# individual pieces.
+  &clear_screen();
+  if ($sel eq "%NONE%") {
+    &pause("(You didn't select anything)");
+  } else {
+    &print_nl("You selected the following:",1);
+    split(/[,]/,$sel);  # Put return in @_
+    foreach (@_) { &print_nl("  $_",1); }
+    &pause("");
+  }
+}
+
+#
+# Build demo short menu (with sub-titles generated by a routine)
+#
+sub test_subtitle_menu {
+  local($sel_num);
+
+  local($menu_default_top) = 0; # Storage for local top menu item number.
+  local($menu_default_row,$menu_default_col) = 0;     # Storage for local arrow location.
+
+  while (1) {
+    $title_cnt++;		# Jog the count
+
+# Init a numbered menu with title, sub-titles, and bottom titles of all
+# varieties.
+    &menu_init($numbered_flag,"Menu with dynamic sub-titles and bottom titles",
+	       0,"&sub_title_builder","&bottom_title_builder");
+
+# Add item to return to main menu.
+    &menu_item("(Exit)","exit");
+
+# Build 25 entries in the menu
+    $i = 1;
+    while ($i < 25) {
+      $sel_num = $i + 1;
+      &menu_item("Item $sel_num","action-$sel_num");
+      $i++;
+    }
+
+# Get user selection.
+# Note that local parms 2 and 3 are provided to provide storage of the
+# default arrow location and top menu item on the screen for subsequent call.
+    $sel = &menu_display("",$menu_default_row,$menu_default_top,$menu_default_col);
+
+    if (($sel eq "%UP%") || ($sel eq "exit")) { return; }
+    &clear_screen();
+    &pause("You picked the item with selection-action $sel.");
+  }
+}
+
+#
+# Generate variable top menu
+#
+sub sub_title_builder {
+  if ($title_cnt > 1) {
+    return("-Dynamic Subtitle Number $title_cnt");
+  } else {
+    return("-Top Centered\n-<Top Left-justified\n->Top Right-justified");
+  }
+}
+
+#
+# Generate variable bottom menu
+#
+sub bottom_title_builder {
+  if ($title_cnt > 1) {
+    return("This could say YOU HAVE $title_cnt NEW PIECES OF MAIL");
+  } else {
+    return("Bottom Centered\n-<Bottom Left-justified\n->Bottom Right-justified");
+  }
+}
+
+#
+# Toggle arrow-action/scrolling preferences
+#
+sub gopher_prefs {
+
+# Init a numbered menu with a title
+  &menu_init($numbered_flag,"Arrow-Wrap/Scrolling Preference Setting");
+
+# Add secelection items
+  &menu_item("Default arrow action (scrolls/nowrap)","default");
+  &menu_item("More \"gopher-like\" arrow action (pages/wraps)","gopher-like");
+
+# Display menu and process selection.
+# Note that the second operand is the "current selection".
+  $sel= &menu_display_radio("",$gopher_pref);
+
+  if ($sel eq "%UP%") { return; }
+  $gopher_pref = $sel;
+
+  if ($sel eq "default") { $gopher_flag = 0; }
+  else { $gopher_flag = 1; }
+
+  &menu_prefs(0,$gopher_flag,0,"","",$mult_flag,$arrow_flag);
+}
+
+#
+# Toggle multiple-column preferences
+#
+sub mult_col_prefs {
+
+# Init a numbered menu with a title
+  &menu_init($numbered_flag,"Multiple-column Preference Setting");
+
+# Add secelection items
+  &menu_item("Single column menus","single");
+  &menu_item("Multiple column menus","multiple");
+
+# Display menu and process selection.
+# Note that the second operand is the "current selection".
+  $sel= &menu_display_radio("",$mult_pref);
+
+  if ($sel eq "%UP%") { return; }
+  $mult_pref = $sel;
+
+  if ($sel eq "single") { $mult_flag = 0; }
+  else { $mult_flag = 1; }
+
+  &menu_prefs(0,$gopher_flag,0,"","",$mult_flag,$arrow_flag);
+}
+
+#
+# Toggle arrow/highlight selection cursor preferences
+#
+sub arrow_prefs {
+
+# Init a menu with a title
+  &menu_init($numbered_flag,"Arrow/Highlighted Selection Cursor Preference");
+
+# Add secelection items
+  &menu_item("Arrow in front of selection text","arrow");
+  &menu_item("Highlighted selection text","highlight");
+
+# Display menu and process selection.
+# Note that the second operand is the "current selection".
+  $sel= &menu_display_radio("",$arrow_pref);
+
+  if ($sel eq "%UP%") { return; }
+  $arrow_pref = $sel;
+
+  if ($sel eq "arrow") { $arrow_flag = 0; }
+  else { $arrow_flag = 1; }
+
+  &menu_prefs(0,$gopher_flag,0,"","",$mult_flag,$arrow_flag);
+}
+
+#
+# Toggle numbered/unnumbered for this demo
+# NOTE THAT THIS IS NOT A "MENU_PREF" PREFERENCE SETTING
+#
+sub numbered_prefs {
+
+# Init a numbered menu with a title
+  &menu_init($numbered_flag,"Numbered/Unnumbered Control");
+
+# Add selection items
+  &menu_item("Numbered menus","numbered");
+  &menu_item("Unnumbered menus","unnumbered");
+
+# Display menu and process selection.
+# Note that the second operand is the "current selection".
+  $sel = &menu_display_radio("",$num_pref);
+
+  if ($sel eq "%UP%") { return; }
+  $num_pref = $sel;
+
+  if ($sel eq "numbered") { $numbered_flag = 1; }
+  else { $numbered_flag = 0; }
+}

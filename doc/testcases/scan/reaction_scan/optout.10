@@ -1,0 +1,121 @@
+  The input energy =   -392.032404550067     
+  Optimisation step number =            0
+  The following bonds are constrained
+          15          33  0.744000000000000     
+  Bond constraints
+        15        33     0.744000     0.841176
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   0.268593952963371     
+  The estimated next step size =   6.783392569090567E-002
+  The estimated change in energy  =  -6.007927022883297E-003
+           Item               Value      Thresold
+Maximum Force                1.667050    0.000450   NO 
+RMS     Force                0.268594    0.000150   NO 
+Maximum Displacement         0.080997    0.001800   NO 
+RMS     Displacement         0.012883    0.001200   NO 
+  Unusual bonds were added to the structure
+          14          15
+          14          33
+  The input energy =   -392.037549881146     
+  Optimisation step number =            1
+  The following bonds are constrained
+          15          33  0.744000000000000     
+  Bond constraints
+        15        33     0.744000     0.745258
+  Previously predicted energy change =  -6.007927022883297E-003
+  Actual energy change               =  -5.145331079006610E-003
+  The trust radius now =   0.495000000000000     
+ The hessian has            2  negative eigenvalues
+  The current gradient norm =   3.077740298870613E-003
+  The estimated next step size =   3.938758177378887E-003
+  The estimated change in energy  =  -2.657009190175842E-006
+           Item               Value      Thresold
+Maximum Force                0.019521    0.000450   NO 
+RMS     Force                0.003078    0.000150   NO 
+Maximum Displacement         0.005343    0.001800   NO 
+RMS     Displacement         0.000748    0.001200   YES
+  Unusual bonds were added to the structure
+          14          15
+          14          33
+  The input energy =   -392.037550846018     
+  Optimisation step number =            2
+  The following bonds are constrained
+          15          33  0.744000000000000     
+  Bond constraints
+        15        33     0.744000     0.744180
+  Previously predicted energy change =  -2.657009190175842E-006
+  Actual energy change               =  -9.648720151744783E-007
+  The trust radius now =   0.495000000000000     
+ The hessian has            2  negative eigenvalues
+  The current gradient norm =   1.049411851899965E-004
+  The estimated next step size =   5.362386658662692E-003
+  The estimated change in energy  =  -8.069514912020381E-006
+           Item               Value      Thresold
+Maximum Force                0.000807    0.000450   NO 
+RMS     Force                0.000105    0.000150   YES
+Maximum Displacement         0.004646    0.001800   NO 
+RMS     Displacement         0.001018    0.001200   YES
+  Unusual bonds were added to the structure
+          14          15
+          14          33
+  The input energy =   -392.037559179958     
+  Optimisation step number =            3
+  The following bonds are constrained
+          15          33  0.744000000000000     
+  Bond constraints
+        15        33     0.744000     0.744144
+  Previously predicted energy change =  -8.069514912020381E-006
+  Actual energy change               =  -8.333940002103191E-006
+  The trust radius now =   0.495000000000000     
+ The hessian has            2  negative eigenvalues
+  The current gradient norm =   9.223557459630189E-005
+  The estimated next step size =   6.104827169822410E-003
+  The estimated change in energy  =  -9.656678300348652E-006
+           Item               Value      Thresold
+Maximum Force                0.000652    0.000450   NO 
+RMS     Force                0.000092    0.000150   YES
+Maximum Displacement         0.005815    0.001800   NO 
+RMS     Displacement         0.001159    0.001200   YES
+  Unusual bonds were added to the structure
+          14          15
+          14          33
+  The input energy =   -392.037568381812     
+  Optimisation step number =            4
+  The following bonds are constrained
+          15          33  0.744000000000000     
+  Bond constraints
+        15        33     0.744000     0.744156
+  Previously predicted energy change =  -9.656678300348652E-006
+  Actual energy change               =  -9.201853970353113E-006
+  The trust radius now =   0.495000000000000     
+ The hessian has            2  negative eigenvalues
+  The current gradient norm =   8.511735713934706E-005
+  The estimated next step size =   5.695407621566957E-003
+  The estimated change in energy  =  -8.258537888058190E-006
+           Item               Value      Thresold
+Maximum Force                0.000461    0.000450   NO 
+RMS     Force                0.000085    0.000150   YES
+Maximum Displacement         0.005468    0.001800   NO 
+RMS     Displacement         0.001082    0.001200   YES
+  Unusual bonds were added to the structure
+          14          15
+          14          33
+  The input energy =   -392.037576480739     
+  Optimisation step number =            5
+  The following bonds are constrained
+          15          33  0.744000000000000     
+  Bond constraints
+        15        33     0.744000     0.744159
+  Previously predicted energy change =  -8.258537888058190E-006
+  Actual energy change               =  -8.098927025912417E-006
+  The trust radius now =   0.495000000000000     
+ The hessian has            2  negative eigenvalues
+  The current gradient norm =   8.351437329306896E-005
+  The estimated next step size =   6.038803172465666E-003
+  The estimated change in energy  =  -9.399191049361882E-006
+           Item               Value      Thresold
+Maximum Force                0.000424    0.000450   YES
+RMS     Force                0.000084    0.000150   YES
+Maximum Displacement         0.005727    0.001800   NO 
+RMS     Displacement         0.001147    0.001200   YES
+  Geometry has converged

@@ -1,0 +1,359 @@
+              INPUT to SMFA
+
+The purpose of the calculation is to find a saddle point geometry (TS)
+
+The maximum number of optimisation steps is
+100
+Enter the number of atoms you will denote as relevant to the TS
+3
+Enter each atom number, one per line
+14
+15
+33
+
+The Level of fragmentation is
+3
+The cutoff value for nonbonded interactions is
+1.1
+
+The quantum chemistry program package is
+GAUSSIAN09
+The electronic structure method is
+HF
+The basis set is
+cc-pVDZ
+The job type is energy (0), force (1), hessian (2), opt (3), opt=TS (4), scan (5)
+4
+Additional options are
+
+Is long range dispersion accounted for?
+N
+
+The molecular coordinates are in file
+approxTS.xyz
+The number of atoms in the molecule is
+33
+
+The number of metal or unusual atoms is 
+ 1 
+The atom number(s) and associated charge(s)
+14 0
+
+
+             EXAMINATION of the MOLECULAR COORDINATES shows:
+
+  The total molecular charge =            0
+
+  The following H atom has been made neutral
+          33
+ 
+  Unusual bonds were added to the structure
+          14          33
+
+ The following metal-containing groups were found
+ Check that the metal charge is correct 
+ 
+ The net charge on this group is            0
+  The first atom in this group is atom number           14
+ The number of atoms in the group is 
+           6
+  The group coordinates are
+C     0.3905    0.0147    0.6478
+H    -0.1641   -0.0088    1.4796
+H    -0.1228   -0.0084   -0.2101
+H     1.1228   -1.0383    0.6655
+H     1.1315    0.8175    0.6662
+H     1.6432   -1.8565    0.6780
+
+ The following other charged groups were found
+ 
+
+
+             FRAGMENTATION RESULTS
+
+A description of the fragments can be found in file frags.out
+The coordinates of the fragments in xyz format are contained
+in seefrags (in suitable format for graphics).
+
+ Total numbers of atoms and electrons:           33          83
+  The number of fragments is
+          13
+ 
+  The largest number of electrons in a fragment
+  is           35  for fragment number            4
+ 
+An ab initio input file for this fragment is contained in
+LARGE.com or LARGE.inp or LARGE.nw
+ 
+ 
+            PARALLEL IMPLEMENTATION
+ 
+  The bulk of the cputime is employed in performing
+  electronic structure calculations for the many
+  molecular fragments, and for fragment properties that
+  are needed to evaluate the non-bonded interactions.
+  For these calculations, the recommended number of
+  cpus for maximum efficiency and and minimum walltime
+  is
+ 
+          13
+ 
+  This assumes that each fragment uses only 1 cpu.
+ 
+  The user sets the number of cpus in main menu item 4
+ 
+  The user can specify less than           13  cpus,
+  for example, if only a smaller number is available.
+ 
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00201907
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00238971
+  and a long range electrostatic component of
+               0.00037064 =       0.9731 (kJ/mol)
+
+The normal mode frequencies are printed in file FREQUENCIES
+
+The normal mode eigenvectors are printed in file NORMAL_MODES
+
+A simulated IR spectrum is printed in file SPECTRUM
+
+ The zero-point energy =     829.28 kJ/mol
+Output from optimization step 1
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00181292
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00217657
+  and a long range electrostatic component of
+               0.00036365 =       0.9548 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 1 during the optimisation
+Output from optimization step 2
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00174035
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00209794
+  and a long range electrostatic component of
+               0.00035759 =       0.9389 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 2 during the optimisation
+Output from optimization step 3
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00179391
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00214749
+  and a long range electrostatic component of
+               0.00035358 =       0.9283 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 3 during the optimisation
+Output from optimization step 4
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00183320
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00218563
+  and a long range electrostatic component of
+               0.00035243 =       0.9253 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 4 during the optimisation
+Output from optimization step 5
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00184962
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00220193
+  and a long range electrostatic component of
+               0.00035231 =       0.9250 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 5 during the optimisation
+Output from optimization step 6
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00186693
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00221938
+  and a long range electrostatic component of
+               0.00035245 =       0.9254 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 6 during the optimisation
+Output from optimization step 7
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00187970
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00223279
+  and a long range electrostatic component of
+               0.00035310 =       0.9271 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 7 during the optimisation
+Output from optimization step 8
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00188860
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00224195
+  and a long range electrostatic component of
+               0.00035335 =       0.9277 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 8 during the optimisation
+Output from optimization step 9
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00189892
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00225239
+  and a long range electrostatic component of
+               0.00035348 =       0.9280 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 9 during the optimisation
+Output from optimization step 10
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00191172
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00226531
+  and a long range electrostatic component of
+               0.00035359 =       0.9283 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 10 during the optimisation
+Output from optimization step 11
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00192650
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00228024
+  and a long range electrostatic component of
+               0.00035374 =       0.9287 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 11 during the optimisation
+Output from optimization step 12
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00193895
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00229328
+  and a long range electrostatic component of
+               0.00035433 =       0.9303 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 12 during the optimisation
+Output from optimization step 13
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00195384
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00230803
+  and a long range electrostatic component of
+               0.00035419 =       0.9299 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+Intermediate geometry 13 during the optimisation
+Output from optimization step 14
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -392.00196799
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -392.00232288
+  and a long range electrostatic component of
+               0.00035488 =       0.9317 (kJ/mol)
+
+ The energy gradients are contained in the file combinedderivs
+ 
+The geometry optimsation has converged in '14' steps.
+The converged geometry is contained in the file CONVERGEDCOORDS.
+Intermediate output from the optimisation process can be viewed
+in the file optout
+ 
+The initial geometry had a total energy of
+-392.002019066995
+ 
+The final geometry has a total energy of
+-392.001967993457

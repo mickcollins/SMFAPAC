@@ -1,0 +1,12 @@
+Title "Ethylene  6-31G(d)  Gaussian 94"
+File C2H4-g94.fchk
+
+Angstrom
+Multipoles
+  Limit 4
+  Limit 1 H
+  Radius H 0.35
+  Punch C2H4.punch
+Start
+
+Finish

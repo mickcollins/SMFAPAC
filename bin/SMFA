@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+$place=`which SMFA`;
+chomp($place);
+@arr=split("/bin/SMFA",$place);
+$CODEDIR=join("",$arr[0],"/bin");
+$EXEDIR=join("",$arr[0],"/exe");
+system("echo $CODEDIR > CODENAME");
+system("echo $EXEDIR > EXENAME");
+
+
+system("cp $CODEDIR/SMFA_main.pl allcode.pl");
+system("cat $CODEDIR/SMFA_subs.pl >> allcode.pl");
+system("cat $CODEDIR/SMFA_gau.pl >> allcode.pl");
+system("cat $CODEDIR/SMFA_gam.pl >> allcode.pl");
+system("cat $CODEDIR/SMFA_qch.pl >> allcode.pl");
+system("cat $CODEDIR/SMFA_dal.pl >> allcode.pl");
+system("cat $CODEDIR/SMFA_nwc.pl >> allcode.pl");
+system("chmod +x allcode.pl");
+system("./allcode.pl");
+

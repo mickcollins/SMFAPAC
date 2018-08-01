@@ -1,0 +1,273 @@
+              INPUT to SMFA
+
+The purpose of the calculation is to evaluate the energy
+
+The Level of fragmentation is
+1
+The cutoff value for nonbonded interactions is
+0.
+
+The quantum chemistry program package is
+GAUSSIAN09
+The electronic structure method is
+HF
+The basis set is
+6-31G(d,p)
+The job type is energy (0), force (1), hessian (2), opt (3), opt=TS (4), scan (5)
+0
+Additional options are
+
+Is long range dispersion accounted for?
+N
+
+The molecular coordinates are in file
+5tlr_1.xyz
+The number of atoms in the molecule is
+557
+
+  There are no charges to be specified
+
+
+             EXAMINATION of the MOLECULAR COORDINATES shows:
+
+  The total molecular charge =            7
+
+
+ The following metal-containing groups were found
+ Check that the metal charge is correct 
+ 
+
+ The following other charged groups were found
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number            1
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+N   -10.7170    6.0300    0.2760
+C    -9.7910    7.0890    0.6310
+H    -8.8529    6.7999    0.4403
+H   -11.7050    6.2780    0.4760
+H   -10.4620    5.1540    0.7720
+H   -10.6290    5.8330   -0.7410
+H   -10.0110    7.9650    0.0390
+H    -9.8990    7.3250    1.6790
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number           96
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C     0.4150    8.5000    7.9700
+H     0.5553    7.5691    7.6327
+N     1.3520    9.4700    7.3510
+H    -0.5960    8.8020    7.7440
+H     0.5580    8.5070    9.0400
+H     2.3420    9.1960    7.5070
+H     1.2000   10.4130    7.7650
+H     1.1870    9.5730    6.3280
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          188
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -1.9250   -3.0940   -3.8200
+H    -2.5121   -2.9848   -3.0179
+C    -1.7160   -1.7900   -4.5660
+O    -1.2570   -0.8170   -3.9660
+O    -2.0220   -1.7340   -5.7810
+H    -0.9620   -3.4730   -3.5110
+H    -2.3870   -3.8000   -4.4920
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          240
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C    -7.4240    1.1890   -5.4830
+H    -7.4525    2.0704   -5.9545
+N    -8.6460    0.3960   -5.7210
+H    -6.5680    0.6340   -5.8340
+H    -7.3200    1.3700   -4.4240
+H    -8.5370   -0.5470   -5.2980
+H    -8.8370    0.2730   -6.7360
+H    -9.4750    0.8420   -5.2780
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          284
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C    -3.2770    7.7590  -11.9340
+H    -2.7489    7.3901  -11.1691
+N    -2.4360    7.9290  -13.1390
+H    -4.0840    7.0780  -12.1630
+H    -3.6830    8.7180  -11.6480
+H    -1.6380    8.5710  -12.9570
+H    -2.9680    8.3080  -13.9440
+H    -2.0270    7.0180  -13.4300
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          361
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C     3.2770   -8.6460   -2.1050
+H     3.5801   -8.0590   -1.3543
+N     2.1440   -8.0420   -2.8390
+C     2.0620   -7.9010   -4.1760
+N     3.1160   -8.1720   -4.9460
+N     0.9400   -7.4380   -4.7350
+H     4.1020   -8.8060   -2.7810
+H     2.9600   -9.5930   -1.6960
+H     1.4000   -7.7590   -2.2550
+H     3.9940   -8.4760   -4.5660
+H     3.0790   -8.0670   -5.9430
+H     0.1250   -7.1810   -4.2060
+H     0.8460   -7.3050   -5.7270
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          386
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C    10.7350   -6.3800   -2.6190
+H    10.8551   -5.6991   -1.8965
+N    11.9690   -6.5740   -3.3890
+H    10.4580   -7.3200   -2.1660
+H     9.9470   -6.0540   -3.2830
+H    12.7330   -6.9010   -2.7650
+H    12.2550   -5.6840   -3.8450
+H    11.8080   -7.2910   -4.1250
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          421
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C     3.4820   -2.9110    7.1010
+H     3.3611   -2.5389    6.1807
+N     4.3320   -2.0590    7.9560
+C     5.1050   -2.5020    8.9610
+N     5.3320   -3.8060    9.1130
+N     5.6920   -1.6330    9.7710
+H     2.5130   -3.0330    7.5590
+H     3.9610   -3.8700    6.9710
+H     4.2580   -1.0920    7.7940
+H     4.9520   -4.4990    8.4940
+H     5.8990   -4.1630    9.8620
+H     5.5770   -0.6440    9.6550
+H     6.2640   -1.9240   10.5440
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          480
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C     6.8850   -0.1610   -4.6110
+H     7.1337    0.7427   -4.2624
+N     7.9510   -1.1500   -4.3590
+H     5.9840   -0.4870   -4.1130
+H     6.7050   -0.0940   -5.6720
+H     8.8610   -0.8430   -4.7540
+H     7.7190   -2.0770   -4.7650
+H     8.0830   -1.2970   -3.3360
+ 
+
+  The number of Hydrogen bonds is
+          13
+  The heavy atoms connected by these are 
+          89          42          -1
+         121         418          -1
+         170         134          -1
+         223         218          -1
+         299         226          -1
+         318         476          -1
+         334         190          -1
+         344         442          -1
+         349         406          -1
+         362         148          -1
+         463          49          -1
+         473         321          -1
+         481         349          -1
+
+             FRAGMENTATION RESULTS
+
+A description of the fragments can be found in file frags.out
+The coordinates of the fragments in xyz format are contained
+in seefrags (in suitable format for graphics).
+
+ Total numbers of atoms and electrons:          557        2146
+  The number of fragments is
+         366
+ 
+  The largest number of electrons in a fragment
+  is           70  for fragment number            2
+ 
+An ab initio input file for this fragment is contained in
+LARGE.com or LARGE.inp or LARGE.nw
+ 
+ 
+            PARALLEL IMPLEMENTATION
+ 
+  The bulk of the cputime is employed in performing
+  electronic structure calculations for the many
+  molecular fragments, and for fragment properties that
+  are needed to evaluate the non-bonded interactions.
+  For these calculations, the recommended number of
+  cpus for maximum efficiency and and minimum walltime
+  is
+ 
+          16
+ 
+  This assumes that each fragment uses only 1 cpu.
+ 
+  The user sets the number of cpus in main menu item 4
+ 
+  The user can specify less than           16  cpus,
+  for example, if only a smaller number is available.
+ 
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+          -15440.88036549
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+          -15443.38228408
+  and a long range electrostatic component of
+               2.50191859 =    6568.7873 (kJ/mol)
+
+
+
+ SMFA will generate the data to allow you to visualise the electrostatic potential
+ on the solvent accessible surface surrounding the molecule.
+ The electrostatic potential is generated from a charge and dipole, quadrupole,
+ octapole and hexadecapole moments distributed onto every atom in the molecule.
+ These charges and electrostatic moments are generated from the electron densities that
+ were generated for the Level = 1 fragments, using Stone's method applied to the output
+ from GAUSSIAN or QChem. Similarly, Stone's method is integrated into GAMESS, and the
+ corresponding moments are used. For NWChem, only distributed charges on the atoms are
+ available for use.
+
+ The solvent accessible surface is defined as the surface that is separated from the
+ nearest atom in the molecule by the Van der Waals radius of that atom plus a radius
+ associated with the solvent molecule.
+
+ This utility program provides two output files for graphics:
+ The first produces a file called SOLACCSURFACE. This is an xyz format file
+ which can be loaded by programs like VMD or MacMolPlt to show you the
+ solvent-accessible-surface surrounding the molecule. This graphic is useful in
+ conjunction with the second file, called ESP.cube. This file has the format of a
+ GAUSSIAN cubegen file, and can be read by VMD (and other programs) to show
+ the electrostatic potential on the solvent-accessible-surface. See the User's manual
+ for a guide to using VMD with this file.
+
+ The solvent radius entered is 1.4
+
+ The requested density (per square Angstrom) of points on the surface is 1.0
+
+The number of grid points for the 'cube' of ESP data is 100 per axis
+

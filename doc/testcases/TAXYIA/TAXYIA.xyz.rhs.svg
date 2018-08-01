@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<svg version="1.1" id="topsvg"
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:cml="http://www.xml-cml.org/schema" x="0" y="0" width="100%" height="100%" viewBox="0 0 100 66">
+<title>OBDepict</title>
+<rect x="0" y="0" width="100" height="66" fill="white"/>
+<text text-anchor="middle" font-size="2" fill ="black" font-family="sans-serif"
+x="16.6667" y="32.3333" >Fragment 1</text>
+<g transform="translate(0,0)">
+<svg width="33.3333" height="33.3333" x="0" y="0" viewBox="0 0 189.282 154.641"
+font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="2"  stroke-linecap="round">
+<line x1="51.3" y1="88.1" x2="74.6" y2="74.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="74.6" y1="74.6" x2="74.6" y2="101.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="74.6" y1="74.6" x2="61.1" y2="51.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="74.6" y1="74.6" x2="114.6" y2="74.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="114.6" y1="101.6" x2="114.6" y2="74.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="138.0" y1="88.1" x2="114.6" y2="74.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="114.6" y1="74.6" x2="128.1" y2="51.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<text x="128.641016" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000000" y="102.641016" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="48.641016" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="68.641016" y="122.641016" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="108.641016" y="122.641016" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="143.282032" y="102.641016" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+</svg>
+</g>
+<text text-anchor="middle" font-size="2.000000" fill ="black" font-family="sans-serif"
+x="50.000000" y="32.333333" >Fragment 4</text>
+<g transform="translate(33.333333,0.000000)">
+<svg width="33.333333" height="33.333333" x="0" y="0" viewBox="0 0 221.889524 241.334547"
+font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="2.000000"  stroke-linecap="round">
+<line x1="88.7" y1="188.4" x2="91.5" y2="161.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="66.8" y1="172.5" x2="91.5" y2="161.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="142.9" y1="120.7" x2="168.6" y2="112.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="144.8" y1="126.4" x2="170.5" y2="118.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="79.1" y1="123.5" x2="52.7" y2="129.1" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="79.1" y1="123.5" x2="61.1" y2="103.4" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="111.5" y1="87.0" x2="111.5" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="111.5" y1="60.0" x2="88.1" y2="46.5" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="110.0" y1="57.4" x2="133.4" y2="43.9" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="113.0" y1="62.6" x2="136.4" y2="49.1" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="122.0" y1="107.6" x2="143.8" y2="123.5" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="143.8" y1="123.5" x2="135.5" y2="149.2" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="118.5" y1="161.6" x2="91.5" y2="161.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="91.5" y1="161.6" x2="79.1" y2="123.5" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="79.1" y1="123.5" x2="101.0" y2="107.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<text x="105.486584" y="108.000000" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="125.486584" y="169.553671" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="175.889524" y="119.150730" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="140.127600" y="48.000000" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="46.360680" y="101.785617" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="48.944765" y="185.823136" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="81.305445" y="209.334547" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="70.845568" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000000" y="139.827878" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+</svg>
+</g>
+<text text-anchor="middle" font-size="2.000000" fill ="black" font-family="sans-serif"
+x="83.333333" y="32.333333" >Fragment 5</text>
+<g transform="translate(66.666667,0.000000)">
+<svg width="33.333333" height="33.333333" x="0" y="0" viewBox="0 0 189.282032 154.641016"
+font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="2.000000"  stroke-linecap="round">
+<line x1="61.1" y1="103.4" x2="74.6" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="138.0" y1="66.5" x2="114.6" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="74.6" y1="80.0" x2="74.6" y2="53.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="74.6" y1="80.0" x2="51.3" y2="66.5" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="74.6" y1="80.0" x2="114.6" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="114.6" y1="53.0" x2="114.6" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="114.6" y1="80.0" x2="128.1" y2="103.4" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<text x="48.641016" y="122.641016" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="128.641016" y="122.641016" fill="rgb(127,178,255)"  stroke="rgb(127,178,255)" stroke-width="1" font-size="16" >F</text>
+<text x="108.641016" y="48.000000" fill="rgb(127,178,255)"  stroke="rgb(127,178,255)" stroke-width="1" font-size="16" >F</text>
+<text x="143.282032" y="68.000000" fill="rgb(127,178,255)"  stroke="rgb(127,178,255)" stroke-width="1" font-size="16" >F</text>
+<text x="34.000000" y="68.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="68.641016" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+</svg>
+</g>
+<text text-anchor="middle" font-size="2.000000" fill ="black" font-family="sans-serif"
+x="16.666667" y="65.666667" >Fragment 6</text>
+<g transform="translate(0.000000,33.333333)">
+<svg width="33.333333" height="33.333333" x="0" y="0" viewBox="0 0 180.000000 154.641016"
+font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="2.000000"  stroke-linecap="round">
+<line x1="127.0" y1="74.6" x2="100.0" y2="74.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="100.0" y1="74.6" x2="76.6" y2="88.1" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="100.0" y1="74.6" x2="86.5" y2="51.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="100.0" y1="74.6" x2="100.0" y2="101.6" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="67.0" y1="40.0" x2="53.0" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<text x="134.000000" y="82.641016" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="74.000000" y="48.000000" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="34.000000" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="94.000000" y="122.641016" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="59.358984" y="102.641016" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+</svg>
+</g>
+<text text-anchor="middle" font-size="2.000000" fill ="black" font-family="sans-serif"
+x="50.000000" y="65.666667" >Fragment 9</text>
+<g transform="translate(33.333333,33.333333)">
+<svg width="33.333333" height="33.333333" x="0" y="0" viewBox="0 0 223.923048 240.000000"
+font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="2.000000"  stroke-linecap="round">
+<line x1="114.6" y1="173.0" x2="114.6" y2="187.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="125.9" y1="153.5" x2="149.3" y2="140.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="150.8" y1="137.4" x2="174.2" y2="150.9" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="147.8" y1="142.6" x2="171.2" y2="156.1" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="149.3" y1="140.0" x2="149.3" y2="113.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="172.7" y1="86.5" x2="160.5" y2="93.5" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="138.0" y1="93.5" x2="114.6" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="114.6" y1="80.0" x2="80.0" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="111.6" y1="80.0" x2="111.6" y2="53.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="117.6" y1="80.0" x2="117.6" y2="53.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="66.5" y1="76.6" x2="80.0" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="80.0" y1="127.0" x2="80.0" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="80.0" y1="100.0" x2="53.0" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<text x="74.000000" y="148.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="143.282032" y="108.000000" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="108.641016" y="168.000000" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="177.923048" y="168.000000" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="108.641016" y="48.000000" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="34.000000" y="108.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="54.000000" y="73.358984" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="177.923048" y="88.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="108.641016" y="208.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+</svg>
+</g>
+<script type="text/ecmascript">
+  <![CDATA[
+    var svgEl = document.getElementById("topsvg");
+    svgEl.addEventListener('DOMMouseScroll', wheel, false);
+    svgEl.addEventListener('mousewheel', wheel, false);
+    var startx=0;
+    var starty=0;
+    function wheel(evt){
+      evt = evt ? evt : window.event;
+      var normal = evt.detail ? evt.detail * -1 : evt.wheelDelta / 40;
+      var vb = new Array(4);
+      var vbtext = svgEl.getAttributeNS(null,"viewBox");
+      vb = vbtext.split(" ");
+      var zoom = (normal<0)? 1.41 : 0.71;
+      //var dwidth = parseFloat(Math.max(vb[2],vb[3])) * (1-zoom);
+      vb[0] = parseFloat(vb[0]) + parseFloat(vb[2])*(1-zoom) * evt.clientX/innerWidth;
+      vb[1] = parseFloat(vb[1]) + parseFloat(vb[3])*(1-zoom) * evt.clientY/innerHeight;
+      vb[2] = parseFloat(vb[2]) * zoom;
+      vb[3] = parseFloat(vb[3]) * zoom;
+      svgEl.setAttributeNS(null, "viewBox", vb.join(" "));
+      if (evt.preventDefault)
+        evt.preventDefault(); // Don't scroll the page when zooming
+    }
+   svgEl.onmousedown = function(evt) {
+      startx = evt.clientX;
+      starty = evt.clientY;
+    }
+    svgEl.onmousemove=function(evt) {
+      if(startx!=0 && starty!=0 
+        && ((evt.clientX - startx)*(evt.clientX - startx)+(evt.clientY - starty)*(evt.clientY - starty)>100))
+      {
+        var vbtext = svgEl.getAttributeNS(null,"viewBox");
+        vb = vbtext.split(" ");
+        var maxwh = Math.max(parseFloat(vb[2]),parseFloat(vb[3]));
+        vb[0] = parseFloat(vb[0]) - (evt.clientX - startx)*maxwh/innerWidth;
+        vb[1] = parseFloat(vb[1]) - (evt.clientY - starty)*maxwh/innerHeight;
+        svgEl.setAttributeNS(null, "viewBox", vb.join(" "));
+        startx = evt.clientX;
+        starty = evt.clientY;
+      }
+    } 
+    svgEl.onmouseup=function() {
+      startx=0;
+      starty=0;
+    }
+    svgEl.ondblclick=function() {
+      location.reload();
+    }
+  ]]>
+</script>
+
+</svg>
+

@@ -1,0 +1,991 @@
+              INPUT to SMFA
+
+The purpose of the calculation is to evaluate the energy
+
+The Level of fragmentation is
+2
+The cutoff value for nonbonded interactions is
+0.
+
+The quantum chemistry program package is
+GAUSSIAN09
+The electronic structure method is
+HF
+The basis set is
+6-31G
+The job type is energy (0), force (1), hessian (2), opt (3), opt=TS (4), scan (5)
+0
+Additional options are
+
+Is long range dispersion accounted for?
+N
+
+The molecular coordinates are in file
+5tp6_1.xyz
+The number of atoms in the molecule is
+2769
+
+Classes of moieties that are treated as united groups
+F   amides
+F   CX2 and CX3 (X=F,Cl,..)
+
+Hydrogen bonds are treated as actual bonds
+true
+Close charged groups are taken as bonded
+false
+The factor which multiplies the sum of the vdW radii
+1.0
+
+The number of specified multiple bonds is
+0
+
+The number of specified single bonds is
+0
+
+The number of extra single bonds is
+0
+
+
+             EXAMINATION of the MOLECULAR COORDINATES shows:
+
+  The total molecular charge =          -13
+
+
+ The following metal-containing groups were found
+ Check that the metal charge is correct 
+ 
+
+ The following other charged groups were found
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number            1
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+N    -2.0800  -20.2580    7.5550
+C    -2.7940  -20.7690    6.3550
+H    -3.3814  -20.0664    5.9533
+H    -3.3300  -21.5796    6.5908
+H    -1.4840  -19.4450    7.2970
+H    -1.4750  -21.0020    7.9560
+H    -2.7650  -19.9570    8.2780
+H    -2.0550  -21.0620    5.6230
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number           17
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -6.7260  -18.1640    6.6000
+H    -5.7878  -17.9743    6.3105
+C    -7.3450  -19.3280    5.8490
+O    -7.9530  -19.0920    4.7840
+O    -7.2210  -20.4760    6.3260
+H    -6.7290  -18.3990    7.6540
+H    -7.3320  -17.2860    6.4300
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number           80
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -1.1210   -8.2930   14.2670
+H    -0.4484   -8.0165   13.5806
+C    -1.1330   -7.3780   15.4760
+O    -2.0630   -6.5520   15.5850
+O    -0.2120   -7.4880   16.3130
+H    -2.1020   -8.2790   13.8170
+H    -0.8900   -9.2960   14.5950
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number           95
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     3.4460   -5.0810   11.3020
+H     3.6432   -5.8356   10.6762
+C     4.7040   -4.4690   11.8860
+O     5.1580   -4.9470   12.9470
+O     5.2340   -3.5130   11.2830
+H     2.9070   -4.3150   10.7650
+H     2.8330   -5.4520   12.1110
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          156
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     0.7090   -4.6000    1.3290
+H     0.7324   -5.1506    2.1634
+C     0.4540   -5.4320    0.0850
+O    -0.7230   -5.5600   -0.3130
+O     1.4310   -5.9560   -0.4890
+H    -0.0850   -3.8590    1.4130
+H     1.6540   -4.1020    1.2180
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          193
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C    -7.6760  -11.0570    5.7560
+H    -6.7164  -10.7762    5.7718
+N    -7.8280  -12.4950    5.4020
+H    -8.1030  -10.8890    6.7330
+H    -8.2010  -10.4580    5.0260
+H    -7.3340  -13.0890    6.0980
+H    -7.4250  -12.6760    4.4610
+H    -8.8350  -12.7560    5.3900
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          213
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -5.6060   -3.8160    6.0270
+H    -5.4542   -3.8620    5.0397
+C    -6.7930   -2.9500    6.4020
+O    -6.6070   -1.7270    6.5680
+O    -7.9090   -3.4960    6.5300
+H    -5.7790   -4.8160    6.3960
+H    -4.7140   -3.4110    6.4950
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          307
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -12.3250   -8.6170   -2.4470
+H   -12.6064   -7.9221   -3.1087
+C   -13.1770   -8.7240   -1.1820
+O   -14.3700   -9.0730   -1.2890
+O   -12.6400   -8.4580   -0.0860
+H   -12.3240   -9.5900   -2.9300
+H   -11.3090   -8.3920   -2.1390
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          322
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C   -13.8690   -2.8320   -6.3420
+H   -14.4941   -3.6123   -6.3230
+N   -14.4220   -1.6900   -7.1240
+H   -13.6880   -2.5050   -5.3290
+H   -12.9340   -3.1420   -6.7860
+H   -15.3180   -1.3690   -6.7030
+H   -14.5990   -1.9820   -8.1060
+H   -13.7480   -0.8980   -7.1260
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          341
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -18.0060   -9.8960   -5.8970
+H   -17.8838   -9.5111   -4.9822
+C   -19.1400  -10.9050   -5.9680
+O   -18.8830  -12.1040   -5.7300
+O   -20.2820  -10.4940   -6.2600
+H   -18.2230   -9.0940   -6.5900
+H   -17.0890  -10.3880   -6.1960
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          360
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -15.6090  -15.2060   -5.7800
+H   -15.4925  -14.9837   -4.8120
+C   -16.2410  -16.5660   -6.0240
+O   -17.4860  -16.6380   -6.0930
+O   -15.4900  -17.5570   -6.1470
+H   -16.2210  -14.4490   -6.2410
+H   -14.6260  -15.1890   -6.2270
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          443
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C   -16.6610   -7.3550  -12.4110
+H   -15.8146   -7.0746  -11.9583
+N   -16.6800   -8.8160  -12.6980
+H   -17.4950   -7.1130  -11.7690
+H   -16.7540   -6.8130  -13.3410
+H   -17.5620   -9.0740  -13.1850
+H   -16.6160   -9.3560  -11.8120
+H   -15.8740   -9.0710  -13.3050
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          463
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -12.6860   -6.0850   -8.2090
+H   -11.8691   -5.5134   -8.2855
+C   -12.4460   -7.4190   -7.5060
+O   -11.2770   -7.7480   -7.2000
+O   -13.4380   -8.1370   -7.2600
+H   -13.4270   -5.5440   -7.6540
+H   -13.0610   -6.2840   -9.2020
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number          552
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C    -9.8670    4.5120  -13.1240
+H    -8.8994    4.3096  -12.9733
+N   -10.7370    3.9180  -12.0980
+C   -12.0750    4.0200  -12.0810
+N   -12.7270    4.6900  -13.0300
+N   -12.7630    3.4470  -11.1040
+H   -10.0010    5.5830  -13.1170
+H   -10.1530    4.1220  -14.0900
+H   -10.3010    3.4150  -11.3790
+H   -13.7640    4.7570  -12.9990
+H   -12.1990    5.1460  -13.8010
+H   -13.8010    3.5210  -11.0850
+H   -12.2670    2.9230  -10.3550
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          671
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -13.4100    1.0990  -19.9310
+H   -12.8795    0.2842  -20.1647
+C   -14.6360    1.2670  -20.8070
+O   -14.5150    1.8850  -21.8850
+O   -15.7180    0.7810  -20.4140
+H   -13.7290    1.0220  -18.9030
+H   -12.7800    1.9680  -20.0480
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          696
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -4.5040   -0.4810  -17.7820
+H    -5.4688   -0.6990  -17.9293
+C    -3.7130   -0.3320  -19.0730
+O    -3.3610   -1.3670  -19.6770
+O    -3.4460    0.8200  -19.4750
+H    -4.4490    0.4530  -17.2410
+H    -4.0580   -1.2660  -17.1890
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          746
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -4.8700   -5.6670  -20.4560
+H    -5.1760   -6.4381  -19.8976
+C    -5.5110   -5.6530  -21.8300
+O    -6.2370   -4.6850  -22.1350
+O    -5.2850   -6.6090  -22.6020
+H    -5.1220   -4.7450  -19.9540
+H    -3.7990   -5.7230  -20.5800
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          809
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     0.3690  -10.1290  -20.0990
+H     0.3710  -10.3137  -19.1162
+C     1.3140   -9.0070  -20.4830
+O     2.4930   -9.2970  -20.7730
+O     0.8730   -7.8380  -20.4940
+H     0.6690  -11.0260  -20.6210
+H    -0.6320   -9.8570  -20.3990
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          839
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -3.9010  -15.1130  -16.2840
+H    -3.6588  -14.7341  -15.3908
+C    -2.7710  -15.8920  -16.9500
+O    -1.7060  -15.2920  -17.2070
+O    -2.9560  -17.0990  -17.2120
+H    -4.7400  -15.7810  -16.1630
+H    -4.1880  -14.3040  -16.9400
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          861
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -8.7540  -17.6870  -12.0310
+H    -7.9757  -17.8689  -12.6319
+C   -10.0780  -18.2570  -12.5250
+O   -10.9840  -17.4600  -12.8450
+O   -10.2030  -19.4980  -12.5880
+H    -8.5480  -18.1270  -11.0640
+H    -8.8540  -16.6140  -11.9130
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          934
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -4.9180  -15.7470   -6.3120
+H    -5.2253  -14.7956   -6.3336
+C    -6.0050  -16.7200   -6.7260
+O    -6.0760  -17.0540   -7.9280
+O    -6.7840  -17.1480   -5.8490
+H    -4.0860  -15.8550   -6.9920
+H    -4.5980  -15.9930   -5.3120
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number          981
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -0.3040  -15.0340   -9.4860
+H    -0.7085  -14.2348   -9.0414
+C    -1.2450  -15.7050  -10.4650
+O    -1.7100  -16.8240  -10.1660
+O    -1.5160  -15.1120  -11.5310
+H     0.5820  -14.7230  -10.0190
+H    -0.0290  -15.7510   -8.7250
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1094
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C    10.5720   -9.9180  -10.8900
+H    10.2413   -9.1039  -10.4126
+N     9.5500  -10.5060  -11.7670
+C     9.6920  -11.6580  -12.4400
+N    10.8120  -12.3730  -12.3530
+N     8.7010  -12.0950  -13.2050
+H    11.4290   -9.6450  -11.4870
+H    10.8670  -10.6530  -10.1550
+H     8.7080  -10.0140  -11.8630
+H    11.5960  -12.0420  -11.7560
+H    10.9020  -13.2640  -12.8820
+H     7.8210  -11.5450  -13.2810
+H     8.8040  -12.9870  -13.7290
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1119
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C     9.8920   -2.8180   -8.9030
+H    10.0758   -3.7699   -8.6579
+N    10.6380   -2.4090  -10.1240
+H     8.8350   -2.7010   -9.0810
+H    10.1910   -2.1850   -8.0800
+H    10.4910   -1.3970  -10.3080
+H    10.3040   -2.9520  -10.9460
+H    11.6550   -2.5840   -9.9970
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1158
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C    11.5140  -14.2050   -5.9180
+H    11.4342  -13.2176   -5.7812
+N    10.9960  -14.9690   -4.7500
+H    10.9510  -14.4810   -6.7960
+H    12.5550  -14.4520   -6.0660
+H    11.0990  -15.9910   -4.9170
+H     9.9900  -14.7540   -4.5990
+H    11.5260  -14.7140   -3.8920
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1177
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    14.7370   -7.4690   -9.3410
+H    15.2137   -7.8432   -8.5456
+C    14.5610   -8.4890  -10.4510
+O    13.5330   -9.1970  -10.4480
+O    15.4520   -8.5780  -11.3210
+H    13.7590   -7.1250   -9.0370
+H    15.3010   -6.6340   -9.7300
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1203
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    14.6270   -2.9410   -9.4410
+H    15.2355   -2.7442   -8.6722
+C    15.3760   -3.4050  -10.6760
+O    15.7600   -2.5440  -11.4960
+O    15.5790   -4.6280  -10.8230
+H    13.9330   -3.7160   -9.1520
+H    14.0750   -2.0460   -9.6910
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1227
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    18.6410    2.4450   -3.9670
+H    18.1595    1.7759   -4.5331
+C    20.1410    2.4230   -4.1860
+O    20.6250    3.1810   -5.0530
+O    20.8310    1.6490   -3.4910
+H    18.2710    3.4320   -4.2070
+H    18.4390    2.2290   -2.9280
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1242
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    16.9150    3.4090   -9.3530
+H    15.9577    3.1619   -9.2032
+C    17.3680    3.1500  -10.7770
+O    17.8640    2.0360  -11.0490
+O    17.2260    4.0610  -11.6200
+H    17.0400    4.4600   -9.1380
+H    17.5330    2.8290   -8.6830
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1257
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    11.5580   -0.1200   -5.9420
+H    11.1377    0.4213   -6.6702
+C    11.2020   -1.5890   -6.0190
+O    11.9300   -2.3370   -6.7010
+O    10.2000   -1.9910   -5.3930
+H    12.6290   -0.0210   -6.0170
+H    11.2280    0.2670   -4.9890
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1292
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C    14.9280    8.3990   -4.1740
+H    14.1737    7.7655   -4.0020
+N    15.6770    8.0630   -5.3930
+C    16.7160    8.7640   -5.8690
+N    17.1560    9.8550   -5.2440
+N    17.3180    8.3670   -6.9820
+H    14.5250    9.3960   -4.2750
+H    15.6010    8.3700   -3.3300
+H    15.3890    7.2670   -5.8870
+H    17.9630   10.3850   -5.6300
+H    16.6920   10.1760   -4.3710
+H    16.9830    7.5170   -7.4800
+H    18.1240    8.9060   -7.3580
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1315
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    10.3130    6.7080   -9.3960
+H     9.5267    6.3106   -8.9230
+C    10.6480    5.9830  -10.6840
+O    11.4340    5.0130  -10.6330
+O    10.1250    6.3840  -11.7450
+H    10.0930    7.7390   -9.6280
+H    11.1700    6.6630   -8.7380
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1361
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C     7.8750   10.5760   -8.7480
+H     7.4124   10.6175   -7.8624
+N     9.0740   11.4210   -8.7830
+C     9.9050   11.5260   -9.8300
+N     9.6880   10.8440  -10.9540
+N    10.9610   12.3230   -9.7490
+H     8.1580    9.5530   -8.9410
+H     7.1880   10.9090   -9.5120
+H     9.2760   11.9420   -7.9780
+H     8.8620   10.2160  -11.0300
+H    10.3440   10.9400  -11.7550
+H    11.1420   12.8600   -8.8770
+H    11.6100   12.4100  -10.5570
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1432
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C    -2.6290   11.4560   -7.4650
+H    -2.2507   12.3613   -7.2716
+N    -4.1010   11.5040   -7.6850
+H    -2.1540   11.0630   -8.3510
+H    -2.4200   10.8060   -6.6270
+H    -4.3210   12.1230   -8.4910
+H    -4.5770   11.8740   -6.8380
+H    -4.4640   10.5500   -7.8840
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1451
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     3.0190   17.7500   -3.6000
+H     3.1707   17.4271   -4.5342
+C     3.0970   19.2620   -3.4770
+O     2.0540   19.9270   -3.6490
+O     4.2010   19.7800   -3.2070
+H     2.0370   17.4340   -3.2730
+H     3.7690   17.3150   -2.9510
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1563
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     0.4290   12.3760    4.6630
+H    -0.0747   11.5176    4.7602
+C     1.8540   12.1800    4.1810
+O     2.1740   12.6420    3.0660
+O     2.6540   11.5740    4.9220
+H    -0.0900   13.0080    3.9580
+H     0.4590   12.8600    5.6270
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1598
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C    -7.8920   12.5090    7.5130
+H    -7.4979   11.9919    6.7532
+N    -7.9400   13.9480    7.2340
+C    -8.4340   14.8720    8.0700
+N    -8.9330   14.5310    9.2570
+N    -8.4270   16.1490    7.7130
+H    -8.8960   12.1530    7.6920
+H    -7.2900   12.3430    8.3950
+H    -7.5840   14.2470    6.3710
+H    -8.9440   13.5330    9.5490
+H    -9.3110   15.2630    9.8920
+H    -8.8080   16.8720    8.3560
+H    -8.0400   16.4280    6.7890
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1620
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C    -4.7020   12.1880    2.1550
+H    -5.3878   11.4643    2.2328
+C    -4.9030   13.1100    0.9870
+N    -5.4630   14.3660    1.1050
+C    -4.6120   12.9540   -0.3270
+C    -5.5090   14.9400   -0.0840
+N    -4.9980   14.1040   -0.9680
+H    -4.7210   12.7860    3.0530
+H    -3.7330   11.7300    2.0580
+H    -5.7810   14.7740    1.9380
+H    -4.1600   12.0850   -0.7840
+H    -5.8960   15.9250   -0.2950
+H    -4.9100   14.2800   -1.9290
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1726
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -11.2990    3.0830    1.1730
+H   -11.4007    3.9843    1.5941
+C   -12.1440    2.0160    1.8480
+O   -13.2970    1.8090    1.4140
+O   -11.6510    1.3890    2.8090
+H   -11.5970    3.1510    0.1380
+H   -10.2620    2.7880    1.2280
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1743
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C   -17.7710    4.6750    1.1940
+H   -17.9927    5.3906    1.8564
+N   -18.9930    4.0080    0.6660
+H   -17.2300    5.1180    0.3710
+H   -17.1470    3.9360    1.6770
+H   -19.5380    3.5900    1.4470
+H   -18.7300    3.2540    0.0000
+H   -19.5920    4.7000    0.1700
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1795
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -13.6610   11.5030   14.0120
+H   -13.2012   10.7212   13.5908
+C   -14.1190   12.5310   12.9930
+O   -15.2610   12.4120   12.5020
+O   -13.3350   13.4540   12.6880
+H   -14.5270   11.1530   14.5540
+H   -12.9810   11.9840   14.7000
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1808
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -14.0550    7.9850   17.8610
+H   -13.6371    7.3331   17.2282
+C   -15.1220    7.3500   18.7310
+O   -16.3010    7.3480   18.3190
+O   -14.7780    6.8530   19.8240
+H   -13.2860    8.3900   18.5000
+H   -14.5060    8.7830   17.2890
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1823
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C   -13.2110    4.2600   12.1780
+H   -12.2773    4.6141   12.1242
+C   -13.6220    3.5100   10.9250
+O   -13.1750    2.3570   10.7510
+O   -14.3920    4.0730   10.1210
+H   -13.2790    3.5870   13.0200
+H   -13.8880    5.0850   12.3230
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1853
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -9.1020    9.1230   16.9550
+H    -8.3990    8.9008   16.2794
+C    -8.6040   10.0580   18.0450
+O    -8.1170    9.5560   19.0800
+O    -8.7010   11.2890   17.8620
+H    -9.9300    9.6040   16.4520
+H    -9.4480    8.2080   17.4190
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1866
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -7.9150    4.0220   18.0540
+H    -7.4955    4.0864   17.1485
+C    -8.7160    2.7480   18.2360
+O    -9.9260    2.7580   17.9250
+O    -8.1340    1.7410   18.6900
+H    -7.1360    4.0490   18.8000
+H    -8.5730    4.8680   18.1920
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         1918
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C    -4.3210    8.9670   20.1030
+H    -3.8587    9.0314   19.2186
+N    -4.8300   10.2670   20.5550
+C    -5.2570   10.5310   21.7990
+N    -5.2480    9.5920   22.7440
+N    -5.6980   11.7450   22.0960
+H    -5.1480    8.2790   20.0130
+H    -3.6200    8.5920   20.8340
+H    -4.8560   10.9900   19.8940
+H    -5.5840    9.8170   23.7030
+H    -4.9050    8.6360   22.5240
+H    -5.7110   12.4870   21.3670
+H    -6.0310   11.9570   23.0580
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1941
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -2.5000    2.7290   15.2890
+H    -1.8842    3.3671   14.8268
+C    -3.2820    1.8690   14.3160
+O    -4.5060    2.0820   14.1860
+O    -2.6710    0.9840   13.6800
+H    -1.9170    2.0840   15.9290
+H    -3.2020    3.2940   15.8900
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         1994
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     8.2680   14.0850   18.3320
+H     7.7962   13.3627   18.8377
+C     9.2900   14.8340   19.1710
+O    10.4600   14.3990   19.2100
+O     8.9180   15.8550   19.7880
+H     8.7770   13.6350   17.4940
+H     7.5350   14.7890   17.9670
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         2013
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     4.2380   16.8810   16.0730
+H     3.5466   16.4637   16.6628
+C     5.1100   17.8800   16.8120
+O     4.7470   19.0740   16.8450
+O     6.1560   17.4660   17.3560
+H     4.8730   16.1070   15.6710
+H     3.7450   17.3930   15.2600
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         2101
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    12.5330   11.2270    7.0600
+H    11.8357   10.5415    7.2696
+C    12.9070   12.0660    8.2660
+O    12.2680   13.1180    8.4790
+O    13.8370   11.6710    8.9990
+H    13.4190   10.7240    6.7030
+H    12.1560   11.8810    6.2880
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         2116
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     7.2050    6.4380    9.8440
+H     7.3408    7.1467    9.1517
+C     6.2880    6.8840   10.9650
+O     5.0570    6.7230   10.8250
+O     6.8000    7.3920   11.9850
+H     6.7730    5.5690    9.3710
+H     8.1650    6.1770   10.2650
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2244
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C    12.4630   -6.2200    3.3130
+H    12.0861   -6.2299    4.2392
+N    13.7590   -5.4890    3.2480
+H    12.6180   -7.2380    2.9900
+H    11.7540   -5.7390    2.6550
+H    14.1260   -5.4980    2.2750
+H    14.4560   -5.9400    3.8740
+H    13.6270   -4.5020    3.5480
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         2238
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     9.1370   -5.7710    6.5510
+H     9.7216   -4.9685    6.6705
+H     9.6851   -6.5737    6.3159
+C     8.3190   -6.0410    7.8140
+O     8.9290   -6.2730    8.8820
+O     7.0740   -6.0160    7.7250
+H     8.4570   -5.5630    5.7390
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2260
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+N    26.7600    8.2840   23.0770
+C    26.3740    9.0470   21.8600
+H    25.4496    9.4196   21.9411
+H    26.4462    8.4653   21.0498
+H    26.1020    7.4920   23.2260
+H    26.7320    8.9040   23.9110
+H    27.7230    7.9070   22.9720
+H    27.0680    9.8670   21.7430
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2283
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C    20.5080    5.3480   24.4440
+H    20.2828    6.0685   23.7881
+C    21.7530    4.5870   24.1020
+N    21.7360    3.3490   23.4950
+C    23.0590    4.8960   24.2870
+C    22.9770    2.9280   23.3220
+N    23.7970    3.8490   23.7930
+H    20.6470    5.7900   25.4190
+H    19.6890    4.6440   24.4880
+H    20.9340    2.8510   23.2310
+H    23.4470    5.7980   24.7390
+H    23.2700    1.9920   22.8710
+H    24.7760    3.7920   23.7900
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2320
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C    16.8750    0.5390   24.2220
+H    16.7687    1.4845   24.5297
+N    18.2400    0.0430   24.4300
+C    18.6620   -1.1900   24.1130
+N    17.8360   -2.0820   23.5670
+N    19.9220   -1.5300   24.3460
+H    16.1880   -0.0850   24.7750
+H    16.6390    0.4880   23.1690
+H    18.8840    0.6650   24.8290
+H    18.1830   -3.0330   23.3290
+H    16.8460   -1.8270   23.3800
+H    20.2560   -2.4840   24.1030
+H    20.5760   -0.8420   24.7710
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2359
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C     9.2420    3.4910   27.5710
+H     8.5906    3.3495   26.8255
+N     8.6510    4.2860   28.6820
+H     9.5490    2.5290   27.9520
+H    10.1040    4.0150   27.1840
+H     8.3530    5.2200   28.3350
+H     9.3510    4.4170   29.4400
+H     7.8220    3.7930   29.0730
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2380
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C     7.4340   -3.6900   19.7320
+H     7.2031   -2.7465   19.9695
+N     8.4680   -3.7600   18.6940
+C     9.1000   -4.8820   18.3190
+N     8.8180   -6.0530   18.8860
+N    10.0210   -4.8270   17.3670
+H     7.7920   -4.1940   20.6170
+H     6.5430   -4.1850   19.3730
+H     8.7090   -2.9210   18.2470
+H     8.0980   -6.1090   19.6340
+H     9.3190   -6.9120   18.5810
+H    10.5150   -5.6940   17.0710
+H    10.2500   -3.9190   16.9160
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2404
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C     2.4920    2.8200   25.1600
+H     2.6201    1.9196   24.7443
+N     3.1630    3.8850   24.4020
+C     3.1930    5.1760   24.7610
+N     2.5930    5.5960   25.8740
+N     3.8300    6.0530   23.9980
+H     1.4350    3.0350   25.2020
+H     2.8930    2.7990   26.1630
+H     3.6190    3.6230   23.5740
+H     2.6280    6.6020   26.1350
+H     2.0900    4.9180   26.4810
+H     4.3030    5.7380   23.1270
+H     3.8580    7.0570   24.2700
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         2427
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C    -1.5100    2.1570   20.0390
+H    -0.8982    1.7785   19.3444
+C    -2.0450    3.5240   19.6630
+O    -3.1260    3.5880   19.0410
+O    -1.3830    4.5320   19.9900
+H    -2.3450    1.4840   20.1700
+H    -0.9680    2.2420   20.9700
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2496
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C     6.3890   -1.9120    8.7510
+H     5.4592   -2.2147    8.5415
+N     6.4220   -0.9310    9.8730
+H     6.9800   -2.7740    9.0230
+H     6.8110   -1.4520    7.8700
+H     6.0280   -1.3590   10.7350
+H     5.8600   -0.0900    9.6300
+H     7.4020   -0.6360   10.0620
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2569
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C     5.4950   -2.9140    0.9860
+H     4.5487   -2.5929    0.9491
+N     5.9310   -3.5020   -0.3100
+H     6.1350   -2.0810    1.2260
+H     5.5770   -3.6640    1.7580
+H     5.3610   -4.3440   -0.5290
+H     6.9320   -3.7790   -0.2580
+H     5.8130   -2.8080   -1.0750
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2729
+ The number of atoms in the group is 
+          13
+ The atomic coordinates are
+C     9.3060   -0.0710  -11.8350
+H     8.4599   -0.0559  -12.3678
+N    10.3400    0.8040  -12.4060
+C    11.6050    0.8810  -11.9660
+N    12.0250    0.1410  -10.9410
+N    12.4550    1.7080  -12.5590
+H     9.0880    0.2560  -10.8290
+H     9.6800   -1.0840  -11.8100
+H    10.0780    1.3680  -13.1630
+H    11.3690   -0.5110  -10.4670
+H    13.0100    0.2160  -10.6150
+H    12.1400    2.2910  -13.3610
+H    13.4370    1.7730  -12.2230
+ 
+  Total charge for this group has been estimated as            1
+  The first atom in this group is atom number         2754
+ The number of atoms in the group is 
+           8
+ The atomic coordinates are
+C     4.6840    4.5320  -16.3190
+H     5.5555    5.0216  -16.2921
+N     3.8590    4.8020  -15.1090
+H     4.1360    4.8470  -17.1940
+H     4.8830    3.4720  -16.3810
+H     2.9640    4.2740  -15.1620
+H     3.6450    5.8180  -15.0410
+H     4.3720    4.5090  -14.2530
+ 
+  Total charge for this group has been estimated as           -1
+  The first atom in this group is atom number         2748
+ The number of atoms in the group is 
+           7
+ The atomic coordinates are
+C     7.4670    2.5030  -17.3350
+H     6.9889    2.2515  -16.4935
+H     7.7785    3.4530  -17.3156
+C     8.6450    1.5640  -17.6280
+O     9.6150    1.5560  -16.8370
+O     8.5840    0.8450  -18.6470
+H     6.7540    2.3980  -18.1400
+ 
+

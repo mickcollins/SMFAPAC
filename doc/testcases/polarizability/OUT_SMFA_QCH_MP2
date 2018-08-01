@@ -1,0 +1,116 @@
+              INPUT to SMFA
+
+The purpose of the calculation is to evaluate the energy
+
+The Level of fragmentation is
+3
+The cutoff value for nonbonded interactions is
+1.1
+
+The quantum chemistry program package is
+QChem
+The QChem input variables are
+$rem
+JOBTYPE SP
+METHOD MP2
+N_FROZEN_CORE  FC
+MOPROP  2
+BASIS cc-pVDZ
+GUI 2
+SYM_IGNORE TRUE
+$end
+The job type is energy (0), force (1), hessian (2), Opt (3), TS (4) or scan (5)
+0
+Is long range dispersion accounted for?
+Y
+
+The molecular coordinates are in file
+optMP2L3dtol1.1c-cyclotridecene.xyz
+The number of atoms in the molecule is
+37
+
+  There are no charges to be specified
+
+
+             EXAMINATION of the MOLECULAR COORDINATES shows:
+
+  The total molecular charge =            0
+
+
+ The following metal-containing groups were found
+ Check that the metal charge is correct 
+ 
+
+ The following other charged groups were found
+ 
+
+
+             FRAGMENTATION RESULTS
+
+A description of the fragments can be found in file frags.out
+The coordinates of the fragments in xyz format are contained
+in seefrags (in suitable format for graphics).
+
+ Total numbers of atoms and electrons:           37         102
+  The number of fragments is
+          24
+ 
+  The largest number of electrons in a fragment
+  is           40  for fragment number            9
+ 
+An ab initio input file for this fragment is contained in
+LARGE.com or LARGE.inp or LARGE.nw
+ 
+ 
+            PARALLEL IMPLEMENTATION
+ 
+  The bulk of the cputime is employed in performing
+  electronic structure calculations for the many
+  molecular fragments, and for fragment properties that
+  are needed to evaluate the non-bonded interactions.
+  For these calculations, the recommended number of
+  cpus for maximum efficiency and and minimum walltime
+  is
+ 
+          23
+ 
+  This assumes that each fragment uses only 1 cpu.
+ 
+  The user sets the number of cpus in main menu item 4
+ 
+  The user can specify less than           23  cpus,
+  for example, if only a smaller number is available.
+ 
+  *****************************************************
+ 
+  The total electronic energy of the molecule is
+ 
+            -508.12322458
+ 
+  *****************************************************
+  This energy is composed of an ab initio component of
+            -508.12066981
+  and a long range electrostatic component of
+              -0.00014085 =      -0.3698 (kJ/mol)
+  and an induction energy of
+              -0.00001534 =      -0.0403 (kJ/mol)
+  and a long range dispersion energy of
+              -0.00239858 =      -6.2975 (kJ/mol)
+
+The total molecular dipole polarizability is approximated
+by a sum over group polarizabilities as:
+
+     xx         yx         yy         zx         zy         zz
+
+   152.117     -2.818    167.720      5.469      5.842    153.588
+
+The isotropic polarizability =       157.809
+
+For QChem, SMFA can calculate the dipole polarizability as a sum over the fragment polarizabilities.
+This is a more accurate approximation.
+
+     xx         yx         yy         zx         zy         zz
+   139.726      2.071    153.548     -6.562     13.969    125.528
+
+The isotropic polarizability =       139.601
+

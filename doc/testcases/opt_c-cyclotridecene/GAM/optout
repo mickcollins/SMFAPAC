@@ -1,0 +1,96 @@
+  The input energy =   -506.273616941453     
+  Optimisation step number =            0
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   2.642762499564253E-003
+  The estimated next step size =   3.746534274444571E-002
+  The estimated change in energy  =  -8.528466513005537E-004
+           Item               Value      Thresold
+Maximum Force                0.012930    0.000450   NO 
+RMS     Force                0.002643    0.000150   NO 
+Maximum Displacement         0.016464    0.001800   NO 
+RMS     Displacement         0.006720    0.001200   NO 
+  The input energy =   -506.274460148331     
+  Optimisation step number =            1
+  Previously predicted energy change =  -8.528466513005537E-004
+  Actual energy change               =  -8.432068780166446E-004
+  The trust radius now =   0.555000000000000     
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   4.331298782723125E-004
+  The estimated next step size =   1.708104652025504E-002
+  The estimated change in energy  =  -9.883886009762582E-005
+           Item               Value      Thresold
+Maximum Force                0.001058    0.000450   NO 
+RMS     Force                0.000433    0.000150   NO 
+Maximum Displacement         0.008329    0.001800   NO 
+RMS     Displacement         0.003064    0.001200   NO 
+  The input energy =   -506.274557907677     
+  Optimisation step number =            2
+  Previously predicted energy change =  -9.883886009762582E-005
+  Actual energy change               =  -9.775934597655578E-005
+  The trust radius now =   0.555000000000000     
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   1.984249607071003E-004
+  The estimated next step size =   1.133578189316658E-002
+  The estimated change in energy  =  -3.609262017534599E-005
+           Item               Value      Thresold
+Maximum Force                0.000536    0.000450   NO 
+RMS     Force                0.000198    0.000150   NO 
+Maximum Displacement         0.006785    0.001800   NO 
+RMS     Displacement         0.002033    0.001200   NO 
+  The input energy =   -506.274593881756     
+  Optimisation step number =            3
+  Previously predicted energy change =  -3.609262017534599E-005
+  Actual energy change               =  -3.597407902589111E-005
+  The trust radius now =   0.555000000000000     
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   1.332309971957315E-004
+  The estimated next step size =   9.010793810528916E-003
+  The estimated change in energy  =  -2.110533424581695E-005
+           Item               Value      Thresold
+Maximum Force                0.000451    0.000450   NO 
+RMS     Force                0.000133    0.000150   YES
+Maximum Displacement         0.006385    0.001800   NO 
+RMS     Displacement         0.001616    0.001200   NO 
+  The input energy =   -506.274614650924     
+  Optimisation step number =            4
+  Previously predicted energy change =  -2.110533424581695E-005
+  Actual energy change               =  -2.076916797477679E-005
+  The trust radius now =   0.555000000000000     
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   1.058528989768352E-004
+  The estimated next step size =   7.749036105449521E-003
+  The estimated change in energy  =  -1.507608446345949E-005
+           Item               Value      Thresold
+Maximum Force                0.000421    0.000450   YES
+RMS     Force                0.000106    0.000150   YES
+Maximum Displacement         0.005910    0.001800   NO 
+RMS     Displacement         0.001390    0.001200   NO 
+  The input energy =   -506.274629260511     
+  Optimisation step number =            5
+  Previously predicted energy change =  -1.507608446345949E-005
+  Actual energy change               =  -1.460958702637072E-005
+  The trust radius now =   0.555000000000000     
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   9.104883137171993E-005
+  The estimated next step size =   6.920744904045451E-003
+  The estimated change in energy  =  -1.182879544705527E-005
+           Item               Value      Thresold
+Maximum Force                0.000389    0.000450   YES
+RMS     Force                0.000091    0.000150   YES
+Maximum Displacement         0.005460    0.001800   NO 
+RMS     Displacement         0.001241    0.001200   NO 
+  The input energy =   -506.274640745947     
+  Optimisation step number =            6
+  Previously predicted energy change =  -1.182879544705527E-005
+  Actual energy change               =  -1.148543600493213E-005
+  The trust radius now =   0.555000000000000     
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   8.127256279157494E-005
+  The estimated next step size =   6.297817683792615E-003
+  The estimated change in energy  =  -9.710096694945806E-006
+           Item               Value      Thresold
+Maximum Force                0.000359    0.000450   YES
+RMS     Force                0.000081    0.000150   YES
+Maximum Displacement         0.005032    0.001800   NO 
+RMS     Displacement         0.001130    0.001200   YES
+  Geometry has converged

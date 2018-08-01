@@ -1,0 +1,75 @@
+                                     G D M A
+
+                                 by Anthony Stone
+
+                            version 2.2.02, 8 May 2007
+
+               Distributed Multipoles from Gaussian wavefunctions
+
+
+Starting at 12:40:19 on 8 May 2007  
+
+Ethylene  6-31G(d)  Gaussian 03
+
+
+
+Using SCF density matrix from file C2H4-g03.fchk
+
+
+                         Distributed Multipole Analysis
+
+Standard DMA for products of primitives with exponent greater than 4.00000
+Using 80-point Euler-MacLaurin radial quadrature
+Using 590-point Lebedev quadrature
+Becke smoothing parameter = 3
+
+Positions and radii in angstrom
+Multipole moments in atomic units, ea_0^k for rank k
+
+C          x =  0.000000  y =  0.000000  z =  0.669938
+           Maximum rank =  4   Radius =  0.650
+                   Q00  =  -0.035811
+|Q1| =   0.095601  Q10  =   0.095601
+|Q2| =   1.579073  Q20  =   0.731238  Q22c =  -1.399558
+|Q3| =   4.200108  Q30  =  -2.874517  Q32c =  -3.062362
+|Q4| =   9.741304  Q40  =  -5.381130  Q42c =  -5.594442  Q44c =   5.885462
+
+C          x =  0.000000  y =  0.000000  z = -0.669938
+           Maximum rank =  4   Radius =  0.650
+                   Q00  =  -0.035811
+|Q1| =   0.095601  Q10  =  -0.095601
+|Q2| =   1.579073  Q20  =   0.731238  Q22c =  -1.399558
+|Q3| =   4.200108  Q30  =   2.874517  Q32c =   3.062362
+|Q4| =   9.741304  Q40  =  -5.381130  Q42c =  -5.594442  Q44c =   5.885462
+
+H          x =  0.000000  y =  0.928706  z =  1.232983
+           Maximum rank =  1   Radius =  0.350
+                   Q00  =   0.017905
+|Q1| =   0.097632  Q10  =  -0.067488  Q11s =  -0.070550
+
+H          x = -0.000000  y = -0.928706  z =  1.232983
+           Maximum rank =  1   Radius =  0.350
+                   Q00  =   0.017905
+|Q1| =   0.097632  Q10  =  -0.067488  Q11s =   0.070550
+
+H          x =  0.000000  y =  0.928706  z = -1.232983
+           Maximum rank =  1   Radius =  0.350
+                   Q00  =   0.017905
+|Q1| =   0.097632  Q10  =   0.067488  Q11s =  -0.070550
+
+H          x = -0.000000  y = -0.928706  z = -1.232983
+           Maximum rank =  1   Radius =  0.350
+                   Q00  =   0.017905
+|Q1| =   0.097632  Q10  =   0.067488  Q11s =   0.070550
+
+Total multipoles
+referred to origin at x =   0.000000,  y =    0.000000,  z =    0.000000
+                   Q00  =  -0.000000
+|Q1| =   0.000000
+|Q2| =   2.522490  Q20  =   1.347629  Q22c =  -2.132335
+|Q3| =   0.000000
+|Q4| =  35.225787  Q40  = -13.861371  Q42c = -31.440160  Q44c =   7.761105
+
+CPU time used:      0m13.640s          Total:      0m13.640s
+
+Finished at 12:40:33 on 8 May 2007  

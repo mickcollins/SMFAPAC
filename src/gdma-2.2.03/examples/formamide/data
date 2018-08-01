@@ -1,0 +1,13 @@
+Title "Formamide  Gaussian 03   B3LYP_cc-pVTZ"
+verbose
+File B3LYP_cc-pVTZ.fchk
+
+Angstrom
+
+Multipoles
+  Limit 4
+  Limit 1 H
+  Punch B3LYP_cc-pVTZ.punch
+Start
+
+Finish

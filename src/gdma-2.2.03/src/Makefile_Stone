@@ -1,0 +1,11 @@
+gdma: gdma.o dma.o atom_grids.o input.o timing.o
+	${FC} ${FFLAGS}o $^ -o gdma
+
+%.o: %.f90
+	${FC} ${FFLAGS} -c $<
+
+%.o: %.F90
+	${FC} ${FFLAGS} -c $<
+
+gdma.o: dma.o atom_grids.o input.o timing.o
+dma.o: atom_grids.o input.o

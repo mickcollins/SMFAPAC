@@ -1,0 +1,14 @@
+Title "Ethylene  6-31G(d)  Gaussian 98"
+File C2H4-g98.fchk
+
+Angstrom
+SI
+
+Multipoles
+  Limit 4
+  Limit 1 H
+  Radius H 0.35
+  Punch C2H4.punch
+Start
+
+Finish

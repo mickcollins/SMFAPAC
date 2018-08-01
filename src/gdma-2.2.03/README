@@ -1,0 +1,36 @@
+The GDMA program carries out distributed multipole analysis of
+wavefunctions calculated by the Gaussian system of programs, using the 
+formatted checkpoint files that they produce.
+
+To unpack the distribution file, put it in a suitable directory and
+run the commands
+        gunzip gdma-2.1.tar
+        tar xvf gdma-2.1.tar
+The files will be unpacked into a new gdma-2.1 directory. Change to
+this directory.
+
+If you are working on a PC under Linux, you can use the program
+executable in gdma-2.1/bin/gdma. Otherwise, check that the settings in
+the Makefile are appropriate for your Fortran90 compiler, and 
+        make
+If the compilation is successful, the new executable will be in
+gdma-2.1/bin/gdm, overwriting the supplied version.
+
+Use
+        make test
+to run the test files through the program. The test script checks
+whether the output is correct. If all is well,
+        make install
+will put the executable in /usr/local/bin. You will probably have to
+be root to do that. Change the definition of INSTALL_DIR in the
+Makefile if necessary.
+
+The detailed documentation is in the file doc/manual.pdf.
+
+The program is distributed under the GNU General Public Licence (GPL).
+See the file doc/gpl-2.0.pdf for full details.
+
+
+In case of difficulty please email Anthony Stone, ajs1@cam.ac.uk.
+
+

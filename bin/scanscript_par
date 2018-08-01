@@ -1,0 +1,75 @@
+#!/bin/ksh
+
+CODEDIR=`awk 'NR==1,NR==1 {print $1}' CODENAME`
+EXEDIR=`awk 'NR==1,NR==1 {print $1}' EXENAME`
+
+cp xyzFILENAME xyzFILENAME_scanstart
+cp IN_JOBTYPE IN_JOBTYPE_scanstart
+
+nscan=`awk 'NR==2,NR==2 {print $1}' IN_OPTSCAN`
+if [ $nscan -eq 0 ]
+then
+echo "The number of scan steps was set to zero" >> OUT_SMFA
+exit 1
+fi
+
+rm -f IN_CONSTRAINTS*
+$EXEDIR/makeIN_CONSTRAINTS
+
+echo " " >> OUT_SMFA
+echo " Performing an optimised scan" >> OUT_SMFA
+echo " " >> OUT_SMFA
+
+rm -f optout*
+rm -f SCANcon*
+rm -f SCANuncon*
+
+isc=1
+while [ $isc -le $nscan ]
+do
+
+echo "jobtype file for opt" > IN_JOBTYPE
+echo "2" >> IN_JOBTYPE
+
+cp IN_CONSTRAINTS_$isc IN_CONSTRAINTS
+echo "Scan geometry $isc with the following constraints" >> OUT_SMFA
+cat IN_CONSTRAINTS >> OUT_SMFA
+
+$CODEDIR/optscript_par
+
+converged=`grep converged optout | wc -l`
+if [ $converged !=  0 ]
+then
+ cp Newcoords.xyz SCANcon$isc
+ numberofatoms=`awk 'NR==2,NR==2 {print $1}' xyzFILENAME`
+ echo "SCANcon$isc" > xyzFILENAME
+ echo "$numberofatoms" >> xyzFILENAME
+ echo " " >> OUT_SMFA
+ echo "Scan geometry $isc converged. See SCANcon$isc and optout files" >> OUT_SMFA
+ echo " " >> OUT_SMFA
+else
+ cp Newcoords.xyz SCANuncon$isc
+ numberofatoms=`awk 'NR==2,NR==2 {print $1}' xyzFILENAME`
+ echo "SCANuncon$isc" > xyzFILENAME
+ echo "$numberofatoms" >> xyzFILENAME
+ echo " " >> OUT_SMFA
+ echo "Scan geometry $isc did not converge. See SCANuncon$isc and optout files"
+ echo " " >> OUT_SMFA
+fi
+
+cp optout optout.$isc
+
+$EXEDIR/Preparegeom < Newcoords.xyz > rub
+
+echo "1" > READY2GO
+$CODEDIR/fragonly.pl
+$CODEDIR/modfilenames.pl
+$CODEDIR/createrunscripts.pl
+
+(( isc = isc + 1 ))
+done
+
+cp xyzFILENAME_scanstart xyzFILENAME
+cp IN_JOBTYPE_scanstart IN_JOBTYPE
+$CODEDIR/getscanenergies.pl
+

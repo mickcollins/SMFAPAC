@@ -1,0 +1,15 @@
+Title "Carbon monoxide  6-31G(d)  Gaussian 03"
+File CO-g03.fchk Density SCF
+
+Multipoles
+  Limit 6
+  Punch CO.punch
+Start
+
+Multipoles
+  Add bond 0.0 0.0 -0.150338
+  Limit 6
+  Punch CO.punch
+Start
+
+Finish

@@ -1,0 +1,27 @@
+pbsdsh -n node  -- bash -l -c 
+
+
+NOTE: Some computer systems require special instructions in order to
+use more cpus than are available in one node.
+
+The first line in this file must contain that special instruction that
+PRECEEDS the command that will be executed on each cpu. 
+
+For example in the authors system, the COMPLETE instruction to execute
+the command "examplescript" would be
+
+pbsdsh -n node  -- bash -l -c examplescript
+
+SMFA will automatically complete the whole instruction as necessary.
+
+The user MUST enter the appropriate instruction on the first line of
+this file (replacing the first line above).
+
+NOTE: SMFA will replace "node" above with an integer that counts cpus, beginning
+wth 1, 2, 3,.......,$PBS_NCPUS. So, if your system instruction contains such
+a counter, you must use "node" to represent this counter.
+
+NOTE: If your system has no special instruction for using multiple nodes, you can simply
+LEAVE THE FIRST LINE IN THIS FILE BLANK.
+
+

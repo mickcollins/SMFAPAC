@@ -1,0 +1,40 @@
+  The input energy =   -1806.57805217272     
+  Optimisation step number =            0
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   1.278313276903139E-004
+  The estimated next step size =   7.103265391275076E-003
+  The estimated change in energy  =  -2.811381486479877E-005
+           Item               Value      Thresold
+Maximum Force                0.000498    0.000450   NO 
+RMS     Force                0.000128    0.000150   YES
+Maximum Displacement         0.003037    0.001800   NO 
+RMS     Displacement         0.000795    0.001200   YES
+  The input energy =   -1806.57807671901     
+  Optimisation step number =            1
+  Previously predicted energy change =  -2.811381486479877E-005
+  Actual energy change               =  -2.454628997838881E-005
+  The trust radius now =    1.42500000000000     
+ The hessian has            0  negative eigenvalues
+  The current gradient norm =   1.206459479782105E-004
+  The estimated next step size =   6.713554230019153E-003
+  The estimated change in energy  =  -2.505872180210396E-005
+           Item               Value      Thresold
+Maximum Force                0.000458    0.000450   NO 
+RMS     Force                0.000121    0.000150   YES
+Maximum Displacement         0.002784    0.001800   NO 
+RMS     Displacement         0.000751    0.001200   YES
+  The input energy =   -1806.57810474811     
+  Optimisation step number =            2
+  Previously predicted energy change =  -2.505872180210396E-005
+  Actual energy change               =  -2.802910012178472E-005
+  The trust radius now =    1.42500000000000     
+ The hessian has            1  negative eigenvalues
+  The current gradient norm =   1.144915521417947E-004
+  The estimated next step size =   6.416417238503822E-003
+  The estimated change in energy  =  -2.285592734131358E-005
+           Item               Value      Thresold
+Maximum Force                0.000426    0.000450   YES
+RMS     Force                0.000114    0.000150   YES
+Maximum Displacement         0.002621    0.001800   NO 
+RMS     Displacement         0.000718    0.001200   YES
+  Geometry has converged

@@ -1,0 +1,2282 @@
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+
+
+   ******************************************* 
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   DALTON release Dalton2016.2 (2016)
+
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.22.0-polar.out nb.22.0-polar
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.3.0-polar.out nb.3.0-polar
+
+
+
+
+   ******************************************* 
+   ******************************************* 
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+
+   ******************************************* 
+
+
+   ******************************************* 
+   DALTON release Dalton2016.2 (2016)
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+
+   DALTON release Dalton2016.2 (2016)
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.14.0-polar.out nb.14.0-polar
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.24.0-polar.out nb.24.0-polar
+
+   ******************************************* 
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.15.0-polar.out nb.15.0-polar
+
+
+
+   DALTON release Dalton2016.2 (2016)
+
+   ******************************************* 
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.1.0-polar.out nb.1.0-polar
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+
+
+   ******************************************* 
+
+   ******************************************* 
+   DALTON release Dalton2016.2 (2016)
+
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.2.0-polar.out nb.2.0-polar
+   ******************************************* 
+
+
+
+   DALTON release Dalton2016.2 (2016)
+
+   ******************************************* 
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.6.0-polar.out nb.6.0-polar
+
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.7.0-polar.out nb.7.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.11.0-polar.out nb.11.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.13.0-polar.out nb.13.0-polar
+
+
+
+   ******************************************* 
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+   ******************************************* 
+
+
+   DALTON release Dalton2016.2 (2016)
+
+   DALTON release Dalton2016.2 (2016)
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.25.0-polar.out nb.25.0-polar
+
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.12.0-polar.out nb.12.0-polar
+
+   Thu Mar 29 14:56:26 AEDT 2018
+
+   Calculation: nb.15.0-polar  (input files: nb.15.0-polar.dal and nb.15.0-polar.mol)
+   PID        : 7137
+   Thu Mar 29 14:56:26 AEDT 2018
+   Input dir  : /short/s01/mac502/Taber2
+   Thu Mar 29 14:56:26 AEDT 2018
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.15.0-polar_7137
+
+
+   Thu Mar 29 14:56:26 AEDT 2018
+
+   Calculation: nb.2.0-polar  (input files: nb.2.0-polar.dal and nb.2.0-polar.mol)
+   Thu Mar 29 14:56:26 AEDT 2018
+   Thu Mar 29 14:56:26 AEDT 2018
+   PID        : 7128
+
+   Calculation: nb.1.0-polar  (input files: nb.1.0-polar.dal and nb.1.0-polar.mol)
+   Input dir  : /short/s01/mac502/Taber2
+
+   PID        : 7154
+
+   Calculation: nb.14.0-polar  (input files: nb.14.0-polar.dal and nb.14.0-polar.mol)
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.2.0-polar_7128
+   Input dir  : /short/s01/mac502/Taber2
+
+   Calculation: nb.22.0-polar  (input files: nb.22.0-polar.dal and nb.22.0-polar.mol)
+   PID        : 7143
+   Calculation: nb.7.0-polar  (input files: nb.7.0-polar.dal and nb.7.0-polar.mol)
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.1.0-polar_7154
+   PID        : 7134
+   Input dir  : /short/s01/mac502/Taber2
+
+   PID        : 7153
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.14.0-polar_7143
+   Input dir  : /short/s01/mac502/Taber2
+
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.22.0-polar_7134
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.7.0-polar_7153
+
+
+   Thu Mar 29 14:56:26 AEDT 2018
+
+   Calculation: nb.24.0-polar  (input files: nb.24.0-polar.dal and nb.24.0-polar.mol)
+   PID        : 7133
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.24.0-polar_7133
+
+   Thu Mar 29 14:56:26 AEDT 2018
+
+   Calculation: nb.3.0-polar  (input files: nb.3.0-polar.dal and nb.3.0-polar.mol)
+   PID        : 7129
+   Input dir  : /short/s01/mac502/Taber2
+
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.3.0-polar_7129
+   ******************************************* 
+
+   Thu Mar 29 14:56:26 AEDT 2018
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+
+   DALTON release Dalton2016.2 (2016)
+   Calculation: nb.11.0-polar  (input files: nb.11.0-polar.dal and nb.11.0-polar.mol)
+
+   PID        : 7135
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.26.0-polar.out nb.26.0-polar
+   Input dir  : /short/s01/mac502/Taber2
+
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.11.0-polar_7135
+   Thu Mar 29 14:56:26 AEDT 2018
+
+
+   Calculation: nb.6.0-polar  (input files: nb.6.0-polar.dal and nb.6.0-polar.mol)
+   PID        : 7138
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.6.0-polar_7138
+
+   Thu Mar 29 14:56:26 AEDT 2018
+
+   Calculation: nb.12.0-polar  (input files: nb.12.0-polar.dal and nb.12.0-polar.mol)
+   PID        : 7141
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.12.0-polar_7141
+
+   Thu Mar 29 14:56:26 AEDT 2018
+
+   Calculation: nb.13.0-polar  (input files: nb.13.0-polar.dal and nb.13.0-polar.mol)
+   PID        : 7155
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.13.0-polar_7155
+
+   Thu Mar 29 14:56:26 AEDT 2018
+
+   Calculation: nb.25.0-polar  (input files: nb.25.0-polar.dal and nb.25.0-polar.mol)
+   PID        : 7130
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.25.0-polar_7130
+
+   Thu Mar 29 14:56:26 AEDT 2018
+
+   Calculation: nb.26.0-polar  (input files: nb.26.0-polar.dal and nb.26.0-polar.mol)
+   PID        : 7152
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.26.0-polar_7152
+
+
+
+
+
+
+
+
+
+
+
+
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+   0: Directories for basis set searches:
+   0: Directories for basis set searches:
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+   0: Directories for basis set searches:
+
+
+
+   0: Directories for basis set searches:
+
+
+   0: Directories for basis set searches:
+   0: Directories for basis set searches:
+
+   0: Directories for basis set searches:
+
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+   0: Directories for basis set searches:
+   0: Directories for basis set searches:
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+   0: Directories for basis set searches:
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.22.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.22.0-polar.out as requested in input.
+nb.12.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.12.0-polar.out as requested in input.
+nb.7.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+nb.15.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+nb.3.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.7.0-polar.out as requested in input.
+Output is in /short/s01/mac502/Taber2/nb.15.0-polar.out as requested in input.
+Output is in /short/s01/mac502/Taber2/nb.3.0-polar.out as requested in input.
+
+nb.25.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+nb.14.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.25.0-polar.out as requested in input.
+Output is in /short/s01/mac502/Taber2/nb.14.0-polar.out as requested in input.
+nb.26.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.26.0-polar.out as requested in input.
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+
+
+
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+
+
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+nb.2.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.2.0-polar.out as requested in input.
+nb.6.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.6.0-polar.out as requested in input.
+nb.13.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.13.0-polar.out as requested in input.
+
+
+
+   Thu Mar 29 14:56:34 AEDT 2018
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+   ***************************************** 
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+nb.11.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.11.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:34 AEDT 2018
+   ***************************************** 
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.10.0-polar.out nb.10.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.10.0-polar  (input files: nb.10.0-polar.dal and nb.10.0-polar.mol)
+   PID        : 8183
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.10.0-polar_8183
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.5.0-polar.out nb.5.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.5.0-polar  (input files: nb.5.0-polar.dal and nb.5.0-polar.mol)
+   PID        : 8204
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.5.0-polar_8204
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.19.0-polar.out nb.19.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.19.0-polar  (input files: nb.19.0-polar.dal and nb.19.0-polar.mol)
+   PID        : 8221
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.19.0-polar_8221
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.18.0-polar.out nb.18.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.18.0-polar  (input files: nb.18.0-polar.dal and nb.18.0-polar.mol)
+   PID        : 8253
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.18.0-polar_8253
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.20.0-polar.out nb.20.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.20.0-polar  (input files: nb.20.0-polar.dal and nb.20.0-polar.mol)
+   PID        : 8323
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.20.0-polar_8323
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.21.0-polar.out nb.21.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.21.0-polar  (input files: nb.21.0-polar.dal and nb.21.0-polar.mol)
+   PID        : 8355
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.21.0-polar_8355
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.9.0-polar.out nb.9.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.9.0-polar  (input files: nb.9.0-polar.dal and nb.9.0-polar.mol)
+   PID        : 8349
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.9.0-polar_8349
+
+nb.10.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.10.0-polar.out as requested in input.
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.5.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.5.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:35 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 14:56:35 AEDT 2018
+   ***************************************** 
+nb.19.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.19.0-polar.out as requested in input.
+nb.18.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.18.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:35 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 14:56:35 AEDT 2018
+   ***************************************** 
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.20.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.20.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:35 AEDT 2018
+   ***************************************** 
+nb.9.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.9.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:35 AEDT 2018
+   ***************************************** 
+nb.21.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.21.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:35 AEDT 2018
+   ***************************************** 
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.23.0-polar.out nb.23.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.23.0-polar  (input files: nb.23.0-polar.dal and nb.23.0-polar.mol)
+   PID        : 8687
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.23.0-polar_8687
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.17.0-polar.out nb.17.0-polar
+
+   Thu Mar 29 14:56:35 AEDT 2018
+
+   Calculation: nb.17.0-polar  (input files: nb.17.0-polar.dal and nb.17.0-polar.mol)
+   PID        : 8716
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.17.0-polar_8716
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.16.0-polar.out nb.16.0-polar
+
+   Thu Mar 29 14:56:36 AEDT 2018
+
+   Calculation: nb.16.0-polar  (input files: nb.16.0-polar.dal and nb.16.0-polar.mol)
+   PID        : 8754
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.16.0-polar_8754
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.8.0-polar.out nb.8.0-polar
+
+   Thu Mar 29 14:56:36 AEDT 2018
+
+   Calculation: nb.8.0-polar  (input files: nb.8.0-polar.dal and nb.8.0-polar.mol)
+   PID        : 8771
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.8.0-polar_8771
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.27.0-polar.out nb.27.0-polar
+
+   Thu Mar 29 14:56:36 AEDT 2018
+
+   Calculation: nb.27.0-polar  (input files: nb.27.0-polar.dal and nb.27.0-polar.mol)
+   PID        : 8868
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.27.0-polar_8868
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.4.0-polar.out nb.4.0-polar
+
+   Thu Mar 29 14:56:36 AEDT 2018
+
+   Calculation: nb.4.0-polar  (input files: nb.4.0-polar.dal and nb.4.0-polar.mol)
+   PID        : 8941
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.4.0-polar_8941
+
+nb.23.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.23.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:36 AEDT 2018
+   ***************************************** 
+nb.17.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.17.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:36 AEDT 2018
+   ***************************************** 
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.16.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.16.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:36 AEDT 2018
+   ***************************************** 
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.8.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.8.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:36 AEDT 2018
+   ***************************************** 
+nb.27.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.27.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:36 AEDT 2018
+   ***************************************** 
+nb.4.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.4.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:36 AEDT 2018
+   ***************************************** 
+nb.1.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.1.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:44 AEDT 2018
+   ***************************************** 
+nb.24.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.24.0-polar.out as requested in input.
+
+   Thu Mar 29 14:56:51 AEDT 2018
+   ***************************************** 
+45   45
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.7.0-polar.out nb.7.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.13.0-polar.out nb.13.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.6.0-polar.out nb.6.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.13.0-polar  (input files: nb.13.0-polar.dal and nb.13.0-polar.mol)
+   PID        : 15281
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.13.0-polar_15281
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.7.0-polar  (input files: nb.7.0-polar.dal and nb.7.0-polar.mol)
+   PID        : 15290
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.7.0-polar_15290
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.1.0-polar.out nb.1.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.6.0-polar  (input files: nb.6.0-polar.dal and nb.6.0-polar.mol)
+   PID        : 15288
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.6.0-polar_15288
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.25.0-polar.out nb.25.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.22.0-polar.out nb.22.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.1.0-polar  (input files: nb.1.0-polar.dal and nb.1.0-polar.mol)
+   PID        : 15285
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.1.0-polar_15285
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.14.0-polar.out nb.14.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.25.0-polar  (input files: nb.25.0-polar.dal and nb.25.0-polar.mol)
+   PID        : 15298
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.25.0-polar_15298
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.22.0-polar  (input files: nb.22.0-polar.dal and nb.22.0-polar.mol)
+   PID        : 15279
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.22.0-polar_15279
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.14.0-polar  (input files: nb.14.0-polar.dal and nb.14.0-polar.mol)
+   PID        : 15301
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.14.0-polar_15301
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.12.0-polar.out nb.12.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.12.0-polar  (input files: nb.12.0-polar.dal and nb.12.0-polar.mol)
+   PID        : 15283
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.12.0-polar_15283
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.24.0-polar.out nb.24.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.3.0-polar.out nb.3.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.24.0-polar  (input files: nb.24.0-polar.dal and nb.24.0-polar.mol)
+   PID        : 15287
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.24.0-polar_15287
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.3.0-polar  (input files: nb.3.0-polar.dal and nb.3.0-polar.mol)
+   PID        : 15293
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.3.0-polar_15293
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.11.0-polar.out nb.11.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.11.0-polar  (input files: nb.11.0-polar.dal and nb.11.0-polar.mol)
+   PID        : 15289
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.11.0-polar_15289
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.2.0-polar.out nb.2.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.2.0-polar  (input files: nb.2.0-polar.dal and nb.2.0-polar.mol)
+   PID        : 15291
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.2.0-polar_15291
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.15.0-polar.out nb.15.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.15.0-polar  (input files: nb.15.0-polar.dal and nb.15.0-polar.mol)
+   PID        : 15312
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.15.0-polar_15312
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.26.0-polar.out nb.26.0-polar
+
+   Thu Mar 29 15:04:11 AEDT 2018
+
+   Calculation: nb.26.0-polar  (input files: nb.26.0-polar.dal and nb.26.0-polar.mol)
+   PID        : 15313
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.26.0-polar_15313
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.12.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.12.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+nb.22.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.22.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+nb.14.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.14.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+nb.7.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.7.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+nb.26.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.26.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+nb.15.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.15.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+nb.6.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+nb.3.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.6.0-polar.out as requested in input.
+Output is in /short/s01/mac502/Taber2/nb.3.0-polar.out as requested in input.
+nb.25.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.25.0-polar.out as requested in input.
+
+
+
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+   Thu Mar 29 15:04:11 AEDT 2018
+   ***************************************** 
+nb.13.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.13.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:12 AEDT 2018
+   ***************************************** 
+nb.2.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.2.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:12 AEDT 2018
+   ***************************************** 
+nb.11.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.11.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:12 AEDT 2018
+   ***************************************** 
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.10.0-polar.out nb.10.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.10.0-polar  (input files: nb.10.0-polar.dal and nb.10.0-polar.mol)
+   PID        : 16262
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.10.0-polar_16262
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.5.0-polar.out nb.5.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.5.0-polar  (input files: nb.5.0-polar.dal and nb.5.0-polar.mol)
+   PID        : 16311
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.5.0-polar_16311
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.19.0-polar.out nb.19.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.19.0-polar  (input files: nb.19.0-polar.dal and nb.19.0-polar.mol)
+   PID        : 16334
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.19.0-polar_16334
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.18.0-polar.out nb.18.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.18.0-polar  (input files: nb.18.0-polar.dal and nb.18.0-polar.mol)
+   PID        : 16343
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.18.0-polar_16343
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.21.0-polar.out nb.21.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.21.0-polar  (input files: nb.21.0-polar.dal and nb.21.0-polar.mol)
+   PID        : 16389
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.21.0-polar_16389
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.9.0-polar.out nb.9.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.20.0-polar.out nb.20.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.20.0-polar  (input files: nb.20.0-polar.dal and nb.20.0-polar.mol)
+   PID        : 16422
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.20.0-polar_16422
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.9.0-polar  (input files: nb.9.0-polar.dal and nb.9.0-polar.mol)
+   PID        : 16405
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.9.0-polar_16405
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.23.0-polar.out nb.23.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.23.0-polar  (input files: nb.23.0-polar.dal and nb.23.0-polar.mol)
+   PID        : 16450
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.23.0-polar_16450
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.16.0-polar.out nb.16.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.16.0-polar  (input files: nb.16.0-polar.dal and nb.16.0-polar.mol)
+   PID        : 16456
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.16.0-polar_16456
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.17.0-polar.out nb.17.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.17.0-polar  (input files: nb.17.0-polar.dal and nb.17.0-polar.mol)
+   PID        : 16477
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.17.0-polar_16477
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.10.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.10.0-polar.out as requested in input.
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.8.0-polar.out nb.8.0-polar
+
+   Thu Mar 29 15:04:12 AEDT 2018
+
+   Calculation: nb.8.0-polar  (input files: nb.8.0-polar.dal and nb.8.0-polar.mol)
+   PID        : 16582
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.8.0-polar_16582
+
+
+   Thu Mar 29 15:04:12 AEDT 2018
+   ***************************************** 
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.5.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.5.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:12 AEDT 2018
+   ***************************************** 
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.19.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.19.0-polar.out as requested in input.
+nb.18.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.18.0-polar.out as requested in input.
+
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+nb.21.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.21.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+nb.20.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.20.0-polar.out as requested in input.
+nb.23.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.23.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+nb.16.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.16.0-polar.out as requested in input.
+nb.9.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.9.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+nb.17.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.17.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+nb.8.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.8.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.27.0-polar.out nb.27.0-polar
+
+   Thu Mar 29 15:04:13 AEDT 2018
+
+   Calculation: nb.27.0-polar  (input files: nb.27.0-polar.dal and nb.27.0-polar.mol)
+   PID        : 17006
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.27.0-polar_17006
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.4.0-polar.out nb.4.0-polar
+
+   Thu Mar 29 15:04:13 AEDT 2018
+
+   Calculation: nb.4.0-polar  (input files: nb.4.0-polar.dal and nb.4.0-polar.mol)
+   PID        : 17075
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.4.0-polar_17075
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.27.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.27.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+nb.4.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.4.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:13 AEDT 2018
+   ***************************************** 
+nb.1.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.1.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:22 AEDT 2018
+   ***************************************** 
+nb.24.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.24.0-polar.out as requested in input.
+
+   Thu Mar 29 15:04:28 AEDT 2018
+   ***************************************** 
+45   45
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.7.0-polar.out nb.7.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.7.0-polar  (input files: nb.7.0-polar.dal and nb.7.0-polar.mol)
+   PID        : 22906
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.7.0-polar_22906
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.13.0-polar.out nb.13.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.13.0-polar  (input files: nb.13.0-polar.dal and nb.13.0-polar.mol)
+   PID        : 22914
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.13.0-polar_22914
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.3.0-polar.out nb.3.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.22.0-polar.out nb.22.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.3.0-polar  (input files: nb.3.0-polar.dal and nb.3.0-polar.mol)
+   PID        : 22912
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.3.0-polar_22912
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.6.0-polar.out nb.6.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.22.0-polar  (input files: nb.22.0-polar.dal and nb.22.0-polar.mol)
+   PID        : 22922
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.22.0-polar_22922
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.6.0-polar  (input files: nb.6.0-polar.dal and nb.6.0-polar.mol)
+   PID        : 22907
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.6.0-polar_22907
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.25.0-polar.out nb.25.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.25.0-polar  (input files: nb.25.0-polar.dal and nb.25.0-polar.mol)
+   PID        : 22911
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.25.0-polar_22911
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.2.0-polar.out nb.2.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.2.0-polar  (input files: nb.2.0-polar.dal and nb.2.0-polar.mol)
+   PID        : 22920
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.2.0-polar_22920
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.12.0-polar.out nb.12.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.12.0-polar  (input files: nb.12.0-polar.dal and nb.12.0-polar.mol)
+   PID        : 22928
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.12.0-polar_22928
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.14.0-polar.out nb.14.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.14.0-polar  (input files: nb.14.0-polar.dal and nb.14.0-polar.mol)
+   PID        : 22921
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.14.0-polar_22921
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.26.0-polar.out nb.26.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.26.0-polar  (input files: nb.26.0-polar.dal and nb.26.0-polar.mol)
+   PID        : 22918
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.26.0-polar_22918
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.11.0-polar.out nb.11.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.11.0-polar  (input files: nb.11.0-polar.dal and nb.11.0-polar.mol)
+   PID        : 22908
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.11.0-polar_22908
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.1.0-polar.out nb.1.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.1.0-polar  (input files: nb.1.0-polar.dal and nb.1.0-polar.mol)
+   PID        : 22913
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.1.0-polar_22913
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.24.0-polar.out nb.24.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.24.0-polar  (input files: nb.24.0-polar.dal and nb.24.0-polar.mol)
+   PID        : 22910
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.24.0-polar_22910
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.15.0-polar.out nb.15.0-polar
+
+   Thu Mar 29 15:11:28 AEDT 2018
+
+   Calculation: nb.15.0-polar  (input files: nb.15.0-polar.dal and nb.15.0-polar.mol)
+   PID        : 22923
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.15.0-polar_22923
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.22.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.22.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:28 AEDT 2018
+   ***************************************** 
+nb.7.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.7.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:28 AEDT 2018
+   ***************************************** 
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+
+ DALTON: default work memory size used.            64000000
+ DALTON: default work memory size used.            64000000
+
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.25.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.25.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+nb.26.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.26.0-polar.out as requested in input.
+
+nb.14.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.14.0-polar.out as requested in input.
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+nb.15.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.15.0-polar.out as requested in input.
+nb.3.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+
+Output is in /short/s01/mac502/Taber2/nb.3.0-polar.out as requested in input.
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+nb.12.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.12.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+nb.2.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.2.0-polar.out as requested in input.
+nb.13.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.13.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+nb.6.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.6.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.10.0-polar.out nb.10.0-polar
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.10.0-polar  (input files: nb.10.0-polar.dal and nb.10.0-polar.mol)
+   PID        : 23875
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.10.0-polar_23875
+
+nb.11.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.11.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:29 AEDT 2018
+   ***************************************** 
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.5.0-polar.out nb.5.0-polar
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.5.0-polar  (input files: nb.5.0-polar.dal and nb.5.0-polar.mol)
+   PID        : 23912
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.5.0-polar_23912
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.18.0-polar.out nb.18.0-polar
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.18.0-polar  (input files: nb.18.0-polar.dal and nb.18.0-polar.mol)
+   PID        : 23985
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.18.0-polar_23985
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.20.0-polar.out nb.20.0-polar
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.20.0-polar  (input files: nb.20.0-polar.dal and nb.20.0-polar.mol)
+   PID        : 23969
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.20.0-polar_23969
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.19.0-polar.out nb.19.0-polar
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.19.0-polar  (input files: nb.19.0-polar.dal and nb.19.0-polar.mol)
+   PID        : 23986
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.19.0-polar_23986
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.21.0-polar.out nb.21.0-polar
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.21.0-polar  (input files: nb.21.0-polar.dal and nb.21.0-polar.mol)
+   PID        : 24046
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.21.0-polar_24046
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.16.0-polar.out nb.16.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.17.0-polar.out nb.17.0-polar
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.16.0-polar  (input files: nb.16.0-polar.dal and nb.16.0-polar.mol)
+   PID        : 24078
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.16.0-polar_24078
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.17.0-polar  (input files: nb.17.0-polar.dal and nb.17.0-polar.mol)
+   PID        : 24047
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.17.0-polar_24047
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.9.0-polar.out nb.9.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.8.0-polar.out nb.8.0-polar
+
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.23.0-polar.out nb.23.0-polar
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.8.0-polar  (input files: nb.8.0-polar.dal and nb.8.0-polar.mol)
+   PID        : 24118
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.8.0-polar_24118
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.23.0-polar  (input files: nb.23.0-polar.dal and nb.23.0-polar.mol)
+   PID        : 24097
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.23.0-polar_24097
+
+   Thu Mar 29 15:11:29 AEDT 2018
+
+   Calculation: nb.9.0-polar  (input files: nb.9.0-polar.dal and nb.9.0-polar.mol)
+   PID        : 24012
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.9.0-polar_24012
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.10.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.10.0-polar.out as requested in input.
+
+
+ DALTON: default work memory size used.            64000000
+   Thu Mar 29 15:11:30 AEDT 2018
+
+   ***************************************** 
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.5.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.5.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.27.0-polar.out nb.27.0-polar
+
+
+ DALTON: default work memory size used.            64000000
+   Thu Mar 29 15:11:30 AEDT 2018
+
+
+   Calculation: nb.27.0-polar  (input files: nb.27.0-polar.dal and nb.27.0-polar.mol)
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+   PID        : 24283
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.27.0-polar_24283
+
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.19.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.19.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+nb.18.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.18.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+nb.20.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.20.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+nb.21.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.21.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.17.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.17.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+nb.23.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.23.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+nb.9.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.9.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+nb.8.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.8.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+nb.16.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.16.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+
+   ******************************************* 
+   **** OUTPUT FROM DALTON SHELL SCRIPT
+   ******************************************* 
+
+   DALTON release Dalton2016.2 (2016)
+
+   Invocation: /apps/dalton/2016.2/dalton -N 1 -o nb.4.0-polar.out nb.4.0-polar
+
+   Thu Mar 29 15:11:30 AEDT 2018
+
+   Calculation: nb.4.0-polar  (input files: nb.4.0-polar.dal and nb.4.0-polar.mol)
+   PID        : 24660
+   Input dir  : /short/s01/mac502/Taber2
+   Scratch dir: /jobfs/local/5586005.r-man2/DALTON_scratch_mac502/nb.4.0-polar_24660
+
+nb.27.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.27.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+
+ DALTON: default work memory size used.            64000000
+
+ Work memory size (LMWORK+2):    64000002 =  488.28 megabytes; node   0
+
+   0: Directories for basis set searches:
+     /short/s01/mac502/Taber2:/apps/dalton/2016.2/basis
+nb.4.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.4.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:30 AEDT 2018
+   ***************************************** 
+nb.1.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.1.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:39 AEDT 2018
+   ***************************************** 
+nb.24.0-polar.tar.gz has been copied to /short/s01/mac502/Taber2
+Output is in /short/s01/mac502/Taber2/nb.24.0-polar.out as requested in input.
+
+   Thu Mar 29 15:11:46 AEDT 2018
+   ***************************************** 
+
+======================================================================================
+                  Resource Usage on 2018-03-29 15:11:53:
+   Job Id:             5586005.r-man2
+   Project:            s01
+   Exit Status:        0
+   Service Units:      32.82
+   NCPUs Requested:    14                     NCPUs Used: 14              
+                                           CPU Time Used: 08:19:13                                   
+   Memory Requested:   28.0GB                Memory Used: 4.22GB          
+   Walltime requested: 02:00:00            Walltime Used: 00:46:53        
+   JobFS requested:    28.0GB                 JobFS used: 670.09MB        
+======================================================================================
