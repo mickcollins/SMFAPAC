@@ -20,7 +20,7 @@ available, in a computation time that is independent of the size of the molecule
 * [Installation](#installation)
 
 * [Examples](/examples)
-* [About Us](#about-us)
+* [Licensing](#Licensing)
 
 ## Requirements
 * fortran compiler
@@ -40,7 +40,7 @@ git clone https://github.com/SMFA/SMFA.git      # Clone SMFA source code from Gi
 ## SMFA Publications
 1. Collins, M. A. Physical Chemistry Chemical Physics 2012, 14, 7744–7751.
 
-## About Us
+## Licensing
 
 
 ## Version
