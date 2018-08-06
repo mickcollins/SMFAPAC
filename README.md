@@ -18,8 +18,8 @@ available, in a computation time that is independent of the size of the molecule
 
 * [Requirements](#requirements)
 * [Installation](#installation)
-
-* [Examples](/examples)
+* [SMFA Publications](#SMFA Publications)
+* [Examples](/doc/testcases)
 * [Licensing](#Licensing)
 
 ## Requirements
