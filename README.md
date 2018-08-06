@@ -18,9 +18,9 @@ available, in a computation time that is independent of the size of the molecule
 
 * [Requirements](#requirements)
 * [Installation](#installation)
-* [SMFA Publications](#SMFA-Publications)
+* [SMFA Publications](#smfa-publications)
 * [Examples](/doc/testcases)
-* [Licensing](#Licensing)
+* [Licensing](#licensing)
 
 ## Requirements
 * fortran compiler
