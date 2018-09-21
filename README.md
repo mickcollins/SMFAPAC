@@ -23,7 +23,7 @@ available, in a computation time that is independent of the size of the molecule
 * [Licensing](#licensing)
 
 ## Requirements
-* fortran compiler
+* Fortran compiler (gfortran, intel-fc)
 * [cmake](https://cmake.org/)
 * [perl](https://www.perl.org/)
 * [DALTON](http://daltonprogram.org/)
@@ -32,6 +32,7 @@ available, in a computation time that is independent of the size of the molecule
     - [Gaussian](http://gaussian.com/)
     - [NWChem](http://www.nwchem-sw.org/)
     - [QChem](http://www.q-chem.com/)
+* System running the PBS scheduling software
 
 
 The SMFA_Users_Guide.pdf (Section 2.7) in SMFAPAC/doc contains information
