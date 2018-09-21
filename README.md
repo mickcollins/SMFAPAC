@@ -26,12 +26,22 @@ available, in a computation time that is independent of the size of the molecule
 * fortran compiler
 * [cmake](https://cmake.org/)
 * [perl](https://www.perl.org/)
-* Quantum Chemistry programs
+* [DALTON](http://daltonprogram.org/)
+* At least one of the following Quantum Chemistry programs:
     - [GAMESS](http://www.msg.ameslab.gov/gamess/)
     - [Gaussian](http://gaussian.com/)
     - [NWChem](http://www.nwchem-sw.org/)
     - [QChem](http://www.q-chem.com/)
-* Optional: [DALTON](http://daltonprogram.org/)
+
+Several Perl modules are also required, and these can be installed 
+with the following commands (administrator privileges required):
+
+```shell
+#> sudo cpan App::cpanminus
+#> sudo cpanm Shell
+#> sudo apt-get install libncurses5-dev 
+#> sudo cpanm Curses
+```
 
 ## Installation
 
