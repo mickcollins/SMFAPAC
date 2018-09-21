@@ -58,14 +58,14 @@ time (the build below does not require it).
 ## Installation
 
 ```shell
-#> git clone https://github.com/SMFA/SMFA.git
-#> mkdir build
-#> cd build
-#> cmake ../
-#> make install
+> git clone https://github.com/SMFA/SMFA.git
+> mkdir build
+> cd build
+> cmake ../
+> make install
 ```
 
-'make install' compiles the binaries and also moves them to the
+`make install` compiles the binaries and also moves them to the
 SMFAPAC/exe directory.  If you need to rebuild, simply remove all
 files in the build directory and `make install` again.
 
@@ -75,13 +75,13 @@ adding the following to the appropriate rc file:
 For ~/.cshrc:
 
 ```shell
-># set path = ( $path /path/to/SMFAPAC/bin)
+> set path = ( $path /path/to/SMFAPAC/bin)
 ```
 
 For ~/.bashrc:
 
 ```shell
-># export PATH=$PATH:/path/to/SMFAPAC/bin
+> export PATH=$PATH:/path/to/SMFAPAC/bin
 ```
 
 Ensure /path/to is replaced with the actual path to the directory.
