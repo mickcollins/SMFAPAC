@@ -42,10 +42,10 @@ Several Perl modules are also required, and these can be installed
 with the following commands (administrator privileges required):
 
 ```shell
-#> sudo cpan App::cpanminus
-#> sudo cpanm Shell
-#> sudo apt-get install libncurses5-dev 
-#> sudo cpanm Curses
+> sudo cpan App::cpanminus
+> sudo cpanm Shell
+> sudo apt-get install libncurses5-dev 
+> sudo cpanm Curses
 ```
 One of the optional utility programs in SMFA requires the openbabel program
 (see Section 5.2 in SMFA_Users_Guide.pdf), so you will need to install
