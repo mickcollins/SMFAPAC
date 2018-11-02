@@ -30,9 +30,12 @@ c cancelations done in subroutine cancelL1
       read(8,*)nffinal
       do i=1,nffinal
       read(8,*)numat1(i)
-      read(8,*)(natstore1(i,k),k=1,numat(i))
+c     read(8,*)(natstore1(i,k),k=1,numat(i))
+c corrected this line on 27/09/18
+      read(8,*)(natstore1(i,k),k=1,numat1(i))
       enddo
       close(unit=8)
+
 c sort for later comparison with natstore
       do i=1,nffinal
        call piksrt(numat1(i),natstore1(i,:))
