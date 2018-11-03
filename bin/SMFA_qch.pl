@@ -59,12 +59,17 @@ if ("$jobtype" eq "OPT") {$deriv=3}
 if ("$jobtype" eq "TS") {$deriv=4}
 if ("$jobtype" eq "SCAN") {$deriv=5}
 print "\n";
-
+RETRYbasis:
 print "QChem allows a different basis set for each element\n";
 print "Do you want all elements to have the same basis (Y or N) ? ";
 my $ans=<STDIN>;
 chomp $ans;
 $ans=uc($ans);
+if($ans ne "Y" && $ans ne "N") {
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYbasis;
+}
 if($ans ne "N") {$ans="Y"};
 if ($ans eq "Y") {
 print "Enter the basis for all atoms\n";
@@ -485,18 +490,21 @@ sub getenergy_qch {
  open(FRAGJOB,"<@_");
  while (<FRAGJOB>) {
   if (/Charge-charge energy/) {
+$_=~ s/^\s+|\s+$//g;
    my @secline = split (/\s+/, $_);
-   $secen = "$secline[4]";
+   $secen = "$secline[3]";
   }
    if (/Total energy in the final/) {
+$_=~ s/^\s+|\s+$//g;
     my @totline = split (/\s+/, $_);
-    $ent = "$totline[9]";
+    $ent = "$totline[8]";
     $TotEn = $ent - $secen;
    }
    if(/correlation energy/) {
      if(/Total/) {
+$_=~ s/^\s+|\s+$//g;
       my @totline = split (/\s+/, $_);
-      $entc = "$totline[6]";
+      $entc = "$totline[5]";
       $TotEn = $TotEn + $entc;
      }
      if(/CCSD/) {
