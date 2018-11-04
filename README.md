@@ -59,7 +59,7 @@ time (the build below does not require it).
 ## Installation
 
 ```shell
-> git clone https://github.com/SMFA/SMFA.git
+> git clone https://github.com/mickcollins/SMFAPAC
 > mkdir build
 > cd build
 > cmake ../
