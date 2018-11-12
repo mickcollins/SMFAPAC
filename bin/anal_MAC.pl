@@ -10,6 +10,10 @@ $EXEDIR=~ s/^\s+|\s+$//g;
 
 &anal_MAC;
 
+$junk=`rm theseforces*`;
+$junk=`rm thesedipdr*`;
+$junk=`rm thesecoords*`;
+
 
 
 sub anal_MAC {
@@ -4403,7 +4407,7 @@ sub getenergy_qch {
    if(/correlation energy/) {
      if(/Total/) {
       my @totline = split (/\s+/, $_);
-      $entc = "$totline[6]";
+      $entc = "$totline[5]";
       $TotEn = $TotEn + $entc;
      }
      if(/CCSD/) {
