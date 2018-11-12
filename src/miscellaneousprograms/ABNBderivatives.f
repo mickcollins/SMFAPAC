@@ -86,11 +86,11 @@ c in the case of caps, w1 = the weight this cap has on a real atom
 
       close(unit=1)
 
-      open(unit=2,file='abforces',status='old')
+      open(unit=2,file='abforces',status='unknown')
 c abforces contins the forces extracted from the nonbonded
 c ab initio jobs
       if(jobtype.eq.2)then
-      open(unit=3,file='abhessians',status='old')
+      open(unit=3,file='abhessians',status='unknown')
 c abhessians contains the hessions extracted from the nonbonded
 c ab initio jobs
 
@@ -98,7 +98,12 @@ c ab initio jobs
 
 c read in the number of ab jobs
 c njobs is the total number of Level1-Level1 ab initio jobs
-      read(2,*)njobs
+      read(2,*,end=127)njobs
+      go to 128
+127   continue
+      stop
+128   continue
+
        if(jobtype.eq.2)then
         read(3,*)
        endif
