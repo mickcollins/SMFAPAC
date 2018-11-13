@@ -82,7 +82,7 @@ system("rm -f TIMELOADING");
     system("mv $my_coord Lev0_${my_coord}");
    }
 
-  system("~/bin/$EXEDIR/findHandCbonds_VdW");
+  system("$EXEDIR/findHandCbonds_VdW");
 
   system("echo 1 > ONEONLY");
 
