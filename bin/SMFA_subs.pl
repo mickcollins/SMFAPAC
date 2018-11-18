@@ -42,14 +42,14 @@ print SMP1 "\n";
 if ($deriv == 3) {
 close SMP1;
 system("cat OPTSTEPS >> OUT_SMFA");
-system("cat -s IN_CONSTRAINTS >> OUT_SMFA");
+$junk=`cat IN_CONSTRAINTS >> OUT_SMFA`;
 open(SMP1,">>OUT_SMFA");
 print SMP1 "\n";
 }
 if ($deriv == 4) {
 close SMP1;
 system("cat OPTSTEPS >> OUT_SMFA");
-system("cat -s IN_CONSTRAINTS >> OUT_SMFA");
+$junk=`cat IN_CONSTRAINTS >> OUT_SMFA`;
 system("cat TSATOMS >> OUT_SMFA");
 open(SMP1,">>OUT_SMFA");
 print SMP1 "\n";
@@ -617,12 +617,18 @@ system("stty echo");
 print "If you want to accept all SMFA defaults regarding bond definitions,\n";
 print "simply hit the RETURN key to skip this input\n";
 print "\n";
+RETRYdouble:
 print "Do you want to specify some bonds as multiple bonds,\n";
 print "that would normally be taken as single bonds (Y/N or hit RET to skip all)?\n";
   $ifdouble=<STDIN>;
 if ($ifdouble eq "\n") {return 1}
 chomp $ifdouble;
 $ifdouble=uc($ifdouble);
+if($ifdouble ne "Y" && $ifdouble ne "N") {
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYdouble;
+}
 $numberd=0;
 if ($ifdouble eq "Y") {
 print "Enter the number of (unusual) user-specified double bonds (usually 0)\n";
@@ -649,11 +655,17 @@ chomp $line;
   close(TMP2);
 }
 
+RETRYsingle:
 print "Do you want to specify some bonds as single bonds,\n";
 print "that would normally be taken as multiple bonds (Y/N)?\n";
   $ifsingle=<STDIN>;
 chomp $ifsingle;
 $ifsingle=uc($ifsingle);
+if ($ifsingle ne "Y" && $ifsingle ne "N") {
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYsingle;
+}
 $numbers=0;
 if($ifsingle eq "Y") {
 print "Enter the number of (unusual) user-specified single bonds (usually 0)\n";
@@ -680,11 +692,17 @@ chomp $line;
   close(TMP2);
 }
 
+RETRYextra:
 print "Do you want to specify that single bonds exist\n";
 print "that would normally not be considered as bonds (Y/N)?\n";
   $ifbonds=<STDIN>;
 chomp $ifbonds;
 $ifbonds=uc($ifbonds);
+if($ifbonds ne "Y" && $ifbonds ne "N") {
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYextra;
+}
 $numberd=0;
 if ($ifbonds eq "Y"){
 print "Enter the number of (unusual) user-specfied extra bonds (usually 0)\n";
@@ -710,21 +728,32 @@ chomp $line;
   print TMP3 "$numberd\n";
   close(TMP3);
 }
-
+RETRYamide:
 print "By default SMFA assumes that the amide moiety is treated as a single group\n";
 print "Do you want to treat the Amide CN bond as a single bond only (Y/N)?\n";
   $ifamide=<STDIN>;
 chomp $ifamide;
 $ifamide=uc($ifamide);
+if($ifamide ne "Y" && $ifamide ne "N") {
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYamide;
+}
 $lamide="T";
 if ($ifamide eq "Y") {$lamide="F"};
 if ($ifamide eq "N") {$lamide="T"};
 
+RETRYcx:
 print "By default SMFA assumes that CX2 or CX3 (X=F,Cl,..) is a single group.\n";
 print "Do you want to treat these CX bonds as single bonds only (Y/N)?\n";
   $ifCF=<STDIN>;
 chomp $ifCF;
 $ifCF=uc($ifCF);
+if($ifCF ne "Y" && $ifCF ne "N") {
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYcx;
+}
 $lcf="T";
 if ($ifCF eq "Y") {$lcf="F"};
 if ($ifCF eq "N") {$lcf="T"};
@@ -738,12 +767,19 @@ if ($ifCF eq "N") {$lcf="T"};
   $hbonds="true";
   $ibonds="true";
   $factor="1.0";
+RETRYhb:
 print "By default SMFA assumes that hydrogen bonds will be treated as regular bonds\n";
 print "Do you want to ignore hydrogen bonds (Y/N)?\n";
   $ifhb=<STDIN>;
 chomp $ifhb;
 $ifhb=uc($ifhb);
+if($ifhb ne "Y" && $ifhb ne "N") {
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYhb;
+}
 if ($ifhb eq "Y") {$hbonds="false"};
+RETRYch:
 print "By default SMFA assumes that if two charged groups are close together\n";
 print "then they should be considered to be bonded\n";
 print "Do you want to ignore this default (Y/N)?\n";
@@ -752,7 +788,9 @@ chomp $ifch;
 $ifch=uc($ifch);
 $ifch=~ s/^\s+|\s+$//g;
 if($ifch ne "Y" && $ifch ne "N") {
-$ifch="Y";
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYch;
 }
 if ($ifch eq "Y") {$ibonds="false"};
 if ($ifch eq "N") {
@@ -781,6 +819,7 @@ sub SMFAchargeinp {
 
 system("clear");
 system("stty echo");
+RETRYmetals:
 print "Are there metals or other atoms whose charge must be specified\n";
 print "or modified (Y/N, or hit RETURN to skip)?\n";
   $ifch=<STDIN>;
@@ -788,7 +827,9 @@ if ($ifch eq "\n") { return 1 }
 chomp $ifch;
 $ifch=uc($ifch);
 if($ifch ne "Y" && $ifch ne "N") {
-$ifch="N";
+ print "The answer must be Y or N or hit RETURN to skip\n";
+ system("sleep 2");
+ goto RETRYmetals;
 }
 if ($ifch eq "Y") {
 print "Enter the number of metal/other atoms\n";
@@ -976,25 +1017,25 @@ system("cat $CODEDIR/SMFA_dal.pl >> optcode.pl");
 system("chmod +x optcode.pl");
 if($qmprog == 1) {
 system("cp pbsfile subrunoptgam");
-system("echo 'optcode.pl' >> subrunoptgam");
+system("echo './optcode.pl' >> subrunoptgam");
 system("chmod +x subrunoptgam");
 system("qsub subrunoptgam");
 }
 if($qmprog == 2) {
 system("cp pbsfile subrunoptgau");
-system("echo 'optcode.pl' >> subrunoptgau");
+system("echo './optcode.pl' >> subrunoptgau");
 system("chmod +x subrunoptgau");
 system("qsub subrunoptgau");
 }
 if($qmprog == 3) {
 system("cp pbsfile subrunoptnwc");
-system("echo 'optcode.pl' >> subrunoptnwc");
+system("echo './optcode.pl' >> subrunoptnwc");
 system("chmod +x subrunoptnwc");
 system("qsub subrunoptnwc");
 }
 if($qmprog == 4) {
 system("cp pbsfile subrunoptqch");
-system("echo 'optcode.pl' >> subrunoptqch");
+system("echo './optcode.pl' >> subrunoptqch");
 system("chmod +x subrunoptqch");
 system("qsub subrunoptqch");
 }
@@ -1023,25 +1064,25 @@ system("cat $CODEDIR/SMFA_dal.pl >> optcode.pl");
 system("chmod +x optcode.pl");
 if($qmprog == 1) {
 system("cp pbsfile subrunoptgam");
-system("echo 'optcode.pl' >> subrunoptgam");
+system("echo './optcode.pl' >> subrunoptgam");
 system("chmod +x subrunoptgam");
 system("qsub subrunoptgam");
 }
 if($qmprog == 2) {
 system("cp pbsfile subrunoptgau");
-system("echo 'optcode.pl' >> subrunoptgau");
+system("echo './optcode.pl' >> subrunoptgau");
 system("chmod +x subrunoptgau");
 system("qsub subrunoptgau");
 }
 if($qmprog == 3) {
 system("cp pbsfile subrunoptnwc");
-system("echo 'optcode.pl' >> subrunoptnwc");
+system("echo './optcode.pl' >> subrunoptnwc");
 system("chmod +x subrunoptnwc");
 system("qsub subrunoptnwc");
 }
 if($qmprog == 4) {
 system("cp pbsfile subrunoptqch");
-system("echo 'optcode.pl' >> subrunoptqch");
+system("echo './optcode.pl' >> subrunoptqch");
 system("chmod +x subrunoptqch");
 system("qsub subrunoptqch");
 }
@@ -1080,13 +1121,13 @@ system("chmod +x runalldal");
 #system("cp pbsfile subrunallgam");
 system("cp pbsfile_bare subrunallgam");
 system("cat LOADQCP >> subrunallgam");
-system("echo 'runallgam' >> subrunallgam");
+system("echo './runallgam' >> subrunallgam");
 
 #system("echo 'module unload gamess/2016-08-R1' >> subrunallgam");
 #system("echo 'module unload openmpi/1.10.2' >> subrunallgam");
 #system("echo 'module load dalton' >> subrunallgam");
 system("cat LOADDP >> subrunallgam");
-system("echo 'runalldal' >> subrunallgam");
+system("echo './runalldal' >> subrunallgam");
 system("chmod +x subrunallgam");
 system("qsub subrunallgam");
 print "\n";
@@ -1110,7 +1151,7 @@ system ("cat $CODEDIR/SMFA_dal.pl >> runallgau");
 system("cat $CODEDIR/SMFA_subs.pl >> runallgau");
 system("chmod +x runallgau");
 system("cp pbsfile subrunallgau");
-system("echo 'runallgau' >> subrunallgau");
+system("echo './runallgau' >> subrunallgau");
 system("chmod +x subrunallgau");
 system("qsub subrunallgau");
 print "\n";
@@ -1142,11 +1183,11 @@ system("chmod +x runalldal");
 #system("cp pbsfile subrunallnwc");
 system("cp pbsfile_bare subrunallnwc");
 system("cat LOADQCP >> subrunallnwc");
-system("echo 'runallnwc' >> subrunallnwc");
+system("echo './runallnwc' >> subrunallnwc");
 #system("echo 'module unload nwchem/6.6' >> subrunallnwc");
 #system("echo 'module load dalton' >> subrunallnwc");
 system("cat LOADDP >> subrunallnwc");
-system("echo 'runalldal' >> subrunallnwc");
+system("echo './runalldal' >> subrunallnwc");
 system("chmod +x subrunallnwc");
 system("qsub subrunallnwc");
 print "\n";
@@ -1170,7 +1211,7 @@ system("cat $CODEDIR/SMFA_dal.pl >> runallqch");
 system("cat $CODEDIR/SMFA_subs.pl >> runallqch");
 system("chmod +x runallqch");
 system("cp pbsfile subrunallqch");
-system("echo 'runallqch' >> subrunallqch");
+system("echo './runallqch' >> subrunallqch");
 system("chmod +x subrunallqch");
 system("qsub subrunallqch");
 print "\n";
@@ -1501,7 +1542,7 @@ sub solventcharges {
 
 system("stty sane");
 system("clear");
-
+RETRYembed:
 print "Very polar solvent molecules can induce polarisation in both\n";
 print "solute and other solvent molecules.\n";
 print "SMFA can evaluate the energy of polar solvents and solutes, at a\n";
@@ -1517,6 +1558,11 @@ if($anssol eq "\n") {
 }
 chomp $anssol;
 $anssol=uc($anssol);
+if($anssol ne "Y" && $anssol ne "N") {
+ print "The answer must be Y or N\n";
+ system("sleep 2");
+ goto RETRYembed;
+}
 if($anssol ne "Y") {
  system("rm -f IN_SOLCHARGES");
  return;
@@ -3439,7 +3485,10 @@ close OUT;
 sub createrunscripts {
 
 
-$line=`awk /ncpus=/ pbsfile`;
+#$line=`awk /ncpus=/ pbsfile`;
+&getncpus;
+# getncpus creates $line;
+
 @bline=split("=",$line);
 $ncpus=$bline[1];
 chomp($ncpus);
@@ -3737,7 +3786,7 @@ system("cat LOADQCP > scr_gam");
 system("cat $CODEDIR/scr_gam1 >>scr_gam");
 system("cat LOADDP >>scr_gam");
 system("cat $CODEDIR/scr_gam2 >>scr_gam");
-system("cat scr_gam >> subrunallgam");
+system("cat ./scr_gam >> subrunallgam");
 #system("cat $CODEDIR/scr_gam >> subrunallgam");
 system("chmod +x subrunallgam");
 system("qsub subrunallgam");
@@ -3773,7 +3822,7 @@ system("cat LOADQCP > scr_nwc");
 system("cat $CODEDIR/scr_nwc1 >> scr_nwc");
 system("cat LOADDP >> scr_nwc");
 system("cat $CODEDIR/scr_nwc2 >> scr_nwc");
-system("cat scr_nwc >> subrunallnwc");
+system("cat ./scr_nwc >> subrunallnwc");
 #system("cat $CODEDIR/scr_nwc >> subrunallnwc");
 system("chmod +x subrunallnwc");
 system("qsub subrunallnwc");
@@ -4209,6 +4258,19 @@ close IN;
 close OUT;
 system("cp tmpfile $targetfile");
 system("rm tmpfile");
+}
+
+sub getncpus {
+$line=`awk /NCPUS=/ pbsfile`;
+if($line eq "\n" || $line eq "") {
+ $line=`awk /ncpus=/ pbsfile`;
+}
+if($line eq "\n" || $line eq "") {
+ print "The pbsfile is missing a statement containing 'ncpus='\n";
+ print "SMFA will terminate\n";
+ system("sleep 5");
+ exit(0);
+}
 }
 
 
