@@ -79,10 +79,10 @@ c "charge.xx" part
       open(unit=1,file=file3,status='old')
 
       read(1,*)ncore,ncaps,numfam
-      if(ncaps.eq.0)then
-       write(6,*)' ncaps = 0 in a charge file'
+c     if(ncaps.eq.0)then
+c      write(6,*)' ncaps = 0 in a charge file'
 c      stop
-      endif
+c     endif
 
       if(ncaps.gt.0)then
 
