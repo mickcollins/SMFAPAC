@@ -192,7 +192,7 @@ c simpler than Anglada and Bofill
         if(ratio.gt.0.85.and.ratio.lt.1.15)then
          radius=radius*1.4142d0
         else
-         if(ratio.gt.0.75.and.ratio.lt.1.25)radius=radius/2.d0
+         if(ratio.lt.0.75.or.ratio.gt.1.25)radius=radius/2.d0
         endif
        endif
 
