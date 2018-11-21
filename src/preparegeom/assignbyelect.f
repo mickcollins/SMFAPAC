@@ -168,6 +168,7 @@ c  look for specified charges and valency
       write(66,*)' input specified charges'
       open(unit=1,file='IN_SPECIFIED_CHARGES',status='unknown')
       ist1=0
+      nspec=0
       read(1,*,end=200)
 c an existing IN_SPECIFIED_CHARGES sets nflag=1
       nflag=1
@@ -638,6 +639,29 @@ c making 5 bonds to a group 5, if that removes charges
         ncharge(n)=0
        endif
 103   enddo  
+
+c 21/11/18  added new code
+c  if a ligand atom to a metal(special =1) has a positive charge only
+c because of this bond, and the metal is positive, then
+c make the ligand atom neutral, on the assumption that this is
+c only a dative bond.
+
+      write(66,*)' The following bonds have been made dative bonds'
+      write(66,*)' for the purpose of charge allocation'
+      do n=1,natom
+       if(ncharge(n).le.0)go to 1044
+       if(special(n).eq.1)go to 1044
+       if(nbonds(n).eq.0)go to 1044
+       do m=1,nbonds(n)
+        m1=bonds(n,m)
+        if(special(m1).eq.1.and.ncharge(m1).gt.0)then
+         ncharge(n)=ncharge(n)-1
+         write(66,*)n,m1
+        endif
+       enddo
+1044   continue
+      enddo
+c end new code 21/11/18
 
 c this completes the assignment of charges
 
