@@ -78,7 +78,7 @@ c see what has to be done
 
       Htrue='true'
       Ctrue='true'
-      factor=1.5d0
+      factor=1.0d0
       open(unit=3,file='IN_MINUSBONDS',status='unknown')
       read(3,*,end=201)
       read(3,200)Htrue
@@ -399,6 +399,7 @@ c we create a new H-bond
       enddo
 
 2000  continue
+
 
 c check for and remove repeats
 
