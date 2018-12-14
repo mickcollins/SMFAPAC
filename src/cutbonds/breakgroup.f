@@ -4,7 +4,8 @@
       implicit double precision(a-h,o-z)
 
       integer, allocatable   :: ma1(:,:)
-      allocate(ma1(natom,natom))
+c     allocate(ma1(natom,natom))
+      allocate(ma1(nsmall,nsmall))
 
 c find the group on which to base the eleimination of groups
 

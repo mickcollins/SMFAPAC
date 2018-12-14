@@ -16,12 +16,13 @@
       character*2, allocatable  :: atoms(:)
       integer, allocatable      :: numa(:)
       integer, allocatable      :: nstop(:),numat(:),natstore(:,:)
-      integer, allocatable      :: isign(:),itype(:,:),ibond(:,:,:)
+      integer, allocatable      :: isign(:),itype(:,:),ibond(:,:)
+      integer, allocatable      :: ib1(:,:)
 
       integer, allocatable      :: ilink(:,:),map(:,:),kf(:)
       integer, allocatable      :: nfam(:),ifam(:,:),mult(:),ichg(:)
       integer, allocatable      ::  mbstore(:),nbstore(:),multstore(:)
-      integer, allocatable     :: junk(:,:),itotf(:)
+      integer, allocatable     :: junk(:),itotf(:)
 
       integer, allocatable      :: nb(:),mb(:),newmult(:),matb(:,:)
 

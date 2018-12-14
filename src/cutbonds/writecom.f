@@ -2,24 +2,17 @@
       use fractdata
       implicit double precision(a-h,o-z)
 
-      integer, allocatable   :: natf(:),idfrag(:,:),nfat(:),nalloc(:,:)
-c     real*8, allocatable    :: cf(:,:,:),com(:,:),cfraction(:,:)
-      real*8, allocatable    :: cf(:,:),com(:,:),cfraction(:,:)
-      real*8, allocatable    :: repel(:,:)
+      integer, allocatable   :: natf(:),nfat(:),nalloc(:,:)
+      real*8, allocatable    :: cf(:,:),cfraction(:,:)
       character*2, allocatable :: fat(:)
 
       dimension xl(3),xn(3)
-      character*1 I0(0:10),anum(10),ca1,ca2,ca3,ca4
+      character*1 I0(0:10),anum(10),ca1,ca2,ca3,ca4,ca5
       character*20 ca,caFRAG
 
       allocate(natf(nffinal))
-      allocate(idfrag(nffinal,natomall))
       allocate(nfat(2*natomall))
-c     allocate(cf(nffinal,natomall,3))
       allocate(cf(2*natomall,3))
-      allocate(com(nffinal+1,3))
-      allocate(repel(nffinal,3))
-c     allocate(fat(nffinal,natomall))
       allocate(fat(2*natomall))
       allocate(nalloc(2*natomall,2))
       allocate(cfraction(2*natomall,2))
@@ -58,12 +51,6 @@ c link atoms will be added to a fragment when the "bonded" atom
 c is missing from the junk array
 
       write(3,*)'The capping atoms are attached to'
-
-      do i=1,natom
-      do j=1,natom
-      idfrag(i,j)=0
-      enddo
-      enddo
 
       open(unit=4,file='molecule.com',status='unknown')
 
@@ -131,14 +118,6 @@ c     write(4,*)'0,1'
 c     write(4,101)'--link1--'
 101   format(a9)
 
-c     do k=1,nffinal
-c     write(4,*)(junk(k,m),m=1,itotf(k))
-c     enddo
-c     do i=1,nbondso
-c     write(4,*)mbstore(i),nbstore(i)
-c     enddo
-c     stop
-
 c make a file that has the number of atoms in the fragments
       open(unit=15,file='fragnum',status='unknown')
       write(15,8765)ititle
@@ -153,20 +132,33 @@ c make a file that has the number of atoms in the fragments
       nemax=0.d0
       nmax=0
       write(22,*)'The numbers of atoms and electrons in each fragment'
+
+
+c now write out the fragments
+c NOTE that subroutine finalcancel put the +ve fragments first
       do k=1,nffinal
 
 c  charge
       itchg=0
       numtot=0
 
+      itot=0
+      do i=1,numat(k)
+      do j=1,nfam(natstore(k,i))
+       itot=itot+1
+       junk(itot)=ifam(natstore(k,i),j)
+      enddo
+      enddo
+      itotf(k)=itot
+
+
       do m=1,itotf(k)
-      n=junk(k,m)
+      n=junk(m)
       itchg=itchg+ichg(n)
       numtot=numtot+numa(n)
 
 c     write(4,100)atoms(n),(c(n,k1),k1=1,3)
 c record atom n in fragment k
-      idfrag(k,n)=1
 c record coords of each atom in frag k
       do k1=1,3
       cf(m,k1)=c(n,k1)
@@ -186,7 +178,7 @@ c and write out the linking H atoms
 c     write(6,*)' Fragment ',k
 
       do m=1,itotf(k)
-      n=junk(k,m)
+      n=junk(m)
 
 
       do i=1,nbondso
@@ -197,7 +189,7 @@ c     write(6,*)' Fragment ',k
        match=0
        do j=1,itotf(k)
        if(j.eq.m)go to 20
-       if(junk(k,j).eq.nbstore(i))match=1
+       if(junk(j).eq.nbstore(i))match=1
 20     continue
        enddo
        if(match.eq.0)then
@@ -230,7 +222,7 @@ c work out fact1
        match=0
        do j=1,itotf(k)
        if(j.eq.m)go to 21
-       if(junk(k,j).eq.mbstore(i))match=1
+       if(junk(j).eq.mbstore(i))match=1
 21     continue
        enddo
        if(match.eq.0)then
@@ -280,13 +272,10 @@ c correct for charge
       write(15,*)num1,num2
       numav=numav+num1
       numav2=numav2+num2
-c     write(4,*)
-c     if(k.lt.nffinal)write(4,101)'--link1--'
 
 c open a separate output file for each fragment
 c calculate filename for each fragment
       if(k.le.9)then
-c      ca='COORD'//I0(k)//'.com'
        ca='COORD'//I0(k)
        caFRAG='FRAG'//I0(k)//'.com'
       endif
@@ -296,42 +285,48 @@ c      ca='COORD'//I0(k)//'.com'
       if(k2.eq.0)k2=10
       ca1=I0(k1)
       ca2=I0(k2)
-c     ca='COORD'//ca1//ca2//'.com'
       ca='COORD'//ca1//ca2
       caFRAG='FRAG'//ca1//ca2//'.com'
       endif
       if(k.gt.99.and.k.le.999)then
       k1=k/100
-c     k2=k-k1*100
-c     k3=k2/10
-c     k4=k2-k3*10
       k3=k/10 - INT(k1)*10
       k4=k - INT(k1)*100 - INT(k3)*10
-c     WRITE(6,*)'K=',k,'K1=',k1,'K3=',k3,'K4=',k4
       ca1=I0(k1)
       ca2=I0(k3)
       ca3=I0(k4)
-c     ca='COORD'//ca1//ca2//ca3//'.com'
       ca='COORD'//ca1//ca2//ca3
       caFRAG='FRAG'//ca1//ca2//ca3//'.com'
       endif
       if(k.gt.999.and.k.le.9999)then
       k1=k/1000
-c     k2=k-k1*100
-c     k3=k2/10
-c     k4=k2-k3*10
       k3=k/100 - INT(k1)*10
       k4=k/10 - INT(k1)*100 - INT(k3)*10
       k5=k-INT(k1)*1000-k3*100-k4*10
-c     WRITE(6,*)'K=',k,'K1=',k1,'K3=',k3,'K4=',k4
       ca1=I0(k1)
       ca2=I0(k3)
       ca3=I0(k4)
       ca4=I0(k5)
-c     ca='COORD'//ca1//ca2//ca3//ca4//'.com'
       ca='COORD'//ca1//ca2//ca3//ca4
       caFRAG='FRAG'//ca1//ca2//ca3//ca4//'.com'
       endif
+
+c added extra 041218
+      if(k.gt.9999.and.k.le.99999)then
+       k1=k/10000
+       k3=k/1000 - int(k1)*10
+       k4=k/100 - int(k1)*100 - int(k3)*10
+       k5=k/10 - int(k1)*1000 - int(k3)*100 - int(k4)*10
+       k6=k - int(k1)*10000 - int(k3)*1000 - int(k4)*100 - int(k5)*10
+       ca1=I0(k1)
+       ca2=I0(k3)
+       ca3=I0(k4)
+       ca4=I0(k5)
+       ca5=I0(k6)
+       ca='COORD'//ca1//ca2//ca3//ca4//ca5
+       caFRAG='FRAG'//ca1//ca2//ca3//ca4//ca5//'.com'
+      endif
+
 
       if(Level.gt.1.or.(Levelflag.eq.2))then
         write(22,*)natf(k),numtot,caFRAG
@@ -342,12 +337,6 @@ c     ca='COORD'//ca1//ca2//ca3//ca4//'.com'
       endif
 
       open(unit=44,file=ca,status='unknown')
-c     do m=1,nabitio
-c     write(44,82)abinitio(m)
-c     enddo
-c     write(44,*)
-c     write(44,*)'Number of atoms is ',natf(k)
-c     write(44,*)
       write(44,*)itchg,',',ndegen
       do m=1,natf(k)
       if(fat(m).eq.'H ')then
@@ -357,11 +346,9 @@ c     write(44,*)
       num2=num2+1
       ncf=ncf+1
       endif
-c     write(44,100)fat(m),(cf(m,k1),k1=1,3)
       write(44,103)fat(m),(cf(m,k1),k1=1,3)
       enddo
 103   format(a2,3f25.16)
-c     write(44,*)
       close(unit=44)
       write(42,*)ncf
 
@@ -392,117 +379,11 @@ c  end the loop over fragments
       close(unit=20)
 
 c output geometries for illustrations
-      go to 777
-c calculate the geometrical center
 
-c      do i=1,3
-c      com(1,i)=0.d0
-c      do n=1,natomall
-c      com(1,i)=com(1,i)+c(n,i)
-c      enddo
-c      com(1,i)=com(1,i)/natomall
-c      enddo
-cc center of each frag
-
-c      do k=1,nffinal
-c      do i=1,3
-c      com(k+1,i)=0.d0
-c      do n=1,natf(k)
-c      com(k+1,i)=com(k+1,i)+cf(k,n,i)
-c      enddo
-c      com(k+1,i)=com(k+1,i)/natf(k)-com(1,i)
-c      enddo
-c      enddo
-c
-c      do n=1,natomall
-c      do k=1,3
-c      c(n,k)=c(n,k)-com(1,k)
-c      enddo
-c      enddo
-c
-cc  calculate an average normal
-c
-c      do i=1,3
-c       xn(i)=0.d0
-c      enddo
-c      do k=1,nffinal-1
-c      do j=k+1,nffinal
-c      xn(1)=xn(1)+com(k+1,2)*com(j+1,3)-com(k+1,3)*com(j+1,2)
-c      xn(2)=xn(2)+com(k+1,3)*com(j+1,1)-com(k+1,1)*com(j+1,3)
-c      xn(3)=xn(3)+com(k+1,1)*com(j+1,2)-com(k+1,2)*com(j+1,1)
-c      enddo
-c      enddo
-c      sum=sqrt(xn(1)**2+xn(2)**2+xn(3)**2)
-c      do i=1,3
-c       xn(i)=xn(i)/sum
-c      enddo
-
-c  pretend the fragments repel onanother
-
-c      do k=1,nffinal
-c      do i=1,3
-c       repel(k,i)=0.d0
-c      enddo
-c      enddo
-c
-c      do k1=1,nffinal-1
-c      do k2=k1+1,nffinal
-c      sum=0.d0
-c      do i=1,3
-c      sum=(com(k1+1,i)-com(k2+1,i))**2+sum
-c      enddo
-c      sum=sqrt(sum)
-c      do i=1,3
-c      repel(k1,i)=repel(k1,i)-(com(k1+1,i)-com(k2+1,i))/sum**3
-c      repel(k2,i)=repel(k2,i)+(com(k1+1,i)-com(k2+1,i))/sum**3
-c      enddo
-c      enddo
-c      enddo
-
-c      open(unit=8,file='illus.txt',status='unknown')
-cc
-c      do n=1,natomall
-c      write(8,100)atoms(n),(c(n,k),k=1,3)
-c      enddo
-c      do k=1,nffinal
-c       sh=7.d0
-c      if(isign(k).eq.1)then
-c      do n=1,natf(k)
-cc     write(8,100)fat(k,n),(cf(k,n,i)+2.d0*com(k+1,i)+sh*xn(i),i=1,3)
-c      write(8,100)fat(k,n),(cf(k,n,i)+3.d0*repel(k,i),i=1,3)
-c      enddo
-c      else
-c      do n=1,natf(k)
-cc     write(8,100)fat(k,n),(cf(k,n,i)+2.d0*com(k+1,i)-sh*xn(i),i=1,3)
-c      write(8,100)fat(k,n),(cf(k,n,i)+3.d0*repel(k,i),i=1,3)
-c      enddo
-c      endif
-
-
-c      enddo
-
-777   continue
-      
-c     stop
-
-c     deallocate(natf)
-c     deallocate(idfrag)
-c     deallocate(nfat)
-c     deallocate(cf)
-c     deallocate(com)
-c     deallocate(repel)
-c     deallocate(fat)
-c     deallocate(nalloc)
-c     deallocate(cfraction)
-
-c     close(unit=4)
 
       close(unit=42)
-c     write(22,*)
       write(23,*)
-c     write(22,*)' The largest number of electrons in a fragment'
       write(23,*)' The largest number of electrons in a fragment'
-c     write(22,*)' is ',nemax,' for fragment number ',nmax
       write(23,*)' is ',nemax,' for fragment number ',nmax
       close(unit=22)
       close(unit=23)

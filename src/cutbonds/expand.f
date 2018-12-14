@@ -13,6 +13,21 @@ c  expand each fragment in turn
 
 
       do i=1,nf
+
+       do n=1,nsmall
+       do m=1,nsmall
+        ibond(n,m)=0
+       enddo
+       enddo
+
+       ic=0
+       do n=1,numat(i)
+       do m=1,itype(i,n)+1
+       ic=ic+1
+       ibond(n,m)=ib1(i,ic)
+       enddo
+       enddo
+
        n1=0
        do n=1,numat(i)
          n1=n1+1
@@ -45,7 +60,7 @@ c record a link array of the current bonding
       do j1=1,nnew
        n=nold(j1)
        do k1=1,itype(i,n)+1
-        l=iabs(ibond(i,n,k1))
+        l=iabs(ibond(n,k1))
         do j2=1,nnew
          if(l.eq.nold(j2))then
           nlink(j1,j2)=1
@@ -75,7 +90,7 @@ c now re-constitute the fragment
        natstore(i,n)=0
        itype(i,n)=-1
        do m=1,nsmall
-        ibond(i,n,m)=0
+        ibond(n,m)=0
        enddo
       enddo
 
@@ -93,7 +108,7 @@ c check that all neighbors are actually in this fragment
          if(iabs(mm).eq.natstore(i,m))then
           if(nlink(n,m).gt.0)then
           ic=ic+1
-          ibond(i,n,ic)=m*(mm/iabs(mm))
+          ibond(n,ic)=m*(mm/iabs(mm))
           go to 100
          endif
          endif
@@ -105,6 +120,14 @@ c       itype(i,natstore(i,n))=ic-1
 c end loop over n
       enddo
 
+       ic=0
+       do n=1,numat(i)
+       do m=1,itype(i,n)+1
+       ic=ic+1
+       ib1(i,ic)=ibond(n,m)
+       enddo
+       enddo
+
       it=0
       do n=1,numat(i)
       if(itype(i,n).gt.it)it=itype(i,n)
@@ -115,16 +138,16 @@ c end loop over n
       nstop(i)=0
       endif
 
-      do n=numat(i)+1,nsmall
-      do k=1,nsmall
-       ibond(i,n,k)=0
-      enddo
-      enddo
-      do n=1,numat(i)
-      do k=itype(i,n)+2,nsmall
-       ibond(i,n,k)=0
-      enddo
-      enddo
+c     do n=numat(i)+1,nsmall
+c     do k=1,nsmall
+c      ibond(i,n,k)=0
+c     enddo
+c     enddo
+c     do n=1,numat(i)
+c     do k=itype(i,n)+2,nsmall
+c      ibond(i,n,k)=0
+c     enddo
+c     enddo
 
 c end loop over fragments
       enddo
@@ -140,22 +163,36 @@ c end loop over fragments
 
       write(66,*)' The fragments and bonding are'
       do i=1,nf
+       ic=0
+       do n=1,numat(i)
+       do m=1,itype(i,n)+1
+       ic=ic+1
+       ibond(n,m)=ib1(i,ic)
+       enddo
+       enddo
       write(66,*)' fragment ',i
       write(66,*)' atoms ',(natstore(i,k),k=1,numat(i))
       write(66,*)' connectivity '
       do m=1,numat(i)
-       write(66,*)m,itype(i,m),(ibond(i,m,k),k=1,itype(i,m)+1)
+       write(66,*)m,itype(i,m),(ibond(m,k),k=1,itype(i,m)+1)
       enddo
       enddo
       write(66,*)
       write(66,*)' The fragments in natural labels and bonding are'
       do i=1,nf
+       ic=0
+       do n=1,numat(i)
+       do m=1,itype(i,n)+1
+       ic=ic+1
+       ibond(n,m)=ib1(i,ic)
+       enddo
+       enddo
       write(66,*)' fragment ',i
       write(66,*)' atoms ',(natstore(i,k),k=1,numat(i))
       write(66,*)' connectivity '
       do m=1,numat(i)
        write(66,*)natstore(i,m),itype(i,m),
-     .          (natstore(i,iabs(ibond(i,m,k))),k=1,itype(i,m)+1)
+     .          (natstore(i,iabs(ibond(m,k))),k=1,itype(i,m)+1)
       enddo
       enddo
       write(66,*)

@@ -11,15 +11,25 @@
       do i=1,nsmall
       mats(i)=0
       matr(i)=0
+      do j=1,nsmall
+      ibond(i,j)=0
+      enddo
+      enddo
+
+      ic=0
+      do i=1,numat(nfrag)
+      do j=1,itype(nfrag,i)+1
+       ic=ic+1
+       ibond(i,j)=ib1(nfrag,ic)
+      enddo
       enddo
 
 c record the atoms in the fragment
       nafrag=numat(nfrag)
       ico=0
       do n=1,nsmall
-c     if(ibond(nfrag,n,1).gt.0)then
 c adjust for negative ibond values
-      if(ibond(nfrag,n,1).ne.0)then
+      if(ibond(n,1).ne.0)then
       ico=ico+1
       mats(ico)=n
       matr(n)=ico
@@ -34,7 +44,7 @@ c adjust for negative ibond values
       write(6,*)'numat = ',numat(nfrag)
       write(6,*)(natstore(nfrag,k),k=1,numat(nfrag))
       do n=1,nsmall
-      write(6,*)n,ibond(nfrag,n,1)
+      write(6,*)n,ibond(n,1)
       enddo
       stop
       endif
@@ -56,8 +66,8 @@ c if all bonded atoms are negative, nocapsatall = 1
       nocapsatall=1
       do n=1,nafrag
       do j=1,itp(n)+1
-      mm=ibond(nfrag,mats(n),j)
-      ibo(n,j)=matr(iabs(ibond(nfrag,mats(n),j)))*(mm/iabs(mm))
+      mm=ibond(mats(n),j)
+      ibo(n,j)=matr(iabs(ibond(mats(n),j)))*(mm/iabs(mm))
 c maintains the sign
       if(ibo(n,j).gt.0)nocapsatall=0
       enddo

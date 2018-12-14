@@ -2,6 +2,9 @@
       use fractdata
       implicit double precision(a-h,o-z)
       write(6,*)'calling makeneighbours'
+      write(6,*)' nf = ',nf
+      write(6,*)' nfragm = ',nfragm
+      write(6,*)' nbondsextra = ',nbondsextra
       call makeneighbours
       write(6,*)' finished makeneighbours'
 
@@ -64,6 +67,25 @@ c cancel repeats
        enddo
 
        nk=ic
+       write(81,*)(kat(kk),kk=1,nk)
+       write(81,*)
+       if(nk.gt.nsmall)then
+        write(6,*)' nk.gt.nsmall, nk = ',nk
+        write(6,*)' at extrabond number ',k
+        write(6,*)' for atoms '
+        write(6,*)nfam(m1)+nfam(m2)
+        write(6,*)nfam(m1),nfam(m2)
+        do i1=1,nfam(m1)
+        j1=ifam(m1,i1)
+        write(6,100)atoms(j1),(c(j1,l),l=1,3)
+        enddo
+        do i1=1,nfam(m2)
+        j1=ifam(m2,i1)
+        write(6,100)atoms(j1),(c(j1,l),l=1,3)
+        enddo
+        stop
+       endif
+100    format(a2,3f13.4)
 
        call makeextrafrags(nk,m1,m2,multn(k))
 
@@ -77,9 +99,18 @@ c close k loop
       use fractdata
       implicit double precision(a-h,o-z)
 
+      do n=1,nsmall
+      do m=1,nsmall
+       ibond(n,m)=0
+      enddo
+      enddo
 
 c subtract the non-bonded
       nf=nf+1
+      if(nf.ge.nfragm)then
+       write(6,*)' nf.ge.nfragm in makeextrafrags'
+       stop
+      endif
       nstop(nf)=0
       isign(nf)=-1
       numat(nf)=nk
@@ -93,21 +124,48 @@ c subtract the non-bonded
         do m=1,numat(nf)
          if(iabs(ibf(kat(n),i,1)).eq.kat(m))then
           itype(nf,n)=itype(nf,n)+1
-         ibond(nf,n,itype(nf,n))=m*ibf(kat(n),i,1)/iabs(ibf(kat(n),i,1))
+         ibond(n,itype(nf,n))=m*ibf(kat(n),i,1)/iabs(ibf(kat(n),i,1))
          endif
         enddo
         enddo
        endif
        itype(nf,n)=itype(nf,n)-1
       enddo
+
+      ic=0
+      do n=1,numat(nf)
+      do m=1,itype(nf,n)+1
+       ic=ic+1
+       ib1(nf,ic)=ibond(n,m)
+      enddo
+      enddo
+
+      write(81,*)' nf = ',nf
+      do n=1,numat(nf)
+      write(81,*)' natstore = ',natstore(nf,n)
+      write(81,*)(ibond(n,m),m=1,itype(nf,n)+1)
+      enddo
+      write(81,*)
+      write(81,*)
+
 c update itf and ibf
       itf(m1,1)=itf(m1,1)+1
       ibf(m1,itf(m1,1)+1,1)=ksign*m2
       itf(m2,1)=itf(m2,1)+1
       ibf(m2,itf(m2,1)+1,1)=ksign*m1
 
+      do n=1,nsmall
+      do m=1,nsmall
+       ibond(n,m)=0
+      enddo
+      enddo
+
 c repeat with this extra bond
       nf=nf+1
+      if(nf.ge.nfragm)then
+       write(6,*)' nf.ge.nfragm in makeextrafrags'
+       stop
+      endif
       nstop(nf)=0
       isign(nf)=1
       numat(nf)=nk
@@ -121,7 +179,7 @@ c repeat with this extra bond
         do m=1,numat(nf)
          if(iabs(ibf(kat(n),i,1)).eq.kat(m))then
           itype(nf,n)=itype(nf,n)+1
-         ibond(nf,n,itype(nf,n))=m*ibf(kat(n),i,1)/iabs(ibf(kat(n),i,1))
+         ibond(n,itype(nf,n))=m*ibf(kat(n),i,1)/iabs(ibf(kat(n),i,1))
          endif
         enddo
         enddo
@@ -129,6 +187,21 @@ c repeat with this extra bond
       itype(nf,n)=itype(nf,n)-1
       enddo
 
+      ic=0
+      do n=1,numat(nf)
+      do m=1,itype(nf,n)+1
+       ic=ic+1
+       ib1(nf,ic)=ibond(n,m)
+      enddo
+      enddo
+
+      write(81,*)' nf = ',nf
+      do n=1,numat(nf)
+      write(81,*)' natstore = ',natstore(nf,n)
+      write(81,*)(ibond(n,m),m=1,itype(nf,n)+1)
+      enddo
+      write(81,*)
+      write(81,*)
       
       return
       end

@@ -241,7 +241,16 @@ c if the number of groups is not reducing, then we stop
       write(6,*)n,itf(n,i),(ibf(n,k,i),k=1,itf(n,i)+1)
       enddo
 
-      if(ng.gt.nsmall)then
+c allow for isolated groups
+      iso=0
+      do n=1,numgroups(i)
+       if(itf(n,i).eq.-1)iso=iso+1
+      enddo
+
+      ngbig=ng-iso
+
+c     if(ng.gt.nsmall)then
+      if(ngbig.gt.nsmall)then
        write(6,*)' There are still more than', nsmall ,'groups' 
        write(6,*)' after maxiters compressions'
        stop

@@ -52,25 +52,25 @@
       write(3,*)'The atoms in each fragment are'
 
 c allocate junk
-      allocate(junk(nf,natomall))
+      allocate(junk(natomall))
       allocate(itotf(nf))
 
       icc=0
       do i=1,nf
-      if(nstop(i).le.1.and.isign(i).gt.0)then
-      icc=icc+1
-      itot=0
-      do k=1,numat(i)
-      do j=1,nfam(natstore(i,k))
-      itot=itot+1
-      junk(icc,itot)=ifam(natstore(i,k),j)
+       if(nstop(i).le.1.and.isign(i).gt.0)then
+        icc=icc+1
+        itot=0
+        do k=1,numat(i)
+        do j=1,nfam(natstore(i,k))
+         itot=itot+1
+         junk(itot)=ifam(natstore(i,k),j)
+        enddo
+        enddo
+        itotf(icc)=itot
+        write(3,*)(junk(k),k=1,itot)
+       endif
       enddo
-      enddo
-      itotf(icc)=itot
-      write(3,*)(junk(icc,k),k=1,itot)
-c     write(3,93)(junk(icc,k),k=1,itot)
-      endif
-      enddo
+
       do i=1,nf
       if(nstop(i).le.1.and.isign(i).lt.0)then
       icc=icc+1
@@ -78,12 +78,11 @@ c     write(3,93)(junk(icc,k),k=1,itot)
       do k=1,numat(i)
       do j=1,nfam(natstore(i,k))
       itot=itot+1
-      junk(icc,itot)=ifam(natstore(i,k),j)
+      junk(itot)=ifam(natstore(i,k),j)
       enddo
       enddo
       itotf(icc)=itot
-      write(3,*)(junk(icc,k),k=1,itot)
-c     write(3,93)(junk(icc,k),k=1,itot)
+      write(3,*)(junk(k),k=1,itot)
       endif
       enddo
 

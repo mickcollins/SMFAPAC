@@ -118,9 +118,10 @@ c Loop over the fragmentation and expansion
       itfinal=1
       call fragsteps
       write(6,*)' calling finalcancel'
+      write(6,*)' nf = ',nf
       call finalcancel
       write(6,*) 'finished finalcancel'
-
+      write(6,*)' nf = ',nf
 
       if(nbondsextra.gt.0)call extrafrags
 c write out the results
@@ -152,7 +153,6 @@ c write out the results
 3691    enddo
 
       write(6,*)' Number of fragments = ',nf
-
 
       call writefrags
       call writecom

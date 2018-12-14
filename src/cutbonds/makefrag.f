@@ -21,7 +21,7 @@ c now set up new fragments
  
       do i=1,nsmall
       do j=1,nsmall
-      ibond(nf,i,j)=0
+      ibond(i,j)=0
       enddo
       enddo
 
@@ -36,13 +36,20 @@ c now set up new fragments
       do j=1,kf(k)
       if(iabs(ilink(map(k,i),map(k,j))).gt.0)then
       nb1=nb1+1
-      ibond(nf,i,nb1)=j*ilink(map(k,i),map(k,j))
+      ibond(i,nb1)=j*ilink(map(k,i),map(k,j))
       endif
       isum=isum+iabs(ilink(map(k,i),map(k,j)))
       enddo
       itype(nf,i)=isum-1
       enddo
 
+      ic=0
+      do i=1,numat(nf)
+      do j=1,itype(nf,i)+1
+       ic=ic+1
+       ib1(nf,ic)=ibond(i,j)
+      enddo
+      enddo
 
 c check to see if this fragment is completely decomposed
 

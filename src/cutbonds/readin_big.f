@@ -7,7 +7,7 @@
 
       integer, allocatable  :: iproj(:),idouble(:,:),nblank(:),ndoub(:)
 
-      integer, allocatable  :: ifamtemp(:),kbond(:)
+      integer, allocatable  :: ifamtemp(:)
 
       integer, allocatable  :: kgroup(:),jbd(:)
 
@@ -18,7 +18,7 @@
       open(unit=1,file='name.xyz',status='old')
 
       read(1,*)natomall
-      maxdouble=natomall/2 +1
+      maxdouble=maxfamily
 
 c allocate some arrays
       allocate(atoms(natomall))
@@ -32,7 +32,6 @@ c allocate some arrays
       allocate(iproj(natomall))
       allocate(ifamtemp(natomall))
 
-      allocate(kbond(natomall))
 
       read(1,90)icomm
 90     format(a80)
@@ -164,13 +163,6 @@ c reset the mb,nb,mult arrays
        mult(m)=multstore(m)
       enddo
 
-c look for any atoms that are not bonded to anything
-      kbond=0
-      do m=1,nbonds
-       kbond(mb(m))=1
-       kbond(nb(m))=1
-      enddo
-       
 
 c now we set up the arrays, assuming that multiple bonds
 c are never broken, and that XH bonds are never broken
@@ -286,27 +278,7 @@ c     ifam(natom,1)=n
       endif
       enddo
 
-c allow for single atoms and H2 molecules as groups
-c 14/11/17 disallow this
-c      do n=1,nbonds
-c       if(mb(n)*nb(n).eq.0)go to 891
-c       if(atoms(mb(n)).eq.'H'.and.atoms(nb(n)).eq.'H')then
-c        natom=natom+1
-c        ifamtemp(natom)=mb(n)
-c        iproj(mb(n))=natom
-c       endif
-c891      enddo
-
-c      do n=1,natomall
-c       if(kbond(n).eq.0.and.atoms(n).eq.'H')then
-c        natom=natom+1
-c        ifamtemp(natom)=n
-c        iproj(n)=natom
-c       endif
-c      enddo
-
-c     write(6,*)' natom = ',natom
-c     stop
+      deallocate(nblank)
 
 c natom is now known, so we call allocate some arrays
       allocate(nfam(natom))
@@ -315,7 +287,8 @@ c natom is now known, so we call allocate some arrays
 c     nsmall2=nsmall/2
       allocate(numat(nfragm))
       allocate(natstore(nfragm,nsmall))
-      allocate(ibond(nfragm,nsmall,nsmall))
+      allocate(ibond(nsmall,nsmall))
+      allocate(ib1(nfragm,3*nsmall))
       allocate(itype(nfragm,nsmall))
       allocate(isign(nfragm))
       allocate(nstop(nfragm))
@@ -329,6 +302,8 @@ c     nsmall2=nsmall/2
       enddo
       ifam(n,1)=ifamtemp(n)
       enddo
+
+      deallocate(ifamtemp)
 
 c  put H atoms in the family of bonded atom
       do n=1,natom
@@ -379,38 +354,8 @@ c  put H atoms in the family of bonded atom
 888   continue
       enddo
 
-c temp check
-c     write(6,*)' iproj'
-c     do n=1,natomall
-c      write(6,*)n,iproj(n)
-c     enddo
-
-c allow for H atoms or H2 molecules as groups
-c       do n=1,natomall
-c       if(iproj(n).ne.0.or.atoms(n).ne.'H')go to 890
-c       natom=natom+1
-c       iproj(n)=natom
-c       nfam(natom)=1
-c       ifam(natom,1)=n
-c       do m=1,nbonds
-c        if(mb(m).eq.n)then
-c         nfam(natom)=nfam(natom)+1
-c         ifam(natom,nfam(natom))=nb(m)
-c         iproj(nb(m))=natom
-c        endif
-c        if(nb(m).eq.n)then
-c         nfam(natom)=nfam(natom)+1
-c         ifam(natom,nfam(natom))=mb(m)
-c         iproj(mb(m))=natom
-c        endif
-c       enddo
-c890   enddo
-
-c     write(6,*)' iproj'
-c     do n=1,natomall
-c      write(6,*)n,iproj(n)
-c     enddo
-c     stop
+      deallocate(idouble)
+      deallocate(ndoub)
 
 c check for multiples of the same bond
       do m=1,nbonds-1
@@ -435,20 +380,6 @@ c checking
       enddo
       write(6,*)
 
-c store the Hbond data separately for use in rings (three, four etc)
-c     numhbonds=0
-c     if(nhbonds.eq.0)go to 778
-c     allocate(mh(nhbonds))
-c     allocate(nh(nhbonds))
-c     do m=1,nbonds
-c      if(mult(m).eq.-1)then
-c       numhbonds=numhbonds+1
-c       mh(numhbonds)=iproj(mb(m))
-c       nh(numhbonds)=iproj(nb(m))
-c      endif
-c     enddo
-c778   continue
-
 
       ib=0
       do m=1,nbonds
@@ -468,7 +399,9 @@ c 221209 remove bonds which bond a composite atom to itself
       do n=1,natom
       write(6,*)nfam(n),(ifam(n,k),k=1,nfam(n))
       enddo
-c     stop
+
+      deallocate(iproj)
+
 c output the families
       call families
 
@@ -538,34 +471,8 @@ c      enddo
 
        write(6,*)' nbonds = ',nbonds
        write(6,*)' nbondsextra = ',nbondsextra
-c      do n=1,natom
-c       jbd(n)=0
-c      enddo
-c      do n=1,nbonds
-c       jbd(mb(n))=jbd(mb(n))+1
-c       jbd(nb(n))=jbd(nb(n))+1
-c      enddo
-c      write(6,*) 'jbd'
-c      do n=1,natom
-c       write(6,*)n,jbd(n)
-c      enddo
+
        endif
-
-c store numbers for groups connected by H bonds
-c     nhstore=0
-c     do n=1,nbonds
-c      if(mult(n).eq.-1)nhstore=nhstore+1
-c     enddo
-
-c     allocate(minusbonds(nhstore,2))
-c     ic=0
-c     do n=1,nbonds
-c      if(mult(n).eq.-1)then
-c       ic=ic+1
-c       minusbonds(ic,1)=mb(n)
-c       minusbonds(ic,2)=nb(n)
-c      endif
-c     enddo
 
  
       write(6,*)
@@ -681,24 +588,9 @@ c end new code 220417
        stop
       endif
 
-c  writeout the skeleton
-c      open(unit=10,file='OUT_SKELETON',status='unknown')
-c      write(10,*)natom
-c      write(10,*)
-c      do n=1,natom
-c      m=ifam(n,1)
-c      write(10,223)atoms(m),(c(m,k),k=1,3)
-c      enddo
-c      close(unit=10)
-223   format(a2,2x,3f8.3)
 
 c     call neigh5
 
-      deallocate(iproj)
-      deallocate(idouble)
-      deallocate(nblank)
-      deallocate(ndoub)
-      deallocate(ifamtemp)
 
       return
       end

@@ -4,9 +4,11 @@
       implicit double precision(a-h,o-z)
 
       integer, allocatable  :: ilinkstore(:,:)
-      allocate(ilinkstore(natom,natom))
+c     allocate(ilinkstore(natom,natom))
+      allocate(ilinkstore(nsmall,nsmall))
       allocate(ilink(nsmall,nsmall))
-      allocate(ma(natom,natom))
+c     allocate(ma(natom,natom))
+      allocate(ma(nsmall,nsmall))
  
 10    continue
       it=0

@@ -33,9 +33,16 @@ c now the fragments
        write(1,*)nstop(k),isign(k),numat(k)
        write(1,*)(itype(k,i),i=1,numat(k))
        write(1,*)(natstore(k,i),i=1,numat(k))
+       ic=0
+       do i=1,numat(k)
+       do j=1,itype(k,i)+1
+       ic=ic+1
+       ibond(i,j)=ib1(k,ic)
+       enddo
+       enddo
        do i=1,numat(k)
         if(itype(k,i).gt.-1)then
-        write(1,*)(ibond(k,i,j),j=1,itype(k,i)+1)
+        write(1,*)(ibond(i,j),j=1,itype(k,i)+1)
         endif
        enddo
       enddo

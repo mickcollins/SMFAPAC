@@ -4,9 +4,7 @@
       implicit double precision(a-h,o-z)
 
       integer, allocatable  :: jnstop(:),jisign(:), jnumat(:)
-      integer, allocatable  :: jitype(:,:), jibond(:,:,:),jnatstore(:,:)
-
-c     dimension lki(natomm,natomm),lkj(natomm,natomm)
+      integer, allocatable  :: jitype(:,:), jib1(:,:),jnatstore(:,:)
 
 c get rid of cancelling fragments
 
@@ -49,27 +47,34 @@ c compare atoms
       enddo
 
 c  reset the arrays
+c Note: we put the +ve fragments first
 
       ic=0
       do k=1,nf
-      if(nstop(k).le.1)then
-      ic=ic+1
-       isign(ic)=isign(k)
-      nstop(ic)=nstop(k)
-      do i=1,nsmall
-      itype(ic,i)=itype(k,i)
-      enddo
-      do i=1,nsmall
-      do j=1,nsmall
-      ibond(ic,i,j)=ibond(k,i,j)
-      enddo
-      enddo
-      numat(ic)=numat(k)
-      do i=1,numat(k)
-      natstore(ic,i)=natstore(k,i)
-      enddo
-      endif
-      enddo
+       if(nstop(k).le.1)then
+        ic=ic+1
+        isign(ic)=isign(k)
+        nstop(ic)=nstop(k)
+        do i=1,nsmall
+         itype(ic,i)=itype(k,i)
+        enddo
+c       do i=1,nsmall
+c       do j=1,nsmall
+c        ibond(ic,i,j)=ibond(k,i,j)
+c       enddo
+c       enddo
+
+        do j=1,3*nsmall
+         ib1(ic,j)=ib1(k,j)
+        enddo
+
+        numat(ic)=numat(k)
+        do i=1,numat(k)
+         natstore(ic,i)=natstore(k,i)
+        enddo
+       endif
+72    enddo
+
 
       do jc=ic+1,nfragm
       isign(jc)=1
@@ -77,11 +82,16 @@ c  reset the arrays
       do i=1,nsmall
       itype(jc,i)=-1
       enddo
-      do i=1,nsmall
-      do j=1,nsmall
-      ibond(jc,i,j)=0
+c     do i=1,nsmall
+c     do j=1,nsmall
+c     ibond(jc,i,j)=0
+c     enddo
+c     enddo
+
+      do j=1,3*nsmall
+       ib1(jc,j)=0
       enddo
-      enddo
+
       do i=1,nsmall
       natstore(jc,i)=0
       enddo
@@ -92,7 +102,6 @@ c  reset the arrays
       idiff=nf-ic
       nf=ic
       nfrag=1
-c     write(6,*)nfrag,nf
       write(6,*)
 
 c put the positive fragments first
@@ -101,7 +110,7 @@ c put the positive fragments first
       allocate(jisign(nf))
       allocate(jnumat(nf))
       allocate(jitype(nf,nsmall))
-      allocate(jibond(nf,nsmall,nsmall))
+      allocate(jib1(nf,3*nsmall))
       allocate(jnatstore(nf,nsmall))
 
       ic=0
@@ -113,10 +122,8 @@ c put the positive fragments first
        do i=1,nsmall
         jitype(ic,i)=itype(k,i)
        enddo
-       do i=1,nsmall
-       do j=1,nsmall
-        jibond(ic,i,j)=ibond(k,i,j)
-       enddo
+       do i=1,3*nsmall
+        jib1(ic,i)=ib1(k,i)
        enddo
        jnumat(ic)=numat(k)
        do i=1,numat(k)
@@ -132,10 +139,8 @@ c put the positive fragments first
        do i=1,nsmall
         jitype(ic,i)=itype(k,i)
        enddo
-       do i=1,nsmall
-       do j=1,nsmall
-        jibond(ic,i,j)=ibond(k,i,j)
-       enddo
+       do i=1,3*nsmall
+        jib1(ic,i)=ib1(k,i)
        enddo
        jnumat(ic)=numat(k)
        do i=1,numat(k)
@@ -151,10 +156,8 @@ c put the positive fragments first
        do i=1,nsmall
         itype(k,i)=jitype(k,i)
        enddo
-       do i=1,nsmall
-       do j=1,nsmall
-        ibond(k,i,j)=jibond(k,i,j)
-       enddo
+       do i=1,3*nsmall
+        ib1(k,i)=jib1(k,i)
        enddo
        numat(k)=jnumat(k)
        do i=1,numat(k)
@@ -167,9 +170,8 @@ c put the positive fragments first
       deallocate(jisign)
       deallocate(jnumat)
       deallocate(jitype)
-      deallocate(jibond)
+      deallocate(jib1)
       deallocate(jnatstore)
-
 
 
       return

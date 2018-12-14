@@ -17,7 +17,8 @@ c iterfinal is the last compression level reached
        natstore(1,n)=0
        itype(1,n)=-1
       do m=1,nsmall
-       ibond(1,n,m)=0
+c      ibond(1,n,m)=0
+       ibond(n,m)=0
       enddo
       enddo
 
@@ -36,9 +37,18 @@ c iterfinal is the last compression level reached
         do m=1,numat(1)
          ii=ibf(natstore(1,n),k,iterfinal)
          if(iabs(ibf(natstore(1,n),k,iterfinal)).eq.natstore(1,m))then
-          ibond(1,n,k)=m*(ii/iabs(ii))
+c         ibond(1,n,k)=m*(ii/iabs(ii))
+          ibond(n,k)=m*(ii/iabs(ii))
          endif
         enddo
+       enddo
+      enddo
+
+      i=0
+      do n=1,numat(1)
+       do k=1,itype(1,n)+1
+        i=i+1
+        ib1(1,i)=ibond(n,k)
        enddo
       enddo
        
@@ -54,7 +64,9 @@ c account for isolated groups
          nf=nf+1
          natstore(nf,1)=n
          itype(nf,1)=-1
-         ibond(nf,1,1)=0
+c         ibond(nf,1,1)=0
+          ibond(1,1)=0
+          ib1(nf,1)=0
          numat(nf)=1
          isign(nf)=1
          nstop(nf)=1
@@ -66,8 +78,11 @@ c account for isolated groups
       write(6,*)' An initial compressed fragment is'
       write(6,*)(natstore(i,n),n=1,numat(i))
       write(6,*)' The connectivity is'
+      ic=0
       do n=1,numat(i)
-       write(6,*)n,itype(i,n),(ibond(i,n,k),k=1,itype(i,n)+1)
+c       write(6,*)n,itype(i,n),(ibond(i,n,k),k=1,itype(i,n)+1)
+       write(6,*)n,itype(i,n),(ib1(i,k),k=ic+1,ic+itype(i,n)+1)
+       ic=ic+itype(i,n)+1
       enddo
       enddo
       write(6,*)
