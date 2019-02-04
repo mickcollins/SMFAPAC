@@ -179,12 +179,12 @@ c     write(6,*)' dimension of numat = ',2*nffinal1
       allocate(nat1(2*nffinal1))
       allocate(c1(2*nffinal1,60,3))
       allocate(lab1(2*nffinal1,60))
-
       do i=1,nffinal
        read(8,*)numat(i)
        read(8,*)(natstore(i,k),k=1,numat(i))
       enddo
       close(unit=8)
+c     stop
 
 c sort natstore (better for cancelling)
       do i=1,nffinal
@@ -532,21 +532,28 @@ c groups that contain formal charges (even if neutral overall)
         match1=0
         do n1=1,numat(k1)
         do k=1,numcharges
-         if(natstore(k1,n1).eq.numchggrps(k).
-     .      and.abs(chchggrps(k)).gt.0)match1=1
+c 290119
+c        if(natstore(k1,n1).eq.numchggrps(k).
+c    .      and.abs(chchggrps(k)).gt.0)match1=1
+         if(natstore(k1,n1).eq.numchggrps(k))match1=1
         enddo
         enddo
         match2=0
         do n1=1,numat(k2)
         do k=1,numcharges
-         if(natstore(k2,n1).eq.numchggrps(k).
-     .      and.abs(chchggrps(k)).gt.0)match2=1
+c 290119
+c         if(natstore(k2,n1).eq.numchggrps(k).
+c    .      and.abs(chchggrps(k)).gt.0)match2=1
+         if(natstore(k2,n1).eq.numchggrps(k))match2=1
         enddo
         enddo
         if(match1*match2.gt.0)then
+c 291019 made xcut = 1.5
+        zcut=1.5d0
+        if(dtol.gt.zcut)zcut=dtol
 
-
-         if(dist.gt.2.d0)then
+c        if(dist.gt.2.d0)then
+         if(dist.gt.zcut)then
           write(20,*)(matstore(n,k),k=1,2),nsign(n)
           go to 999
          else
