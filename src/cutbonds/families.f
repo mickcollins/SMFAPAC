@@ -13,9 +13,9 @@
 c assumes no more than 10 formal charges in a group
 
       character*1 I0(0:10),ca1,ca2,ca3,ca4
-      character*15 ca
-      character*15 da
-      character*21 ea,fa,pa,panames(10000)
+      character*16 ca
+      character*17 da
+      character*22 ea,fa,pa,panames(10000)
       character*27 ga
 
       integer, allocatable   ::nchgatoms(:)
