@@ -45,7 +45,7 @@ c make the filename
        call filelabel(n,ca)
        n1=index(ca,' ')-1
        ca1='nb.'//ca(1:n1)//'.0-polar.com'
-       open(unit=1,file=ca1,status='unknown')
+       open(unit=1,file=ca1,status='unknown',buffered='YES')
        write(1,*)nch0(n),multiplicity     
        do i=1,nat0(n)
         write(1,100)lab0(n,i),(c0(n,i,k),k=1,3)
