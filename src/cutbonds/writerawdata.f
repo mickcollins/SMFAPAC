@@ -6,7 +6,7 @@ c this subroutine is called in bigfract after fragsteps
 c it writes the data about atoms, bonds and fragmnents
 c that is needed to restart fragmentation
 
-      open(unit=1,file='RAWDATA',status='unknown')
+      open(unit=1,file='RAWDATA',status='unknown',buffered='YES')
 
       write(1,*)natomall
       do n=1,natomall
