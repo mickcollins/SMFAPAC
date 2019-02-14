@@ -61,7 +61,7 @@ c  this sub outputs the atoms in each family.
 c  these are needed by findHbond and findHandCbond to
 c  avoid connecting families multiple times by "-1" bonds
 
-      open(unit=20,file='families.out',status='unknown')
+      open(unit=20,file='families.out',status='unknown',buffered='YES')
 
       write(20,*)' The number of groups'
       write(20,*)natom
@@ -116,7 +116,7 @@ c     match=1
 
 
       if(match.eq.1)then
-       open(unit=90,file='CHARGECOORDS',status='unknown')
+       open(unit=90,file='CHARGECOORDS',status='unknown',buffered='YES')
       endif
 
 c keep count of the number of groups containing formal charges
@@ -292,14 +292,14 @@ c which will be filled in other scripts/programs
       open(unit=66,file=pa,status='unknown')
       close(unit=66)
 
-      open(unit=66,file=ca,status='unknown')
+      open(unit=66,file=ca,status='unknown',buffered='YES')
       write(66,100)(xmean(k),k=1,3),dble(float(nsum))
       close(unit=66)
-      open(unit=67,file=da,status='unknown')
+      open(unit=67,file=da,status='unknown',buffered='YES')
       write(67,*)'  The distributed Cartesian multipoles'
       write(67,*) nfam(n)+numbercaps
-      open(unit=68,file=ea,status='unknown')
-      open(unit=70,file=ga,status='unknown')
+      open(unit=68,file=ea,status='unknown',buffered='YES')
+      open(unit=70,file=ga,status='unknown',buffered='YES')
 c     write(68,*)nsum," 1"
       write(68,*)nsum,ndegen
       do i=1,nfam(n)
@@ -312,7 +312,7 @@ c     write(68,*)nsum," 1"
       enddo
       close(unit=68)
       close(unit=70)
-      open(unit=69,file=fa,status='unknown')
+      open(unit=69,file=fa,status='unknown',buffered='YES')
       write(69,*)nfam(n),numbercaps,n
       do i=1,numbercaps
        nsite=0
@@ -422,7 +422,7 @@ c end the nchg if
 c close the natom loop
       enddo
 
-      open(unit=30,file='OUT_ELECTRONS',status='unknown')
+      open(unit=30,file='OUT_ELECTRONS',status='unknown',buffered='YES')
       write(30,*)' The number of charge calculations is'
       write(30,*)kcharge
       if(kcharge.gt.0)then
@@ -436,7 +436,8 @@ c close the natom loop
 
 c output the identities of the groups which contain formal charges
 c and the associated numbers of the charged atoms
-      open(unit=66,file='OUT_CHARGEDGROUPS',status='unknown')
+      open(unit=66,file='OUT_CHARGEDGROUPS',status='unknown',
+     .             buffered='YES')
       write(66,*)' The number of groups with formal charges is'
       write(66,*)kcharge
       write(66,*)' The group numbers,# of charges, and atom numbers are'
@@ -449,7 +450,8 @@ c and the associated numbers of the charged atoms
       close(unit=66)
 
 c output the charged groups for viewing
-      open(unit=66,file='VIEWCHARGEDGROUPS',status='unknown')
+      open(unit=66,file='VIEWCHARGEDGROUPS',status='unknown',
+     .             buffered='YES')
       write(66,*)natomall
       write(66,*)
       do j=1,natomall
