@@ -481,7 +481,7 @@ c  calculate the itype array
       write(6,*)
 c check to see if all bonds between groups have mult = -1
 c if so then "nocapsatall =1" in IN_CAPS
-      open(unit=17,file='IN_CAPS',status='unknown')
+      open(unit=17,file='IN_CAPS',status='unknown',buffered='YES')
       write(17,*)'Enter 0 for caps or 1 for no caps'
       nocapsatall=1
       do m=1,nbonds
@@ -536,7 +536,8 @@ c  calculate the ibond array
       write(6,*)
 
 c output the group connectivity
-      open(unit=22,file='OUT_GROUPCONNECTIVITY',status='unknown')
+      open(unit=22,file='OUT_GROUPCONNECTIVITY',status='unknown',
+     .            buffered='YES')
       write(22,*)natom
       do n=1,natom
        write(22,*)n,itf(n,1)+1
@@ -576,7 +577,7 @@ c embedded charges for Level0 fragments
        call filelabel(kgroup(k),ca1)
        n1=index(ca1,' ')-1
        ca='chL0.'//ca1(1:n1)
-       open(unit=21,file=ca,status='unknown')
+       open(unit=21,file=ca,status='unknown',buffered='YES')
        do m=1,kcharge
         if(m.ne.k)write(21,*)kgroup(m)
        enddo
