@@ -30,10 +30,10 @@ c make the file name
        call filelabel(k2,ca2)
        n2=index(ca2,' ')-1
        ca='ab.'//ca1(1:n1)//'.'//ca2(1:n2)//'.com'
-       open(unit=1,file=ca,status='unknown')
+       open(unit=1,file=ca,status='unknown',buffered='YES')
 
        da='ABbgidentities.'//ca1(1:n1)//'.'//ca2(1:n2)
-       open(unit=4,file=da,status='unknown')
+       open(unit=4,file=da,status='unknown',buffered='YES')
 
 c calculate the charge and multiplicity
        if(numat(k1).eq.1)then
