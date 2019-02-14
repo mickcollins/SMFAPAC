@@ -105,7 +105,8 @@ c each real atom in a final L1 fragment has one corresponding real atom
 c caps have 2
 
 c write out all the necessary data
-      open(unit=1,file='OUT_Lev1_ATOMALLOCATION',status='unknown')
+      open(unit=1,file='OUT_Lev1_ATOMALLOCATION',status='unknown',
+     .            buffered='YES')
       write(1,*)' The number of final L1 frags from L1L1_mac.f'
       write(1,*)nfextra
       write(1,*)' For each of ',nfextra,' fragments:the number of atoms'
