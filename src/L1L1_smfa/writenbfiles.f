@@ -22,7 +22,8 @@
 
 c open the file that will allocate atoms ids
 c to these bg charges
-       open(unit=4,file='NBbgidentities',status='unknown')
+       open(unit=4,file='NBbgidentities',status='unknown',
+     .             buffered='YES')
        write(4,*)nffinal+nbextra
 
 c write to fort.23 which will be added to OUT_ELECTRONS
@@ -34,7 +35,7 @@ c write to fort.23 which will be added to OUT_ELECTRONS
        call filelabel(n,ca)
        n1=index(ca,' ')-1
        ca1='nb.'//ca(1:n1)//'.0.com'
-       open(unit=1,file=ca1,status='unknown')
+       open(unit=1,file=ca1,status='unknown',buffered='YES')
 c calculate the charge and multiplicity
        if(numat(n).eq.1)then
         ncharge=nch0(natstore(n,1))
