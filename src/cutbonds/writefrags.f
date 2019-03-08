@@ -6,9 +6,16 @@
       integer, allocatable :: kgroup(:)
       character*20 ca,ca1
 
+
+#ifdef __GFORTRAN__
+      open(unit=3,file='frags.out',status='unknown')
+      open(unit=8,file='signs.out',status='unknown')
+      open(unit=4,file='OUT_LIST_FRAG',status='unknown')
+#else
       open(unit=3,file='frags.out',status='unknown',buffered='YES')
       open(unit=8,file='signs.out',status='unknown',buffered='YES')
       open(unit=4,file='OUT_LIST_FRAG',status='unknown',buffered='YES')
+#endif
 
       write(4,*)' This file contains the coefficients that multiply the'
       write(4,*)' energies of each bonded fragment. The list below'
@@ -97,7 +104,11 @@ c get average number of groups
        write(40,*)avgroups,natom
 
 c write the fragments to a file
+#ifdef __GFORTRAN__
+      open(unit=9,file='OUT_FRAGMENTS',status='unknown')
+#else
       open(unit=9,file='OUT_FRAGMENTS',status='unknown',buffered='YES')
+#endif
       write(9,*)nffinal
       do i=1,nf
       if(nstop(i).le.1.and.isign(i).gt.0)then
@@ -138,7 +149,11 @@ c used as embedded charges for each fragment
        call filelabel(n,ca1)
        n1=index(ca1,' ')-1
        ca='chFRAG.'//ca1(1:n1)
+#ifdef __GFORTRAN__
+       open(unit=21,file=ca,status='unknown')
+#else
        open(unit=21,file=ca,status='unknown',buffered='YES')
+#endif
        do m=1,kcharge
         do i=1,numat(n)
          if(natstore(n,i).eq.kgroup(m))go to 2112

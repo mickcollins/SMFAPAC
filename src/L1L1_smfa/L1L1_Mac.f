@@ -221,8 +221,13 @@ c save nffinal, as it has been used to dimension arrays
 
 c write out the signs for the L1 frags. Used in the
 c induction calculation.
-      open(unit=22,file='OUT_L1_FINALSIGNS',status='unknown',
-     .            buffered='YES')
+#ifdef __GFORTRAN__
+      open(unit=22,file='OUT_L1_FINALSIGNS',status='unknown')
+#else
+      open(unit=22,file='OUT_L1_FINALSIGNS',status='unknown', 
+     . buffered='YES')
+#endif
+          
       write(22,*)' The number of Lev1 frags after cancelation'
       write(22,*)nffinal
       write(22,*)' The signs'
@@ -421,8 +426,12 @@ c end the k1,k2 loops
       nf=ic
 
 c  write out the final L1 frags
+#ifdef __GFORTRAN__
+      open(unit=8,file='OUT_FINAL_L1_DATA',status='unknown')
+#else
       open(unit=8,file='OUT_FINAL_L1_DATA',status='unknown',
      .           buffered='YES')
+#endif
       write(8,*)' Final L1 data'
       write(8,*)' The number of fragments'
       write(8,*)nffinal+nbextra
@@ -466,7 +475,11 @@ c embedded charges for Level=1 (nb) fragments
        call filelabel(n,ca1)
        n1=index(ca1,' ')-1
        ca='chnb.'//ca1(1:n1)
+#ifdef __GFORTRAN__
+       open(unit=21,file=ca,status='unknown')
+#else
        open(unit=21,file=ca,status='unknown',buffered='YES')
+#endif
        do k=1,numcharges
         do i=1,numat(n)
          if(natstore(n,i).eq.numchggrps(k))go to 2112
@@ -481,8 +494,12 @@ c embedded charges for Level=1 (nb) fragments
 
       if(numcharges.gt.1)then
 c open an output file for long range charge-charge interactions
+#ifdef __GFORTRAN__
+       open(unit=20,file='OUT_CHARGE_CHARGE',status='unknown')
+#else
        open(unit=20,file='OUT_CHARGE_CHARGE',status='unknown',
      .       buffered='YES')
+#endif
       endif
 
 c    first we write out the nb.*.0.com files
@@ -498,13 +515,22 @@ c now the interactions have to be sorted into ab initio and
 c electrostatics. The ab initio files need to be written, and
 c the details about the remaining interactions ahve to be written
 c to a file, so that later the electrostatics can be done.
+#ifdef __GFORTRAN__
+      open(unit=3,file='OUT_L1L1_data',status='unknown')
+      open(unit=33,file='OUT_L1L1_AB_data',status='unknown')
+#else
       open(unit=3,file='OUT_L1L1_data',status='unknown',buffered='YES')
       open(unit=33,file='OUT_L1L1_AB_data',status='unknown',
      .            buffered='YES')
+#endif
 
 c output the groups involved in ab intio interactions
 c so they can later be excluded from dispersion interactions
+#ifdef __GFORTRAN__
+      open(unit=44,file='OUT_ABGROUPS',status='unknown')
+#else
       open(unit=44,file='OUT_ABGROUPS',status='unknown',buffered='YES')
+#endif
 
 c write a comment to fort.25 that will be added to OUT_ELECTRONS
       write(25,*)' The number of L1L1 ab calcs is'
@@ -647,7 +673,11 @@ c embedded charges for Level=1 (nb) fragments
        n1=index(ca1,' ')-1
        n2=index(ca2,' ')-1
        ca='chab.'//ca1(1:n1)//'.'//ca2(1:n2)
+#ifdef __GFORTRAN__
+       open(unit=21,file=ca,status='unknown')
+#else
        open(unit=21,file=ca,status='unknown',buffered='YES')
+#endif
        do k=1,numcharges
         do i=1,numat(k1)
          if(natstore(k1,i).eq.numchggrps(k))go to 3112

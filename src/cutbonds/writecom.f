@@ -19,8 +19,12 @@
 
       fact1=0.68d0
 
+#ifdef __GFORTRAN__
+      open(unit=20,file='OUT_ALLOC_FRAG',status='unknown')
+#else
       open(unit=20,file='OUT_ALLOC_FRAG',status='unknown',
      .             buffered='YES')
+#endif
       write(20,*)' this files contains the list of atom numbers '
       write(20,*)' in the original molecule that'
       write(20,*)' correspond to the atomic coordinates in the '
@@ -53,8 +57,12 @@ c is missing from the junk array
 
       write(3,*)'The capping atoms are attached to'
 
+#ifdef __GFORTRAN__
+      open(unit=4,file='molecule.com',status='unknown')
+#else
       open(unit=4,file='molecule.com',status='unknown',
      .           buffered='YES')
+#endif
 
 c this version accounts for charge
 c First find the net charge on the whole molecule
@@ -121,16 +129,24 @@ c     write(4,101)'--link1--'
 101   format(a9)
 
 c make a file that has the number of atoms in the fragments
+#ifdef __GFORTRAN__
+      open(unit=15,file='fragnum',status='unknown')
+#else
       open(unit=15,file='fragnum',status='unknown',
      .             buffered='YES')
+#endif
       write(15,8765)ititle
 8765  format(1x,a20)
       numav=0
       numav2=0
       numcaps=0
 
+#ifdef __GFORTRAN__
+      open(unit=42,file='OUT_NCOORD_FRAG',status='unknown')
+#else
       open(unit=42,file='OUT_NCOORD_FRAG',status='unknown',
      .             buffered='YES')
+#endif
       write(42,*)'Number of fragments is ',nffinal
 
       nemax=0.d0
@@ -340,7 +356,11 @@ c added extra 041218
         endif
       endif
 
+#ifdef __GFORTRAN__
+      open(unit=44,file=ca,status='unknown')
+#else
       open(unit=44,file=ca,status='unknown',buffered='YES')
+#endif
       write(44,*)itchg,',',ndegen
       do m=1,natf(k)
       if(fat(m).eq.'H ')then

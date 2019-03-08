@@ -15,7 +15,7 @@ get_filename_component (Fortran_COMPILER_NAME ${CMAKE_Fortran_COMPILER} NAME)
 
 if (Fortran_COMPILER_NAME MATCHES "gfortran.*")
    # gfortran defaults
-   set (CMAKE_Fortran_FLAGS_RELEASE "-ffixed-line-length-132 -O2")
+   set (CMAKE_Fortran_FLAGS_RELEASE "-cpp -ffixed-line-length-132 -O2")
 elseif (Fortran_COMPILER_NAME MATCHES "ifort.*")
    # ifort defaults
    set (CMAKE_Fortran_FLAGS_RELEASE "-132 -O2 -ip -fpe0 -save")
