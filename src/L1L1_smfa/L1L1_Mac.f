@@ -578,9 +578,10 @@ c    .      and.abs(chchggrps(k)).gt.0)match2=1
         enddo
         enddo
         if(match1*match2.gt.0)then
-c 291019 made xcut = 1.5
-        zcut=1.5d0
-        if(dtol.gt.zcut)zcut=dtol
+c 291019 made zcut = 1.5
+c       zcut=1.5d0
+c       if(dtol.gt.zcut)zcut=dtol
+        zcut=dtol
 
 c        if(dist.gt.2.d0)then
          if(dist.gt.zcut)then
