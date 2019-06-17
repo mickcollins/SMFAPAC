@@ -51,13 +51,13 @@ c ab initio fragment output, read in readdata
 
 c  find out how many real atoms are in the whole molecule
 
-      natom=0
-      do m=1,nfrag
-      do n=1,nat0(m)
-      if(nat(m,n).gt.natom)natom=nat(m,n)
-      enddo
-      enddo
-      close(unit=3)
+c     natom=0
+c     do m=1,nfrag
+c     do n=1,nat0(m)
+c     if(nat(m,n).gt.natom)natom=nat(m,n)
+c     enddo
+c     enddo
+c     close(unit=3)
 
       return
       end
