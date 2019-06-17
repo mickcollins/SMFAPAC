@@ -29,6 +29,10 @@
 
       allocate(numa(natom))
 
+      do n=1,natom
+       numa(n)=1
+      enddo
+
 c get the atomic number and coordinates for each real atom
       do m=1,nfrag
       do n=1,nat0(m)
