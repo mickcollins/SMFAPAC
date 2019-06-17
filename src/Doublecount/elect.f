@@ -79,16 +79,16 @@ c     call tfactor(c1(n1,:),c2(n2,:),t0,t1,t2,t3,t4,t5,t6)
       call ct2q(ch2(n2),qu1(n1,:,:),t2,ect2qa)
       call ct2q(ch1(n1),qu2(n2,:,:),t2,ect2qb)
 c next 4 re-added
-      call ct3o(ch2(n2),oct1(n1,:,:,:),t3,ect3oa)
-      call ct3o(ch1(n1),oct2(n2,:,:,:),t3,ect3ob)
-      call ct4h(ch2(n2),hex1(n1,:,:,:,:),t4,ect4ha)
-      call ct4h(ch1(n1),hex2(n2,:,:,:,:),t4,ect4hb)
+c     call ct3o(ch2(n2),oct1(n1,:,:,:),t3,ect3oa)
+c     call ct3o(ch1(n1),oct2(n2,:,:,:),t3,ect3ob)
+c     call ct4h(ch2(n2),hex1(n1,:,:,:,:),t4,ect4ha)
+c     call ct4h(ch1(n1),hex2(n2,:,:,:,:),t4,ect4hb)
       call dt2d(d2(n2,:),d1(n1,:),t2,edt2d)
       call dt3q(d2(n2,:),qu1(n1,:,:),t3,edt3qa)
       call dt3q(d1(n1,:),qu2(n2,:,:),t3,edt3qb)
 c next 2 re-added
-      call dt4o(d2(n2,:),oct1(n1,:,:,:),t4,edt4oa)
-      call dt4o(d1(n1,:),oct2(n2,:,:,:),t4,edt4ob)
+c     call dt4o(d2(n2,:),oct1(n1,:,:,:),t4,edt4oa)
+c     call dt4o(d1(n1,:),oct2(n2,:,:,:),t4,edt4ob)
       call qt4q(qu2(n2,:,:),qu1(n1,:,:),t4,eqt4q)
 
       tot(1)=ch1(n1)*ch2(n2)*t0
