@@ -11,6 +11,8 @@ c symmetrize
       enddo
       enddo
 
+      return
+
       do i=1,3
       do j=i,3
       do k=j,3
