@@ -22,13 +22,13 @@
 
 c open the file that will allocate atoms ids
 c to these bg charges
-#ifdef __GFORTRAN__
-       open(unit=4,file='NBbgidentities',status='unknown')
-#else
-       open(unit=4,file='NBbgidentities',status='unknown',
-     .             buffered='YES')
-#endif
-       write(4,*)nffinal+nbextra
+c#ifdef __GFORTRAN__
+c       open(unit=4,file='NBbgidentities',status='unknown')
+c#else
+c       open(unit=4,file='NBbgidentities',status='unknown',
+c     .             buffered='YES')
+c#endif
+c       write(4,*)nffinal+nbextra
 
 c write to fort.23 which will be added to OUT_ELECTRONS
        write(23,*)' The number of Level 1 fragments is'
@@ -153,16 +153,16 @@ c add a blank line
 
       endif
 c output the bg charges identities
-      if(numcharges.eq.0)then
-       write(4,*)0
-      else
-       write(4,*)jc
-       if(jc.gt.0)then
-        do l=1,jc
-         write(4,668)ptch(l),num(l),(nbg(l,k),we(l,k),k=1,num(l))
-        enddo
-       endif
-      endif
+c      if(numcharges.eq.0)then
+c       write(4,*)0
+c      else
+c       write(4,*)jc
+c       if(jc.gt.0)then
+c        do l=1,jc
+c         write(4,668)ptch(l),num(l),(nbg(l,k),we(l,k),k=1,num(l))
+c        enddo
+c       endif
+c      endif
 668    format(f10.6,i4,6(i6,f10.6))
      
 3000  continue 
