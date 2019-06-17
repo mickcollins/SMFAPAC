@@ -36,12 +36,12 @@ c make the file name
        open(unit=1,file=ca,status='unknown',buffered='YES')
 #endif 
 
-       da='ABbgidentities.'//ca1(1:n1)//'.'//ca2(1:n2)
-#ifdef __GFORTRAN__
-       open(unit=4,file=da,status='unknown')
-#else
-       open(unit=4,file=da,status='unknown',buffered='YES')
-#endif 
+c      da='ABbgidentities.'//ca1(1:n1)//'.'//ca2(1:n2)
+c#ifdef __GFORTRAN__
+c      open(unit=4,file=da,status='unknown')
+c#else
+c       open(unit=4,file=da,status='unknown',buffered='YES')
+c#endif 
 
 c calculate the charge and multiplicity
        if(numat(k1).eq.1)then
@@ -208,16 +208,16 @@ c add a blank line
       endif
       close(unit=1)
 c output the bg charges identities
-      if(numcharges.eq.0)then
-       write(4,*)0
-      else
-       write(4,*)jc
-       if(jc.gt.0)then
-        do l=1,jc
-         write(4,668)ptch(l),num(l),(nbg(l,k),we(l,k),k=1,num(l))
-        enddo
-       endif
-      endif
+c     if(numcharges.eq.0)then
+c      write(4,*)0
+c     else
+c      write(4,*)jc
+c      if(jc.gt.0)then
+c       do l=1,jc
+c        write(4,668)ptch(l),num(l),(nbg(l,k),we(l,k),k=1,num(l))
+c       enddo
+c      endif
+c     endif
 668    format(f10.6,i4,6(i6,f10.6))
 
 3000  continue
