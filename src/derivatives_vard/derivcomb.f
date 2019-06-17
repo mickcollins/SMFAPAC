@@ -86,7 +86,7 @@ c allocate forces on caps to the associated real atoms
       enddo
 
 
-      if(nflag.eq.1)go to 222
+      if(nflag.le.1)go to 222
 
 c  combine the second derivatives
 
