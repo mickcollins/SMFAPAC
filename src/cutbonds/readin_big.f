@@ -288,7 +288,7 @@ c     nsmall2=nsmall/2
       allocate(numat(nfragm))
       allocate(natstore(nfragm,nsmall))
       allocate(ibond(nsmall,nsmall))
-      allocate(ib1(nfragm,3*nsmall))
+      allocate(ib1(nfragm,6*nsmall))
       allocate(itype(nfragm,nsmall))
       allocate(isign(nfragm))
       allocate(nstop(nfragm))
@@ -455,6 +455,28 @@ c      enddo
          mb(n)=0
          nb(n)=0
         endif
+c patch 111119
+        if((jbd(mb(n)).ge.4).and.(jbd(nb(n)).ge.2))then
+         ic=ic+1
+         mbn(ic)=mb(n)
+         nbn(ic)=nb(n)
+         multn(ic)=mult(n)
+         jbd(mb(n))=jbd(mb(n))-1
+         jbd(nb(n))=jbd(nb(n))-1
+         mb(n)=0
+         nb(n)=0
+        endif
+        if((jbd(nb(n)).ge.4).and.(jbd(mb(n)).ge.2))then
+         ic=ic+1
+         mbn(ic)=mb(n)
+         nbn(ic)=nb(n)
+         multn(ic)=mult(n)
+         jbd(mb(n))=jbd(mb(n))-1
+         jbd(nb(n))=jbd(nb(n))-1
+         mb(n)=0
+         nb(n)=0
+        endif
+c end patch 111119
        enddo
        nbondsextra=ic
 
@@ -481,11 +503,11 @@ c  calculate the itype array
       write(6,*)
 c check to see if all bonds between groups have mult = -1
 c if so then "nocapsatall =1" in IN_CAPS
-#ifdef __GFORTRAN__
-      open(unit=17,file='IN_CAPS',status='unknown')
-#else
+c#ifdef __GFORTRAN__
+c      open(unit=17,file='IN_CAPS',status='unknown')
+c#else
       open(unit=17,file='IN_CAPS',status='unknown',buffered='YES')
-#endif
+c#endif
       write(17,*)'Enter 0 for caps or 1 for no caps'
       nocapsatall=1
       do m=1,nbonds
@@ -540,12 +562,12 @@ c  calculate the ibond array
       write(6,*)
 
 c output the group connectivity
-#ifdef __GFORTRAN__
-      open(unit=22,file='OUT_GROUPCONNECTIVITY',status='unknown')
-#else
+c#ifdef __GFORTRAN__
+c      open(unit=22,file='OUT_GROUPCONNECTIVITY',status='unknown')
+c#else
       open(unit=22,file='OUT_GROUPCONNECTIVITY',status='unknown',
      .            buffered='YES')
-#endif
+c#endif
       write(22,*)natom
       do n=1,natom
        write(22,*)n,itf(n,1)+1
@@ -585,11 +607,11 @@ c embedded charges for Level0 fragments
        call filelabel(kgroup(k),ca1)
        n1=index(ca1,' ')-1
        ca='chL0.'//ca1(1:n1)
-#ifdef __GFORTRAN__
-       open(unit=21,file=ca,status='unknown')
-#else
+c#ifdef __GFORTRAN__
+c       open(unit=21,file=ca,status='unknown')
+c#else
        open(unit=21,file=ca,status='unknown',buffered='YES')
-#endif
+c#endif
        do m=1,kcharge
         if(m.ne.k)write(21,*)kgroup(m)
        enddo
