@@ -124,6 +124,10 @@ c end loop over n
        do n=1,numat(i)
        do m=1,itype(i,n)+1
        ic=ic+1
+       if(ic.gt.6*nsmall)then
+        write(6,*)' bonds exceed 6*nsmall in subroutine expand'
+        stop
+       endif
        ib1(i,ic)=ibond(n,m)
        enddo
        enddo
