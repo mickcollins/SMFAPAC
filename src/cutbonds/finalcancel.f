@@ -64,7 +64,7 @@ c        ibond(ic,i,j)=ibond(k,i,j)
 c       enddo
 c       enddo
 
-        do j=1,3*nsmall
+        do j=1,6*nsmall
          ib1(ic,j)=ib1(k,j)
         enddo
 
@@ -88,7 +88,7 @@ c     ibond(jc,i,j)=0
 c     enddo
 c     enddo
 
-      do j=1,3*nsmall
+      do j=1,6*nsmall
        ib1(jc,j)=0
       enddo
 
@@ -110,7 +110,7 @@ c put the positive fragments first
       allocate(jisign(nf))
       allocate(jnumat(nf))
       allocate(jitype(nf,nsmall))
-      allocate(jib1(nf,3*nsmall))
+      allocate(jib1(nf,6*nsmall))
       allocate(jnatstore(nf,nsmall))
 
       ic=0
@@ -122,7 +122,7 @@ c put the positive fragments first
        do i=1,nsmall
         jitype(ic,i)=itype(k,i)
        enddo
-       do i=1,3*nsmall
+       do i=1,6*nsmall
         jib1(ic,i)=ib1(k,i)
        enddo
        jnumat(ic)=numat(k)
@@ -139,7 +139,7 @@ c put the positive fragments first
        do i=1,nsmall
         jitype(ic,i)=itype(k,i)
        enddo
-       do i=1,3*nsmall
+       do i=1,6*nsmall
         jib1(ic,i)=ib1(k,i)
        enddo
        jnumat(ic)=numat(k)
@@ -156,7 +156,7 @@ c put the positive fragments first
        do i=1,nsmall
         itype(k,i)=jitype(k,i)
        enddo
-       do i=1,3*nsmall
+       do i=1,6*nsmall
         ib1(k,i)=jib1(k,i)
        enddo
        numat(k)=jnumat(k)
