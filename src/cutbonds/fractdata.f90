@@ -1,7 +1,7 @@
       module fractdata
       implicit double precision(a-h,o-z)
-      parameter(nsmall=90)
-      parameter(ncomp=10)
+      parameter(nsmall=120)
+      parameter(ncomp=12)
       parameter(maxfamily=50)
       save
 
