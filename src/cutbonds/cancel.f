@@ -90,7 +90,7 @@ c     ibond(ic,i,j)=ibond(k,i,j)
 c     enddo
 c     enddo
 
-      do j=1,3*nsmall
+      do j=1,6*nsmall
        ib1(ic,j)=ib1(k,j)
       enddo
 
@@ -112,7 +112,7 @@ c     do j=1,nsmall
 c     ibond(jc,i,j)=0
 c     enddo
 c     enddo
-      do i=1,3*nsmall
+      do i=1,6*nsmall
        ib1(jc,i)=0
       enddo
 
